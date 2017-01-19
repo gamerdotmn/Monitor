@@ -1,0 +1,514 @@
+c:\users\dalai\documents\visual studio 2012\Projects\McMonitor\McMonitor\McMonitor\bin\Debug\McMonitor.exe
+c:\users\dalai\documents\visual studio 2012\Projects\McMonitor\McMonitor\McMonitor\bin\Debug\McMonitor.pdb
+c:\users\dalai\documents\visual studio 2012\Projects\McMonitor\McMonitor\McMonitor\obj\Debug\McMonitor.Properties.Resources.resources
+c:\users\dalai\documents\visual studio 2012\Projects\McMonitor\McMonitor\McMonitor\obj\Debug\McMonitor.csproj.GenerateResource.Cache
+c:\users\dalai\documents\visual studio 2012\Projects\McMonitor\McMonitor\McMonitor\obj\Debug\McMonitor.exe
+c:\users\dalai\documents\visual studio 2012\Projects\McMonitor\McMonitor\McMonitor\obj\Debug\McMonitor.pdb
+c:\users\dalai\documents\visual studio 2012\Projects\McMonitor\McMonitor\McMonitor\obj\Debug\McMonitor.Mainfrm.resources
+c:\users\dalai\documents\visual studio 2012\Projects\McMonitor\McMonitor\McMonitor\obj\Debug\McMonitor.exe.licenses
+c:\users\dalai\documents\visual studio 2012\Projects\McMonitor\McMonitor\McMonitor\obj\Debug\McMonitor.IP.resources
+c:\users\dalai\documents\visual studio 2012\Projects\McMonitor\McMonitor\McMonitor\bin\Debug\McMonitor.exe.config
+c:\users\dalai\documents\visual studio 2012\Projects\McMonitor\McMonitor\McMonitor\obj\Debug\McMonitor.Login.resources
+c:\users\dalai\documents\visual studio 2012\Projects\McMonitor\McMonitor\McMonitor\obj\Debug\McMonitor.FrmAddEmp.resources
+c:\users\dalai\documents\visual studio 2012\Projects\McMonitor\McMonitor\McMonitor\obj\Debug\McMonitor.IPAddressTextBox.resources
+c:\users\dalai\documents\visual studio 2012\Projects\McMonitor\McMonitor\McMonitor\obj\Debug\McMonitor.Label_type.resources
+c:\users\dalai\documents\visual studio 2012\Projects\McMonitor\McMonitor\McMonitor\obj\Debug\McMonitor.FrmBan.resources
+C:\Users\Dalai\Documents\Visual Studio 2012\Projects\McMonitor\McMonitor\McMonitor\obj\Debug\McMonitor.addGroup.resources
+C:\Users\Dalai\Documents\Visual Studio 2012\Projects\McMonitor\McMonitor\McMonitor\obj\Debug\McMonitor.Connecting.resources
+C:\Users\Dalai\Documents\Visual Studio 2012\Projects\McMonitor\McMonitor\McMonitor\obj\Debug\McMonitor.Password.resources
+C:\Users\Dalai\Documents\Visual Studio 2012\Projects\McMonitor\McMonitor\McMonitor\obj\Debug\McMonitor.msg.resources
+C:\Users\Dalai\Documents\Visual Studio 2012\Projects\McMonitor\McMonitor\McMonitor\obj\Debug\McMonitor.transfer.resources
+C:\Users\Dalai\Documents\Visual Studio 2012\Projects\McMonitor\McMonitor\McMonitor\obj\Debug\McMonitor.changepc.resources
+C:\Users\Dalai\Documents\Visual Studio 2012\Projects\McMonitor\McMonitor\McMonitor\obj\Debug\McMonitor.Money.resources
+C:\Users\Dalai\Documents\Visual Studio 2012\Projects\McMonitor\McMonitor\McMonitor\obj\Debug\McMonitor.cgroup.resources
+C:\Users\Dalai\Documents\Visual Studio 2012\Projects\McMonitor\McMonitor\McMonitor\obj\Debug\McMonitor.addmember.resources
+C:\Users\Dalai\Documents\Visual Studio 2012\Projects\McMonitor\McMonitor\McMonitor\obj\Debug\McMonitor.chargemember.resources
+C:\Users\Dalai\Documents\Visual Studio 2012\Projects\McMonitor\McMonitor\McMonitor\obj\Debug\McMonitor.editmember.resources
+C:\Users\Dalai\Documents\Visual Studio 2012\Projects\McMonitor\McMonitor\McMonitor\obj\Debug\McMonitor.addTimez.resources
+C:\Users\Dalai\Documents\Visual Studio 2012\Projects\McMonitor\McMonitor\McMonitor\obj\Debug\McMonitor.timetemplate.resources
+C:\Users\Dalai\Documents\Visual Studio 2012\Projects\McMonitor\McMonitor\McMonitor\obj\Debug\McMonitor.XtraReport_orlogo.resources
+C:\Users\Dalai\Documents\Visual Studio 2012\Projects\McMonitor\McMonitor\McMonitor\obj\Debug\McMonitor.XtraReport_employee_member.resources
+C:\Users\Dalai\Documents\Visual Studio 2012\Projects\McMonitor\McMonitor\McMonitor\obj\Debug\McMonitor.XtraReport_emptimecode.resources
+C:\Users\Dalai\Documents\Visual Studio 2012\Projects\McMonitor\McMonitor\McMonitor\obj\Debug\McMonitor.XtraReport_clienthours.resources
+C:\Users\Dalai\Documents\Visual Studio 2012\Projects\McMonitor\McMonitor\McMonitor\obj\Debug\McMonitor.XtraReport_client_member.resources
+C:\Users\Dalai\Documents\Visual Studio 2012\Projects\McMonitor\McMonitor\McMonitor\obj\Debug\McMonitor.csprojResolveAssemblyReference.cache
+C:\Users\Dalai\Documents\Visual Studio 2012\Projects\McMonitor\McMonitor\McMonitor\obj\Debug\McMonitor.XtraReport_client_timecode.resources
+C:\Users\Dalai\Documents\Visual Studio 2012\Projects\McMonitor\McMonitor\McMonitor\obj\Debug\McMonitor.XtraReport_topmember.resources
+C:\Users\Dalai\Documents\Visual Studio 2012\Projects\McMonitor\McMonitor\McMonitor\bin\Debug\DevExpress.BonusSkins.v14.2.dll
+C:\Users\Dalai\Documents\Visual Studio 2012\Projects\McMonitor\McMonitor\McMonitor\bin\Debug\DevExpress.Charts.v14.2.Core.dll
+C:\Users\Dalai\Documents\Visual Studio 2012\Projects\McMonitor\McMonitor\McMonitor\bin\Debug\DevExpress.CodeParser.v14.2.dll
+C:\Users\Dalai\Documents\Visual Studio 2012\Projects\McMonitor\McMonitor\McMonitor\bin\Debug\DevExpress.Dashboard.v14.2.Core.dll
+C:\Users\Dalai\Documents\Visual Studio 2012\Projects\McMonitor\McMonitor\McMonitor\bin\Debug\DevExpress.Dashboard.v14.2.Win.dll
+C:\Users\Dalai\Documents\Visual Studio 2012\Projects\McMonitor\McMonitor\McMonitor\bin\Debug\DevExpress.Data.v14.2.dll
+C:\Users\Dalai\Documents\Visual Studio 2012\Projects\McMonitor\McMonitor\McMonitor\bin\Debug\DevExpress.DataAccess.v14.2.dll
+C:\Users\Dalai\Documents\Visual Studio 2012\Projects\McMonitor\McMonitor\McMonitor\bin\Debug\DevExpress.DataAccess.v14.2.UI.dll
+C:\Users\Dalai\Documents\Visual Studio 2012\Projects\McMonitor\McMonitor\McMonitor\bin\Debug\DevExpress.Map.v14.2.Core.dll
+C:\Users\Dalai\Documents\Visual Studio 2012\Projects\McMonitor\McMonitor\McMonitor\bin\Debug\DevExpress.Mvvm.v14.2.dll
+C:\Users\Dalai\Documents\Visual Studio 2012\Projects\McMonitor\McMonitor\McMonitor\bin\Debug\DevExpress.Office.v14.2.Core.dll
+C:\Users\Dalai\Documents\Visual Studio 2012\Projects\McMonitor\McMonitor\McMonitor\bin\Debug\DevExpress.PivotGrid.v14.2.Core.dll
+C:\Users\Dalai\Documents\Visual Studio 2012\Projects\McMonitor\McMonitor\McMonitor\bin\Debug\DevExpress.Printing.v14.2.Core.dll
+C:\Users\Dalai\Documents\Visual Studio 2012\Projects\McMonitor\McMonitor\McMonitor\bin\Debug\DevExpress.RichEdit.v14.2.Core.dll
+C:\Users\Dalai\Documents\Visual Studio 2012\Projects\McMonitor\McMonitor\McMonitor\bin\Debug\DevExpress.Snap.v14.2.Core.dll
+C:\Users\Dalai\Documents\Visual Studio 2012\Projects\McMonitor\McMonitor\McMonitor\bin\Debug\DevExpress.Snap.v14.2.dll
+C:\Users\Dalai\Documents\Visual Studio 2012\Projects\McMonitor\McMonitor\McMonitor\bin\Debug\DevExpress.Snap.v14.2.Extensions.dll
+C:\Users\Dalai\Documents\Visual Studio 2012\Projects\McMonitor\McMonitor\McMonitor\bin\Debug\DevExpress.Sparkline.v14.2.Core.dll
+C:\Users\Dalai\Documents\Visual Studio 2012\Projects\McMonitor\McMonitor\McMonitor\bin\Debug\DevExpress.Utils.v14.2.dll
+C:\Users\Dalai\Documents\Visual Studio 2012\Projects\McMonitor\McMonitor\McMonitor\bin\Debug\DevExpress.Utils.v14.2.UI.dll
+C:\Users\Dalai\Documents\Visual Studio 2012\Projects\McMonitor\McMonitor\McMonitor\bin\Debug\DevExpress.Xpo.v14.2.dll
+C:\Users\Dalai\Documents\Visual Studio 2012\Projects\McMonitor\McMonitor\McMonitor\bin\Debug\DevExpress.XtraBars.v14.2.dll
+C:\Users\Dalai\Documents\Visual Studio 2012\Projects\McMonitor\McMonitor\McMonitor\bin\Debug\DevExpress.XtraCharts.v14.2.dll
+C:\Users\Dalai\Documents\Visual Studio 2012\Projects\McMonitor\McMonitor\McMonitor\bin\Debug\DevExpress.XtraCharts.v14.2.Extensions.dll
+C:\Users\Dalai\Documents\Visual Studio 2012\Projects\McMonitor\McMonitor\McMonitor\bin\Debug\DevExpress.XtraCharts.v14.2.UI.dll
+C:\Users\Dalai\Documents\Visual Studio 2012\Projects\McMonitor\McMonitor\McMonitor\bin\Debug\DevExpress.XtraCharts.v14.2.Wizard.dll
+C:\Users\Dalai\Documents\Visual Studio 2012\Projects\McMonitor\McMonitor\McMonitor\bin\Debug\DevExpress.XtraEditors.v14.2.dll
+C:\Users\Dalai\Documents\Visual Studio 2012\Projects\McMonitor\McMonitor\McMonitor\bin\Debug\DevExpress.XtraGauges.v14.2.Core.dll
+C:\Users\Dalai\Documents\Visual Studio 2012\Projects\McMonitor\McMonitor\McMonitor\bin\Debug\DevExpress.XtraGauges.v14.2.Win.dll
+C:\Users\Dalai\Documents\Visual Studio 2012\Projects\McMonitor\McMonitor\McMonitor\bin\Debug\DevExpress.XtraGrid.v14.2.dll
+C:\Users\Dalai\Documents\Visual Studio 2012\Projects\McMonitor\McMonitor\McMonitor\bin\Debug\DevExpress.XtraLayout.v14.2.dll
+C:\Users\Dalai\Documents\Visual Studio 2012\Projects\McMonitor\McMonitor\McMonitor\bin\Debug\DevExpress.XtraMap.v14.2.dll
+C:\Users\Dalai\Documents\Visual Studio 2012\Projects\McMonitor\McMonitor\McMonitor\bin\Debug\DevExpress.XtraNavBar.v14.2.dll
+C:\Users\Dalai\Documents\Visual Studio 2012\Projects\McMonitor\McMonitor\McMonitor\bin\Debug\DevExpress.XtraPivotGrid.v14.2.dll
+C:\Users\Dalai\Documents\Visual Studio 2012\Projects\McMonitor\McMonitor\McMonitor\bin\Debug\DevExpress.XtraPrinting.v14.2.dll
+C:\Users\Dalai\Documents\Visual Studio 2012\Projects\McMonitor\McMonitor\McMonitor\bin\Debug\DevExpress.XtraReports.v14.2.dll
+C:\Users\Dalai\Documents\Visual Studio 2012\Projects\McMonitor\McMonitor\McMonitor\bin\Debug\DevExpress.XtraReports.v14.2.Extensions.dll
+C:\Users\Dalai\Documents\Visual Studio 2012\Projects\McMonitor\McMonitor\McMonitor\bin\Debug\DevExpress.XtraRichEdit.v14.2.dll
+C:\Users\Dalai\Documents\Visual Studio 2012\Projects\McMonitor\McMonitor\McMonitor\bin\Debug\DevExpress.XtraRichEdit.v14.2.Extensions.dll
+C:\Users\Dalai\Documents\Visual Studio 2012\Projects\McMonitor\McMonitor\McMonitor\bin\Debug\DevExpress.XtraTreeList.v14.2.dll
+C:\Users\Dalai\Documents\Visual Studio 2012\Projects\McMonitor\McMonitor\McMonitor\bin\Debug\DevExpress.XtraVerticalGrid.v14.2.dll
+C:\Users\Dalai\Documents\Visual Studio 2012\Projects\McMonitor\McMonitor\McMonitor\bin\Debug\DevExpress.Dashboard.v14.2.Core.xml
+C:\Users\Dalai\Documents\Visual Studio 2012\Projects\McMonitor\McMonitor\McMonitor\bin\Debug\DevExpress.Dashboard.v14.2.Win.xml
+C:\Users\Dalai\Documents\Visual Studio 2012\Projects\McMonitor\McMonitor\McMonitor\bin\Debug\DevExpress.Data.v14.2.xml
+C:\Users\Dalai\Documents\Visual Studio 2012\Projects\McMonitor\McMonitor\McMonitor\bin\Debug\DevExpress.DataAccess.v14.2.xml
+C:\Users\Dalai\Documents\Visual Studio 2012\Projects\McMonitor\McMonitor\McMonitor\bin\Debug\DevExpress.DataAccess.v14.2.UI.xml
+C:\Users\Dalai\Documents\Visual Studio 2012\Projects\McMonitor\McMonitor\McMonitor\bin\Debug\DevExpress.Map.v14.2.Core.xml
+C:\Users\Dalai\Documents\Visual Studio 2012\Projects\McMonitor\McMonitor\McMonitor\bin\Debug\DevExpress.Mvvm.v14.2.xml
+C:\Users\Dalai\Documents\Visual Studio 2012\Projects\McMonitor\McMonitor\McMonitor\bin\Debug\DevExpress.Office.v14.2.Core.xml
+C:\Users\Dalai\Documents\Visual Studio 2012\Projects\McMonitor\McMonitor\McMonitor\bin\Debug\DevExpress.PivotGrid.v14.2.Core.xml
+C:\Users\Dalai\Documents\Visual Studio 2012\Projects\McMonitor\McMonitor\McMonitor\bin\Debug\DevExpress.Printing.v14.2.Core.xml
+C:\Users\Dalai\Documents\Visual Studio 2012\Projects\McMonitor\McMonitor\McMonitor\bin\Debug\DevExpress.RichEdit.v14.2.Core.xml
+C:\Users\Dalai\Documents\Visual Studio 2012\Projects\McMonitor\McMonitor\McMonitor\bin\Debug\DevExpress.Snap.v14.2.xml
+C:\Users\Dalai\Documents\Visual Studio 2012\Projects\McMonitor\McMonitor\McMonitor\bin\Debug\DevExpress.Snap.v14.2.Core.xml
+C:\Users\Dalai\Documents\Visual Studio 2012\Projects\McMonitor\McMonitor\McMonitor\bin\Debug\DevExpress.Snap.v14.2.Extensions.xml
+C:\Users\Dalai\Documents\Visual Studio 2012\Projects\McMonitor\McMonitor\McMonitor\bin\Debug\DevExpress.Utils.v14.2.xml
+C:\Users\Dalai\Documents\Visual Studio 2012\Projects\McMonitor\McMonitor\McMonitor\bin\Debug\DevExpress.Sparkline.v14.2.Core.xml
+C:\Users\Dalai\Documents\Visual Studio 2012\Projects\McMonitor\McMonitor\McMonitor\bin\Debug\DevExpress.Utils.v14.2.UI.xml
+C:\Users\Dalai\Documents\Visual Studio 2012\Projects\McMonitor\McMonitor\McMonitor\bin\Debug\DevExpress.Xpo.v14.2.xml
+C:\Users\Dalai\Documents\Visual Studio 2012\Projects\McMonitor\McMonitor\McMonitor\bin\Debug\DevExpress.XtraBars.v14.2.xml
+C:\Users\Dalai\Documents\Visual Studio 2012\Projects\McMonitor\McMonitor\McMonitor\bin\Debug\DevExpress.XtraCharts.v14.2.xml
+C:\Users\Dalai\Documents\Visual Studio 2012\Projects\McMonitor\McMonitor\McMonitor\bin\Debug\DevExpress.XtraCharts.v14.2.UI.xml
+C:\Users\Dalai\Documents\Visual Studio 2012\Projects\McMonitor\McMonitor\McMonitor\bin\Debug\DevExpress.XtraCharts.v14.2.Wizard.xml
+C:\Users\Dalai\Documents\Visual Studio 2012\Projects\McMonitor\McMonitor\McMonitor\bin\Debug\DevExpress.XtraEditors.v14.2.xml
+C:\Users\Dalai\Documents\Visual Studio 2012\Projects\McMonitor\McMonitor\McMonitor\bin\Debug\DevExpress.XtraGauges.v14.2.Core.xml
+C:\Users\Dalai\Documents\Visual Studio 2012\Projects\McMonitor\McMonitor\McMonitor\bin\Debug\DevExpress.XtraGauges.v14.2.Win.xml
+C:\Users\Dalai\Documents\Visual Studio 2012\Projects\McMonitor\McMonitor\McMonitor\bin\Debug\DevExpress.XtraGrid.v14.2.xml
+C:\Users\Dalai\Documents\Visual Studio 2012\Projects\McMonitor\McMonitor\McMonitor\bin\Debug\DevExpress.XtraLayout.v14.2.xml
+C:\Users\Dalai\Documents\Visual Studio 2012\Projects\McMonitor\McMonitor\McMonitor\bin\Debug\DevExpress.XtraMap.v14.2.xml
+C:\Users\Dalai\Documents\Visual Studio 2012\Projects\McMonitor\McMonitor\McMonitor\bin\Debug\DevExpress.XtraNavBar.v14.2.xml
+C:\Users\Dalai\Documents\Visual Studio 2012\Projects\McMonitor\McMonitor\McMonitor\bin\Debug\DevExpress.XtraPivotGrid.v14.2.xml
+C:\Users\Dalai\Documents\Visual Studio 2012\Projects\McMonitor\McMonitor\McMonitor\bin\Debug\DevExpress.XtraPrinting.v14.2.xml
+C:\Users\Dalai\Documents\Visual Studio 2012\Projects\McMonitor\McMonitor\McMonitor\bin\Debug\DevExpress.XtraReports.v14.2.xml
+C:\Users\Dalai\Documents\Visual Studio 2012\Projects\McMonitor\McMonitor\McMonitor\bin\Debug\DevExpress.XtraReports.v14.2.Extensions.xml
+C:\Users\Dalai\Documents\Visual Studio 2012\Projects\McMonitor\McMonitor\McMonitor\bin\Debug\DevExpress.XtraRichEdit.v14.2.xml
+C:\Users\Dalai\Documents\Visual Studio 2012\Projects\McMonitor\McMonitor\McMonitor\bin\Debug\DevExpress.XtraRichEdit.v14.2.Extensions.xml
+C:\Users\Dalai\Documents\Visual Studio 2012\Projects\McMonitor\McMonitor\McMonitor\bin\Debug\DevExpress.XtraTreeList.v14.2.xml
+C:\Users\Dalai\Documents\Visual Studio 2012\Projects\McMonitor\McMonitor\McMonitor\bin\Debug\DevExpress.XtraVerticalGrid.v14.2.xml
+C:\Users\Dalai\Documents\Visual Studio 2012\Projects\McMonitor\McMonitor\McMonitor\bin\Debug\de\DevExpress.Dashboard.v14.2.Core.resources.dll
+C:\Users\Dalai\Documents\Visual Studio 2012\Projects\McMonitor\McMonitor\McMonitor\bin\Debug\es\DevExpress.Dashboard.v14.2.Core.resources.dll
+C:\Users\Dalai\Documents\Visual Studio 2012\Projects\McMonitor\McMonitor\McMonitor\bin\Debug\ja\DevExpress.Dashboard.v14.2.Core.resources.dll
+C:\Users\Dalai\Documents\Visual Studio 2012\Projects\McMonitor\McMonitor\McMonitor\bin\Debug\ru\DevExpress.Dashboard.v14.2.Core.resources.dll
+C:\Users\Dalai\Documents\Visual Studio 2012\Projects\McMonitor\McMonitor\McMonitor\bin\Debug\de\DevExpress.Dashboard.v14.2.Win.resources.dll
+C:\Users\Dalai\Documents\Visual Studio 2012\Projects\McMonitor\McMonitor\McMonitor\bin\Debug\es\DevExpress.Dashboard.v14.2.Win.resources.dll
+C:\Users\Dalai\Documents\Visual Studio 2012\Projects\McMonitor\McMonitor\McMonitor\bin\Debug\ja\DevExpress.Dashboard.v14.2.Win.resources.dll
+C:\Users\Dalai\Documents\Visual Studio 2012\Projects\McMonitor\McMonitor\McMonitor\bin\Debug\ru\DevExpress.Dashboard.v14.2.Win.resources.dll
+C:\Users\Dalai\Documents\Visual Studio 2012\Projects\McMonitor\McMonitor\McMonitor\bin\Debug\de\DevExpress.Data.v14.2.resources.dll
+C:\Users\Dalai\Documents\Visual Studio 2012\Projects\McMonitor\McMonitor\McMonitor\bin\Debug\es\DevExpress.Data.v14.2.resources.dll
+C:\Users\Dalai\Documents\Visual Studio 2012\Projects\McMonitor\McMonitor\McMonitor\bin\Debug\ja\DevExpress.Data.v14.2.resources.dll
+C:\Users\Dalai\Documents\Visual Studio 2012\Projects\McMonitor\McMonitor\McMonitor\bin\Debug\ru\DevExpress.Data.v14.2.resources.dll
+C:\Users\Dalai\Documents\Visual Studio 2012\Projects\McMonitor\McMonitor\McMonitor\bin\Debug\de\DevExpress.DataAccess.v14.2.resources.dll
+C:\Users\Dalai\Documents\Visual Studio 2012\Projects\McMonitor\McMonitor\McMonitor\bin\Debug\es\DevExpress.DataAccess.v14.2.resources.dll
+C:\Users\Dalai\Documents\Visual Studio 2012\Projects\McMonitor\McMonitor\McMonitor\bin\Debug\ja\DevExpress.DataAccess.v14.2.resources.dll
+C:\Users\Dalai\Documents\Visual Studio 2012\Projects\McMonitor\McMonitor\McMonitor\bin\Debug\ru\DevExpress.DataAccess.v14.2.resources.dll
+C:\Users\Dalai\Documents\Visual Studio 2012\Projects\McMonitor\McMonitor\McMonitor\bin\Debug\de\DevExpress.DataAccess.v14.2.UI.resources.dll
+C:\Users\Dalai\Documents\Visual Studio 2012\Projects\McMonitor\McMonitor\McMonitor\bin\Debug\es\DevExpress.DataAccess.v14.2.UI.resources.dll
+C:\Users\Dalai\Documents\Visual Studio 2012\Projects\McMonitor\McMonitor\McMonitor\bin\Debug\ja\DevExpress.DataAccess.v14.2.UI.resources.dll
+C:\Users\Dalai\Documents\Visual Studio 2012\Projects\McMonitor\McMonitor\McMonitor\bin\Debug\ru\DevExpress.DataAccess.v14.2.UI.resources.dll
+C:\Users\Dalai\Documents\Visual Studio 2012\Projects\McMonitor\McMonitor\McMonitor\bin\Debug\de\DevExpress.Map.v14.2.Core.resources.dll
+C:\Users\Dalai\Documents\Visual Studio 2012\Projects\McMonitor\McMonitor\McMonitor\bin\Debug\es\DevExpress.Map.v14.2.Core.resources.dll
+C:\Users\Dalai\Documents\Visual Studio 2012\Projects\McMonitor\McMonitor\McMonitor\bin\Debug\ja\DevExpress.Map.v14.2.Core.resources.dll
+C:\Users\Dalai\Documents\Visual Studio 2012\Projects\McMonitor\McMonitor\McMonitor\bin\Debug\ru\DevExpress.Map.v14.2.Core.resources.dll
+C:\Users\Dalai\Documents\Visual Studio 2012\Projects\McMonitor\McMonitor\McMonitor\bin\Debug\de\DevExpress.Office.v14.2.Core.resources.dll
+C:\Users\Dalai\Documents\Visual Studio 2012\Projects\McMonitor\McMonitor\McMonitor\bin\Debug\es\DevExpress.Office.v14.2.Core.resources.dll
+C:\Users\Dalai\Documents\Visual Studio 2012\Projects\McMonitor\McMonitor\McMonitor\bin\Debug\ja\DevExpress.Office.v14.2.Core.resources.dll
+C:\Users\Dalai\Documents\Visual Studio 2012\Projects\McMonitor\McMonitor\McMonitor\bin\Debug\ru\DevExpress.Office.v14.2.Core.resources.dll
+C:\Users\Dalai\Documents\Visual Studio 2012\Projects\McMonitor\McMonitor\McMonitor\bin\Debug\de\DevExpress.PivotGrid.v14.2.Core.resources.dll
+C:\Users\Dalai\Documents\Visual Studio 2012\Projects\McMonitor\McMonitor\McMonitor\bin\Debug\es\DevExpress.PivotGrid.v14.2.Core.resources.dll
+C:\Users\Dalai\Documents\Visual Studio 2012\Projects\McMonitor\McMonitor\McMonitor\bin\Debug\ja\DevExpress.PivotGrid.v14.2.Core.resources.dll
+C:\Users\Dalai\Documents\Visual Studio 2012\Projects\McMonitor\McMonitor\McMonitor\bin\Debug\ru\DevExpress.PivotGrid.v14.2.Core.resources.dll
+C:\Users\Dalai\Documents\Visual Studio 2012\Projects\McMonitor\McMonitor\McMonitor\bin\Debug\de\DevExpress.Printing.v14.2.Core.resources.dll
+C:\Users\Dalai\Documents\Visual Studio 2012\Projects\McMonitor\McMonitor\McMonitor\bin\Debug\es\DevExpress.Printing.v14.2.Core.resources.dll
+C:\Users\Dalai\Documents\Visual Studio 2012\Projects\McMonitor\McMonitor\McMonitor\bin\Debug\ja\DevExpress.Printing.v14.2.Core.resources.dll
+C:\Users\Dalai\Documents\Visual Studio 2012\Projects\McMonitor\McMonitor\McMonitor\bin\Debug\ru\DevExpress.Printing.v14.2.Core.resources.dll
+C:\Users\Dalai\Documents\Visual Studio 2012\Projects\McMonitor\McMonitor\McMonitor\bin\Debug\de\DevExpress.RichEdit.v14.2.Core.resources.dll
+C:\Users\Dalai\Documents\Visual Studio 2012\Projects\McMonitor\McMonitor\McMonitor\bin\Debug\es\DevExpress.RichEdit.v14.2.Core.resources.dll
+C:\Users\Dalai\Documents\Visual Studio 2012\Projects\McMonitor\McMonitor\McMonitor\bin\Debug\ja\DevExpress.RichEdit.v14.2.Core.resources.dll
+C:\Users\Dalai\Documents\Visual Studio 2012\Projects\McMonitor\McMonitor\McMonitor\bin\Debug\ru\DevExpress.RichEdit.v14.2.Core.resources.dll
+C:\Users\Dalai\Documents\Visual Studio 2012\Projects\McMonitor\McMonitor\McMonitor\bin\Debug\de\DevExpress.Snap.v14.2.resources.dll
+C:\Users\Dalai\Documents\Visual Studio 2012\Projects\McMonitor\McMonitor\McMonitor\bin\Debug\es\DevExpress.Snap.v14.2.resources.dll
+C:\Users\Dalai\Documents\Visual Studio 2012\Projects\McMonitor\McMonitor\McMonitor\bin\Debug\ja\DevExpress.Snap.v14.2.resources.dll
+C:\Users\Dalai\Documents\Visual Studio 2012\Projects\McMonitor\McMonitor\McMonitor\bin\Debug\ru\DevExpress.Snap.v14.2.resources.dll
+C:\Users\Dalai\Documents\Visual Studio 2012\Projects\McMonitor\McMonitor\McMonitor\bin\Debug\de\DevExpress.Snap.v14.2.Core.resources.dll
+C:\Users\Dalai\Documents\Visual Studio 2012\Projects\McMonitor\McMonitor\McMonitor\bin\Debug\es\DevExpress.Snap.v14.2.Core.resources.dll
+C:\Users\Dalai\Documents\Visual Studio 2012\Projects\McMonitor\McMonitor\McMonitor\bin\Debug\ja\DevExpress.Snap.v14.2.Core.resources.dll
+C:\Users\Dalai\Documents\Visual Studio 2012\Projects\McMonitor\McMonitor\McMonitor\bin\Debug\ru\DevExpress.Snap.v14.2.Core.resources.dll
+C:\Users\Dalai\Documents\Visual Studio 2012\Projects\McMonitor\McMonitor\McMonitor\bin\Debug\de\DevExpress.Snap.v14.2.Extensions.resources.dll
+C:\Users\Dalai\Documents\Visual Studio 2012\Projects\McMonitor\McMonitor\McMonitor\bin\Debug\es\DevExpress.Snap.v14.2.Extensions.resources.dll
+C:\Users\Dalai\Documents\Visual Studio 2012\Projects\McMonitor\McMonitor\McMonitor\bin\Debug\ja\DevExpress.Snap.v14.2.Extensions.resources.dll
+C:\Users\Dalai\Documents\Visual Studio 2012\Projects\McMonitor\McMonitor\McMonitor\bin\Debug\ru\DevExpress.Snap.v14.2.Extensions.resources.dll
+C:\Users\Dalai\Documents\Visual Studio 2012\Projects\McMonitor\McMonitor\McMonitor\bin\Debug\de\DevExpress.Utils.v14.2.resources.dll
+C:\Users\Dalai\Documents\Visual Studio 2012\Projects\McMonitor\McMonitor\McMonitor\bin\Debug\es\DevExpress.Utils.v14.2.resources.dll
+C:\Users\Dalai\Documents\Visual Studio 2012\Projects\McMonitor\McMonitor\McMonitor\bin\Debug\ja\DevExpress.Utils.v14.2.resources.dll
+C:\Users\Dalai\Documents\Visual Studio 2012\Projects\McMonitor\McMonitor\McMonitor\bin\Debug\ru\DevExpress.Utils.v14.2.resources.dll
+C:\Users\Dalai\Documents\Visual Studio 2012\Projects\McMonitor\McMonitor\McMonitor\bin\Debug\de\DevExpress.Sparkline.v14.2.Core.resources.dll
+C:\Users\Dalai\Documents\Visual Studio 2012\Projects\McMonitor\McMonitor\McMonitor\bin\Debug\es\DevExpress.Sparkline.v14.2.Core.resources.dll
+C:\Users\Dalai\Documents\Visual Studio 2012\Projects\McMonitor\McMonitor\McMonitor\bin\Debug\ja\DevExpress.Sparkline.v14.2.Core.resources.dll
+C:\Users\Dalai\Documents\Visual Studio 2012\Projects\McMonitor\McMonitor\McMonitor\bin\Debug\ru\DevExpress.Sparkline.v14.2.Core.resources.dll
+C:\Users\Dalai\Documents\Visual Studio 2012\Projects\McMonitor\McMonitor\McMonitor\bin\Debug\de\DevExpress.Utils.v14.2.UI.resources.dll
+C:\Users\Dalai\Documents\Visual Studio 2012\Projects\McMonitor\McMonitor\McMonitor\bin\Debug\es\DevExpress.Utils.v14.2.UI.resources.dll
+C:\Users\Dalai\Documents\Visual Studio 2012\Projects\McMonitor\McMonitor\McMonitor\bin\Debug\ja\DevExpress.Utils.v14.2.UI.resources.dll
+C:\Users\Dalai\Documents\Visual Studio 2012\Projects\McMonitor\McMonitor\McMonitor\bin\Debug\ru\DevExpress.Utils.v14.2.UI.resources.dll
+C:\Users\Dalai\Documents\Visual Studio 2012\Projects\McMonitor\McMonitor\McMonitor\bin\Debug\de\DevExpress.Xpo.v14.2.resources.dll
+C:\Users\Dalai\Documents\Visual Studio 2012\Projects\McMonitor\McMonitor\McMonitor\bin\Debug\es\DevExpress.Xpo.v14.2.resources.dll
+C:\Users\Dalai\Documents\Visual Studio 2012\Projects\McMonitor\McMonitor\McMonitor\bin\Debug\ja\DevExpress.Xpo.v14.2.resources.dll
+C:\Users\Dalai\Documents\Visual Studio 2012\Projects\McMonitor\McMonitor\McMonitor\bin\Debug\ru\DevExpress.Xpo.v14.2.resources.dll
+C:\Users\Dalai\Documents\Visual Studio 2012\Projects\McMonitor\McMonitor\McMonitor\bin\Debug\de\DevExpress.XtraBars.v14.2.resources.dll
+C:\Users\Dalai\Documents\Visual Studio 2012\Projects\McMonitor\McMonitor\McMonitor\bin\Debug\es\DevExpress.XtraBars.v14.2.resources.dll
+C:\Users\Dalai\Documents\Visual Studio 2012\Projects\McMonitor\McMonitor\McMonitor\bin\Debug\ja\DevExpress.XtraBars.v14.2.resources.dll
+C:\Users\Dalai\Documents\Visual Studio 2012\Projects\McMonitor\McMonitor\McMonitor\bin\Debug\ru\DevExpress.XtraBars.v14.2.resources.dll
+C:\Users\Dalai\Documents\Visual Studio 2012\Projects\McMonitor\McMonitor\McMonitor\bin\Debug\de\DevExpress.XtraCharts.v14.2.resources.dll
+C:\Users\Dalai\Documents\Visual Studio 2012\Projects\McMonitor\McMonitor\McMonitor\bin\Debug\es\DevExpress.XtraCharts.v14.2.resources.dll
+C:\Users\Dalai\Documents\Visual Studio 2012\Projects\McMonitor\McMonitor\McMonitor\bin\Debug\ja\DevExpress.XtraCharts.v14.2.resources.dll
+C:\Users\Dalai\Documents\Visual Studio 2012\Projects\McMonitor\McMonitor\McMonitor\bin\Debug\ru\DevExpress.XtraCharts.v14.2.resources.dll
+C:\Users\Dalai\Documents\Visual Studio 2012\Projects\McMonitor\McMonitor\McMonitor\bin\Debug\de\DevExpress.XtraCharts.v14.2.Wizard.resources.dll
+C:\Users\Dalai\Documents\Visual Studio 2012\Projects\McMonitor\McMonitor\McMonitor\bin\Debug\es\DevExpress.XtraCharts.v14.2.Wizard.resources.dll
+C:\Users\Dalai\Documents\Visual Studio 2012\Projects\McMonitor\McMonitor\McMonitor\bin\Debug\ja\DevExpress.XtraCharts.v14.2.Wizard.resources.dll
+C:\Users\Dalai\Documents\Visual Studio 2012\Projects\McMonitor\McMonitor\McMonitor\bin\Debug\ru\DevExpress.XtraCharts.v14.2.Wizard.resources.dll
+C:\Users\Dalai\Documents\Visual Studio 2012\Projects\McMonitor\McMonitor\McMonitor\bin\Debug\de\DevExpress.XtraEditors.v14.2.resources.dll
+C:\Users\Dalai\Documents\Visual Studio 2012\Projects\McMonitor\McMonitor\McMonitor\bin\Debug\es\DevExpress.XtraEditors.v14.2.resources.dll
+C:\Users\Dalai\Documents\Visual Studio 2012\Projects\McMonitor\McMonitor\McMonitor\bin\Debug\ja\DevExpress.XtraEditors.v14.2.resources.dll
+C:\Users\Dalai\Documents\Visual Studio 2012\Projects\McMonitor\McMonitor\McMonitor\bin\Debug\ru\DevExpress.XtraEditors.v14.2.resources.dll
+C:\Users\Dalai\Documents\Visual Studio 2012\Projects\McMonitor\McMonitor\McMonitor\bin\Debug\de\DevExpress.XtraGauges.v14.2.Core.resources.dll
+C:\Users\Dalai\Documents\Visual Studio 2012\Projects\McMonitor\McMonitor\McMonitor\bin\Debug\es\DevExpress.XtraGauges.v14.2.Core.resources.dll
+C:\Users\Dalai\Documents\Visual Studio 2012\Projects\McMonitor\McMonitor\McMonitor\bin\Debug\ja\DevExpress.XtraGauges.v14.2.Core.resources.dll
+C:\Users\Dalai\Documents\Visual Studio 2012\Projects\McMonitor\McMonitor\McMonitor\bin\Debug\ru\DevExpress.XtraGauges.v14.2.Core.resources.dll
+C:\Users\Dalai\Documents\Visual Studio 2012\Projects\McMonitor\McMonitor\McMonitor\bin\Debug\de\DevExpress.XtraGrid.v14.2.resources.dll
+C:\Users\Dalai\Documents\Visual Studio 2012\Projects\McMonitor\McMonitor\McMonitor\bin\Debug\es\DevExpress.XtraGrid.v14.2.resources.dll
+C:\Users\Dalai\Documents\Visual Studio 2012\Projects\McMonitor\McMonitor\McMonitor\bin\Debug\ja\DevExpress.XtraGrid.v14.2.resources.dll
+C:\Users\Dalai\Documents\Visual Studio 2012\Projects\McMonitor\McMonitor\McMonitor\bin\Debug\ru\DevExpress.XtraGrid.v14.2.resources.dll
+C:\Users\Dalai\Documents\Visual Studio 2012\Projects\McMonitor\McMonitor\McMonitor\bin\Debug\de\DevExpress.XtraLayout.v14.2.resources.dll
+C:\Users\Dalai\Documents\Visual Studio 2012\Projects\McMonitor\McMonitor\McMonitor\bin\Debug\es\DevExpress.XtraLayout.v14.2.resources.dll
+C:\Users\Dalai\Documents\Visual Studio 2012\Projects\McMonitor\McMonitor\McMonitor\bin\Debug\ja\DevExpress.XtraLayout.v14.2.resources.dll
+C:\Users\Dalai\Documents\Visual Studio 2012\Projects\McMonitor\McMonitor\McMonitor\bin\Debug\ru\DevExpress.XtraLayout.v14.2.resources.dll
+C:\Users\Dalai\Documents\Visual Studio 2012\Projects\McMonitor\McMonitor\McMonitor\bin\Debug\de\DevExpress.XtraNavBar.v14.2.resources.dll
+C:\Users\Dalai\Documents\Visual Studio 2012\Projects\McMonitor\McMonitor\McMonitor\bin\Debug\es\DevExpress.XtraNavBar.v14.2.resources.dll
+C:\Users\Dalai\Documents\Visual Studio 2012\Projects\McMonitor\McMonitor\McMonitor\bin\Debug\ja\DevExpress.XtraNavBar.v14.2.resources.dll
+C:\Users\Dalai\Documents\Visual Studio 2012\Projects\McMonitor\McMonitor\McMonitor\bin\Debug\ru\DevExpress.XtraNavBar.v14.2.resources.dll
+C:\Users\Dalai\Documents\Visual Studio 2012\Projects\McMonitor\McMonitor\McMonitor\bin\Debug\de\DevExpress.XtraPivotGrid.v14.2.resources.dll
+C:\Users\Dalai\Documents\Visual Studio 2012\Projects\McMonitor\McMonitor\McMonitor\bin\Debug\es\DevExpress.XtraPivotGrid.v14.2.resources.dll
+C:\Users\Dalai\Documents\Visual Studio 2012\Projects\McMonitor\McMonitor\McMonitor\bin\Debug\ja\DevExpress.XtraPivotGrid.v14.2.resources.dll
+C:\Users\Dalai\Documents\Visual Studio 2012\Projects\McMonitor\McMonitor\McMonitor\bin\Debug\ru\DevExpress.XtraPivotGrid.v14.2.resources.dll
+C:\Users\Dalai\Documents\Visual Studio 2012\Projects\McMonitor\McMonitor\McMonitor\bin\Debug\de\DevExpress.XtraPrinting.v14.2.resources.dll
+C:\Users\Dalai\Documents\Visual Studio 2012\Projects\McMonitor\McMonitor\McMonitor\bin\Debug\es\DevExpress.XtraPrinting.v14.2.resources.dll
+C:\Users\Dalai\Documents\Visual Studio 2012\Projects\McMonitor\McMonitor\McMonitor\bin\Debug\ja\DevExpress.XtraPrinting.v14.2.resources.dll
+C:\Users\Dalai\Documents\Visual Studio 2012\Projects\McMonitor\McMonitor\McMonitor\bin\Debug\ru\DevExpress.XtraPrinting.v14.2.resources.dll
+C:\Users\Dalai\Documents\Visual Studio 2012\Projects\McMonitor\McMonitor\McMonitor\bin\Debug\de\DevExpress.XtraReports.v14.2.resources.dll
+C:\Users\Dalai\Documents\Visual Studio 2012\Projects\McMonitor\McMonitor\McMonitor\bin\Debug\es\DevExpress.XtraReports.v14.2.resources.dll
+C:\Users\Dalai\Documents\Visual Studio 2012\Projects\McMonitor\McMonitor\McMonitor\bin\Debug\ja\DevExpress.XtraReports.v14.2.resources.dll
+C:\Users\Dalai\Documents\Visual Studio 2012\Projects\McMonitor\McMonitor\McMonitor\bin\Debug\ru\DevExpress.XtraReports.v14.2.resources.dll
+C:\Users\Dalai\Documents\Visual Studio 2012\Projects\McMonitor\McMonitor\McMonitor\bin\Debug\de\DevExpress.XtraReports.v14.2.Extensions.resources.dll
+C:\Users\Dalai\Documents\Visual Studio 2012\Projects\McMonitor\McMonitor\McMonitor\bin\Debug\es\DevExpress.XtraReports.v14.2.Extensions.resources.dll
+C:\Users\Dalai\Documents\Visual Studio 2012\Projects\McMonitor\McMonitor\McMonitor\bin\Debug\ja\DevExpress.XtraReports.v14.2.Extensions.resources.dll
+C:\Users\Dalai\Documents\Visual Studio 2012\Projects\McMonitor\McMonitor\McMonitor\bin\Debug\ru\DevExpress.XtraReports.v14.2.Extensions.resources.dll
+C:\Users\Dalai\Documents\Visual Studio 2012\Projects\McMonitor\McMonitor\McMonitor\bin\Debug\de\DevExpress.XtraRichEdit.v14.2.resources.dll
+C:\Users\Dalai\Documents\Visual Studio 2012\Projects\McMonitor\McMonitor\McMonitor\bin\Debug\es\DevExpress.XtraRichEdit.v14.2.resources.dll
+C:\Users\Dalai\Documents\Visual Studio 2012\Projects\McMonitor\McMonitor\McMonitor\bin\Debug\ja\DevExpress.XtraRichEdit.v14.2.resources.dll
+C:\Users\Dalai\Documents\Visual Studio 2012\Projects\McMonitor\McMonitor\McMonitor\bin\Debug\ru\DevExpress.XtraRichEdit.v14.2.resources.dll
+C:\Users\Dalai\Documents\Visual Studio 2012\Projects\McMonitor\McMonitor\McMonitor\bin\Debug\de\DevExpress.XtraRichEdit.v14.2.Extensions.resources.dll
+C:\Users\Dalai\Documents\Visual Studio 2012\Projects\McMonitor\McMonitor\McMonitor\bin\Debug\es\DevExpress.XtraRichEdit.v14.2.Extensions.resources.dll
+C:\Users\Dalai\Documents\Visual Studio 2012\Projects\McMonitor\McMonitor\McMonitor\bin\Debug\ja\DevExpress.XtraRichEdit.v14.2.Extensions.resources.dll
+C:\Users\Dalai\Documents\Visual Studio 2012\Projects\McMonitor\McMonitor\McMonitor\bin\Debug\ru\DevExpress.XtraRichEdit.v14.2.Extensions.resources.dll
+C:\Users\Dalai\Documents\Visual Studio 2012\Projects\McMonitor\McMonitor\McMonitor\bin\Debug\de\DevExpress.XtraTreeList.v14.2.resources.dll
+C:\Users\Dalai\Documents\Visual Studio 2012\Projects\McMonitor\McMonitor\McMonitor\bin\Debug\es\DevExpress.XtraTreeList.v14.2.resources.dll
+C:\Users\Dalai\Documents\Visual Studio 2012\Projects\McMonitor\McMonitor\McMonitor\bin\Debug\ja\DevExpress.XtraTreeList.v14.2.resources.dll
+C:\Users\Dalai\Documents\Visual Studio 2012\Projects\McMonitor\McMonitor\McMonitor\bin\Debug\ru\DevExpress.XtraTreeList.v14.2.resources.dll
+C:\Users\Dalai\Documents\Visual Studio 2012\Projects\McMonitor\McMonitor\McMonitor\bin\Debug\de\DevExpress.XtraVerticalGrid.v14.2.resources.dll
+C:\Users\Dalai\Documents\Visual Studio 2012\Projects\McMonitor\McMonitor\McMonitor\bin\Debug\es\DevExpress.XtraVerticalGrid.v14.2.resources.dll
+C:\Users\Dalai\Documents\Visual Studio 2012\Projects\McMonitor\McMonitor\McMonitor\bin\Debug\ja\DevExpress.XtraVerticalGrid.v14.2.resources.dll
+C:\Users\Dalai\Documents\Visual Studio 2012\Projects\McMonitor\McMonitor\McMonitor\bin\Debug\ru\DevExpress.XtraVerticalGrid.v14.2.resources.dll
+C:\Users\Dalai\Documents\Visual Studio 2012\Projects\McMonitor\McMonitor\McMonitor\bin\Debug\icudt53.dll
+C:\Users\Dalai\Documents\Visual Studio 2012\Projects\McMonitor\McMonitor\McMonitor\bin\Debug\icuin53.dll
+C:\Users\Dalai\Documents\Visual Studio 2012\Projects\McMonitor\McMonitor\McMonitor\bin\Debug\icuuc53.dll
+C:\Users\Dalai\Documents\Visual Studio 2012\Projects\McMonitor\McMonitor\McMonitor\bin\Debug\libeay32.dll
+C:\Users\Dalai\Documents\Visual Studio 2012\Projects\McMonitor\McMonitor\McMonitor\bin\Debug\Qt5Core.dll
+C:\Users\Dalai\Documents\Visual Studio 2012\Projects\McMonitor\McMonitor\McMonitor\bin\Debug\Qt5Network.dll
+C:\Users\Dalai\Documents\Visual Studio 2012\Projects\McMonitor\McMonitor\McMonitor\bin\Debug\Qt5Script.dll
+C:\Users\Dalai\Documents\Visual Studio 2012\Projects\McMonitor\McMonitor\McMonitor\bin\Debug\Qt5Sql.dll
+C:\Users\Dalai\Documents\Visual Studio 2012\Projects\McMonitor\McMonitor\McMonitor\bin\Debug\sqldrivers\qsqlite.dll
+C:\Users\Dalai\Documents\Visual Studio 2012\Projects\McMonitor\McMonitor\McMonitor\bin\Debug\ssleay32.dll
+C:\Users\Dalai\Documents\Visual Studio 2012\Projects\McMonitor\McMonitor\McMonitor\bin\Debug\zxing.dll
+D:\MasterCafe\McMonitor\McMonitor\McMonitor\bin\Debug\McMonitor.exe.config
+D:\MasterCafe\McMonitor\McMonitor\McMonitor\obj\Debug\McMonitor.exe
+D:\MasterCafe\McMonitor\McMonitor\McMonitor\obj\Debug\McMonitor.pdb
+D:\MasterCafe\McMonitor\McMonitor\McMonitor\bin\Debug\icudt53.dll
+D:\MasterCafe\McMonitor\McMonitor\McMonitor\bin\Debug\icuin53.dll
+D:\MasterCafe\McMonitor\McMonitor\McMonitor\bin\Debug\icuuc53.dll
+D:\MasterCafe\McMonitor\McMonitor\McMonitor\bin\Debug\libeay32.dll
+D:\MasterCafe\McMonitor\McMonitor\McMonitor\bin\Debug\Qt5Core.dll
+D:\MasterCafe\McMonitor\McMonitor\McMonitor\bin\Debug\Qt5Network.dll
+D:\MasterCafe\McMonitor\McMonitor\McMonitor\bin\Debug\Qt5Script.dll
+D:\MasterCafe\McMonitor\McMonitor\McMonitor\bin\Debug\Qt5Sql.dll
+D:\MasterCafe\McMonitor\McMonitor\McMonitor\bin\Debug\sqldrivers\qsqlite.dll
+D:\MasterCafe\McMonitor\McMonitor\McMonitor\bin\Debug\ssleay32.dll
+D:\MasterCafe\McMonitor\McMonitor\McMonitor\bin\Debug\zxing.dll
+D:\MasterCafe\McMonitor\McMonitor\McMonitor\bin\Debug\McMonitor.exe
+D:\MasterCafe\McMonitor\McMonitor\McMonitor\bin\Debug\McMonitor.pdb
+D:\MasterCafe\McMonitor\McMonitor\McMonitor\bin\Debug\DevExpress.BonusSkins.v14.2.dll
+D:\MasterCafe\McMonitor\McMonitor\McMonitor\bin\Debug\DevExpress.Charts.v14.2.Core.dll
+D:\MasterCafe\McMonitor\McMonitor\McMonitor\bin\Debug\DevExpress.CodeParser.v14.2.dll
+D:\MasterCafe\McMonitor\McMonitor\McMonitor\bin\Debug\DevExpress.Dashboard.v14.2.Core.dll
+D:\MasterCafe\McMonitor\McMonitor\McMonitor\bin\Debug\DevExpress.Dashboard.v14.2.Win.dll
+D:\MasterCafe\McMonitor\McMonitor\McMonitor\bin\Debug\DevExpress.Data.v14.2.dll
+D:\MasterCafe\McMonitor\McMonitor\McMonitor\bin\Debug\DevExpress.DataAccess.v14.2.dll
+D:\MasterCafe\McMonitor\McMonitor\McMonitor\bin\Debug\DevExpress.DataAccess.v14.2.UI.dll
+D:\MasterCafe\McMonitor\McMonitor\McMonitor\bin\Debug\DevExpress.Map.v14.2.Core.dll
+D:\MasterCafe\McMonitor\McMonitor\McMonitor\bin\Debug\DevExpress.Mvvm.v14.2.dll
+D:\MasterCafe\McMonitor\McMonitor\McMonitor\bin\Debug\DevExpress.Office.v14.2.Core.dll
+D:\MasterCafe\McMonitor\McMonitor\McMonitor\bin\Debug\DevExpress.PivotGrid.v14.2.Core.dll
+D:\MasterCafe\McMonitor\McMonitor\McMonitor\bin\Debug\DevExpress.Printing.v14.2.Core.dll
+D:\MasterCafe\McMonitor\McMonitor\McMonitor\bin\Debug\DevExpress.RichEdit.v14.2.Core.dll
+D:\MasterCafe\McMonitor\McMonitor\McMonitor\bin\Debug\DevExpress.Snap.v14.2.Core.dll
+D:\MasterCafe\McMonitor\McMonitor\McMonitor\bin\Debug\DevExpress.Snap.v14.2.dll
+D:\MasterCafe\McMonitor\McMonitor\McMonitor\bin\Debug\DevExpress.Snap.v14.2.Extensions.dll
+D:\MasterCafe\McMonitor\McMonitor\McMonitor\bin\Debug\DevExpress.Sparkline.v14.2.Core.dll
+D:\MasterCafe\McMonitor\McMonitor\McMonitor\bin\Debug\DevExpress.Utils.v14.2.dll
+D:\MasterCafe\McMonitor\McMonitor\McMonitor\bin\Debug\DevExpress.Utils.v14.2.UI.dll
+D:\MasterCafe\McMonitor\McMonitor\McMonitor\bin\Debug\DevExpress.Xpo.v14.2.dll
+D:\MasterCafe\McMonitor\McMonitor\McMonitor\bin\Debug\DevExpress.XtraBars.v14.2.dll
+D:\MasterCafe\McMonitor\McMonitor\McMonitor\bin\Debug\DevExpress.XtraCharts.v14.2.dll
+D:\MasterCafe\McMonitor\McMonitor\McMonitor\bin\Debug\DevExpress.XtraCharts.v14.2.Extensions.dll
+D:\MasterCafe\McMonitor\McMonitor\McMonitor\bin\Debug\DevExpress.XtraCharts.v14.2.UI.dll
+D:\MasterCafe\McMonitor\McMonitor\McMonitor\bin\Debug\DevExpress.XtraCharts.v14.2.Wizard.dll
+D:\MasterCafe\McMonitor\McMonitor\McMonitor\bin\Debug\DevExpress.XtraEditors.v14.2.dll
+D:\MasterCafe\McMonitor\McMonitor\McMonitor\bin\Debug\DevExpress.XtraGauges.v14.2.Core.dll
+D:\MasterCafe\McMonitor\McMonitor\McMonitor\bin\Debug\DevExpress.XtraGauges.v14.2.Win.dll
+D:\MasterCafe\McMonitor\McMonitor\McMonitor\bin\Debug\DevExpress.XtraGrid.v14.2.dll
+D:\MasterCafe\McMonitor\McMonitor\McMonitor\bin\Debug\DevExpress.XtraLayout.v14.2.dll
+D:\MasterCafe\McMonitor\McMonitor\McMonitor\bin\Debug\DevExpress.XtraMap.v14.2.dll
+D:\MasterCafe\McMonitor\McMonitor\McMonitor\bin\Debug\DevExpress.XtraNavBar.v14.2.dll
+D:\MasterCafe\McMonitor\McMonitor\McMonitor\bin\Debug\DevExpress.XtraPivotGrid.v14.2.dll
+D:\MasterCafe\McMonitor\McMonitor\McMonitor\bin\Debug\DevExpress.XtraPrinting.v14.2.dll
+D:\MasterCafe\McMonitor\McMonitor\McMonitor\bin\Debug\DevExpress.XtraReports.v14.2.dll
+D:\MasterCafe\McMonitor\McMonitor\McMonitor\bin\Debug\DevExpress.XtraReports.v14.2.Extensions.dll
+D:\MasterCafe\McMonitor\McMonitor\McMonitor\bin\Debug\DevExpress.XtraRichEdit.v14.2.dll
+D:\MasterCafe\McMonitor\McMonitor\McMonitor\bin\Debug\DevExpress.XtraRichEdit.v14.2.Extensions.dll
+D:\MasterCafe\McMonitor\McMonitor\McMonitor\bin\Debug\DevExpress.XtraTreeList.v14.2.dll
+D:\MasterCafe\McMonitor\McMonitor\McMonitor\bin\Debug\DevExpress.XtraVerticalGrid.v14.2.dll
+D:\MasterCafe\McMonitor\McMonitor\McMonitor\bin\Debug\DevExpress.Dashboard.v14.2.Core.xml
+D:\MasterCafe\McMonitor\McMonitor\McMonitor\bin\Debug\DevExpress.Dashboard.v14.2.Win.xml
+D:\MasterCafe\McMonitor\McMonitor\McMonitor\bin\Debug\DevExpress.Data.v14.2.xml
+D:\MasterCafe\McMonitor\McMonitor\McMonitor\bin\Debug\DevExpress.DataAccess.v14.2.xml
+D:\MasterCafe\McMonitor\McMonitor\McMonitor\bin\Debug\DevExpress.DataAccess.v14.2.UI.xml
+D:\MasterCafe\McMonitor\McMonitor\McMonitor\bin\Debug\DevExpress.Map.v14.2.Core.xml
+D:\MasterCafe\McMonitor\McMonitor\McMonitor\bin\Debug\DevExpress.Mvvm.v14.2.xml
+D:\MasterCafe\McMonitor\McMonitor\McMonitor\bin\Debug\DevExpress.Office.v14.2.Core.xml
+D:\MasterCafe\McMonitor\McMonitor\McMonitor\bin\Debug\DevExpress.PivotGrid.v14.2.Core.xml
+D:\MasterCafe\McMonitor\McMonitor\McMonitor\bin\Debug\DevExpress.Printing.v14.2.Core.xml
+D:\MasterCafe\McMonitor\McMonitor\McMonitor\bin\Debug\DevExpress.RichEdit.v14.2.Core.xml
+D:\MasterCafe\McMonitor\McMonitor\McMonitor\bin\Debug\DevExpress.Snap.v14.2.xml
+D:\MasterCafe\McMonitor\McMonitor\McMonitor\bin\Debug\DevExpress.Snap.v14.2.Core.xml
+D:\MasterCafe\McMonitor\McMonitor\McMonitor\bin\Debug\DevExpress.Snap.v14.2.Extensions.xml
+D:\MasterCafe\McMonitor\McMonitor\McMonitor\bin\Debug\DevExpress.Utils.v14.2.xml
+D:\MasterCafe\McMonitor\McMonitor\McMonitor\bin\Debug\DevExpress.Sparkline.v14.2.Core.xml
+D:\MasterCafe\McMonitor\McMonitor\McMonitor\bin\Debug\DevExpress.Utils.v14.2.UI.xml
+D:\MasterCafe\McMonitor\McMonitor\McMonitor\bin\Debug\DevExpress.Xpo.v14.2.xml
+D:\MasterCafe\McMonitor\McMonitor\McMonitor\bin\Debug\DevExpress.XtraBars.v14.2.xml
+D:\MasterCafe\McMonitor\McMonitor\McMonitor\bin\Debug\DevExpress.XtraCharts.v14.2.xml
+D:\MasterCafe\McMonitor\McMonitor\McMonitor\bin\Debug\DevExpress.XtraCharts.v14.2.UI.xml
+D:\MasterCafe\McMonitor\McMonitor\McMonitor\bin\Debug\DevExpress.XtraCharts.v14.2.Wizard.xml
+D:\MasterCafe\McMonitor\McMonitor\McMonitor\bin\Debug\DevExpress.XtraEditors.v14.2.xml
+D:\MasterCafe\McMonitor\McMonitor\McMonitor\bin\Debug\DevExpress.XtraGauges.v14.2.Core.xml
+D:\MasterCafe\McMonitor\McMonitor\McMonitor\bin\Debug\DevExpress.XtraGauges.v14.2.Win.xml
+D:\MasterCafe\McMonitor\McMonitor\McMonitor\bin\Debug\DevExpress.XtraGrid.v14.2.xml
+D:\MasterCafe\McMonitor\McMonitor\McMonitor\bin\Debug\DevExpress.XtraLayout.v14.2.xml
+D:\MasterCafe\McMonitor\McMonitor\McMonitor\bin\Debug\DevExpress.XtraMap.v14.2.xml
+D:\MasterCafe\McMonitor\McMonitor\McMonitor\bin\Debug\DevExpress.XtraNavBar.v14.2.xml
+D:\MasterCafe\McMonitor\McMonitor\McMonitor\bin\Debug\DevExpress.XtraPivotGrid.v14.2.xml
+D:\MasterCafe\McMonitor\McMonitor\McMonitor\bin\Debug\DevExpress.XtraPrinting.v14.2.xml
+D:\MasterCafe\McMonitor\McMonitor\McMonitor\bin\Debug\DevExpress.XtraReports.v14.2.xml
+D:\MasterCafe\McMonitor\McMonitor\McMonitor\bin\Debug\DevExpress.XtraReports.v14.2.Extensions.xml
+D:\MasterCafe\McMonitor\McMonitor\McMonitor\bin\Debug\DevExpress.XtraRichEdit.v14.2.xml
+D:\MasterCafe\McMonitor\McMonitor\McMonitor\bin\Debug\DevExpress.XtraRichEdit.v14.2.Extensions.xml
+D:\MasterCafe\McMonitor\McMonitor\McMonitor\bin\Debug\DevExpress.XtraTreeList.v14.2.xml
+D:\MasterCafe\McMonitor\McMonitor\McMonitor\bin\Debug\DevExpress.XtraVerticalGrid.v14.2.xml
+D:\MasterCafe\McMonitor\McMonitor\McMonitor\bin\Debug\de\DevExpress.Dashboard.v14.2.Core.resources.dll
+D:\MasterCafe\McMonitor\McMonitor\McMonitor\bin\Debug\es\DevExpress.Dashboard.v14.2.Core.resources.dll
+D:\MasterCafe\McMonitor\McMonitor\McMonitor\bin\Debug\ja\DevExpress.Dashboard.v14.2.Core.resources.dll
+D:\MasterCafe\McMonitor\McMonitor\McMonitor\bin\Debug\ru\DevExpress.Dashboard.v14.2.Core.resources.dll
+D:\MasterCafe\McMonitor\McMonitor\McMonitor\bin\Debug\de\DevExpress.Dashboard.v14.2.Win.resources.dll
+D:\MasterCafe\McMonitor\McMonitor\McMonitor\bin\Debug\es\DevExpress.Dashboard.v14.2.Win.resources.dll
+D:\MasterCafe\McMonitor\McMonitor\McMonitor\bin\Debug\ja\DevExpress.Dashboard.v14.2.Win.resources.dll
+D:\MasterCafe\McMonitor\McMonitor\McMonitor\bin\Debug\ru\DevExpress.Dashboard.v14.2.Win.resources.dll
+D:\MasterCafe\McMonitor\McMonitor\McMonitor\bin\Debug\de\DevExpress.Data.v14.2.resources.dll
+D:\MasterCafe\McMonitor\McMonitor\McMonitor\bin\Debug\es\DevExpress.Data.v14.2.resources.dll
+D:\MasterCafe\McMonitor\McMonitor\McMonitor\bin\Debug\ja\DevExpress.Data.v14.2.resources.dll
+D:\MasterCafe\McMonitor\McMonitor\McMonitor\bin\Debug\ru\DevExpress.Data.v14.2.resources.dll
+D:\MasterCafe\McMonitor\McMonitor\McMonitor\bin\Debug\de\DevExpress.DataAccess.v14.2.resources.dll
+D:\MasterCafe\McMonitor\McMonitor\McMonitor\bin\Debug\es\DevExpress.DataAccess.v14.2.resources.dll
+D:\MasterCafe\McMonitor\McMonitor\McMonitor\bin\Debug\ja\DevExpress.DataAccess.v14.2.resources.dll
+D:\MasterCafe\McMonitor\McMonitor\McMonitor\bin\Debug\ru\DevExpress.DataAccess.v14.2.resources.dll
+D:\MasterCafe\McMonitor\McMonitor\McMonitor\bin\Debug\de\DevExpress.DataAccess.v14.2.UI.resources.dll
+D:\MasterCafe\McMonitor\McMonitor\McMonitor\bin\Debug\es\DevExpress.DataAccess.v14.2.UI.resources.dll
+D:\MasterCafe\McMonitor\McMonitor\McMonitor\bin\Debug\ja\DevExpress.DataAccess.v14.2.UI.resources.dll
+D:\MasterCafe\McMonitor\McMonitor\McMonitor\bin\Debug\ru\DevExpress.DataAccess.v14.2.UI.resources.dll
+D:\MasterCafe\McMonitor\McMonitor\McMonitor\bin\Debug\de\DevExpress.Map.v14.2.Core.resources.dll
+D:\MasterCafe\McMonitor\McMonitor\McMonitor\bin\Debug\es\DevExpress.Map.v14.2.Core.resources.dll
+D:\MasterCafe\McMonitor\McMonitor\McMonitor\bin\Debug\ja\DevExpress.Map.v14.2.Core.resources.dll
+D:\MasterCafe\McMonitor\McMonitor\McMonitor\bin\Debug\ru\DevExpress.Map.v14.2.Core.resources.dll
+D:\MasterCafe\McMonitor\McMonitor\McMonitor\bin\Debug\de\DevExpress.Office.v14.2.Core.resources.dll
+D:\MasterCafe\McMonitor\McMonitor\McMonitor\bin\Debug\es\DevExpress.Office.v14.2.Core.resources.dll
+D:\MasterCafe\McMonitor\McMonitor\McMonitor\bin\Debug\ja\DevExpress.Office.v14.2.Core.resources.dll
+D:\MasterCafe\McMonitor\McMonitor\McMonitor\bin\Debug\ru\DevExpress.Office.v14.2.Core.resources.dll
+D:\MasterCafe\McMonitor\McMonitor\McMonitor\bin\Debug\de\DevExpress.PivotGrid.v14.2.Core.resources.dll
+D:\MasterCafe\McMonitor\McMonitor\McMonitor\bin\Debug\es\DevExpress.PivotGrid.v14.2.Core.resources.dll
+D:\MasterCafe\McMonitor\McMonitor\McMonitor\bin\Debug\ja\DevExpress.PivotGrid.v14.2.Core.resources.dll
+D:\MasterCafe\McMonitor\McMonitor\McMonitor\bin\Debug\ru\DevExpress.PivotGrid.v14.2.Core.resources.dll
+D:\MasterCafe\McMonitor\McMonitor\McMonitor\bin\Debug\de\DevExpress.Printing.v14.2.Core.resources.dll
+D:\MasterCafe\McMonitor\McMonitor\McMonitor\bin\Debug\es\DevExpress.Printing.v14.2.Core.resources.dll
+D:\MasterCafe\McMonitor\McMonitor\McMonitor\bin\Debug\ja\DevExpress.Printing.v14.2.Core.resources.dll
+D:\MasterCafe\McMonitor\McMonitor\McMonitor\bin\Debug\ru\DevExpress.Printing.v14.2.Core.resources.dll
+D:\MasterCafe\McMonitor\McMonitor\McMonitor\bin\Debug\de\DevExpress.RichEdit.v14.2.Core.resources.dll
+D:\MasterCafe\McMonitor\McMonitor\McMonitor\bin\Debug\es\DevExpress.RichEdit.v14.2.Core.resources.dll
+D:\MasterCafe\McMonitor\McMonitor\McMonitor\bin\Debug\ja\DevExpress.RichEdit.v14.2.Core.resources.dll
+D:\MasterCafe\McMonitor\McMonitor\McMonitor\bin\Debug\ru\DevExpress.RichEdit.v14.2.Core.resources.dll
+D:\MasterCafe\McMonitor\McMonitor\McMonitor\bin\Debug\de\DevExpress.Snap.v14.2.resources.dll
+D:\MasterCafe\McMonitor\McMonitor\McMonitor\bin\Debug\es\DevExpress.Snap.v14.2.resources.dll
+D:\MasterCafe\McMonitor\McMonitor\McMonitor\bin\Debug\ja\DevExpress.Snap.v14.2.resources.dll
+D:\MasterCafe\McMonitor\McMonitor\McMonitor\bin\Debug\ru\DevExpress.Snap.v14.2.resources.dll
+D:\MasterCafe\McMonitor\McMonitor\McMonitor\bin\Debug\de\DevExpress.Snap.v14.2.Core.resources.dll
+D:\MasterCafe\McMonitor\McMonitor\McMonitor\bin\Debug\es\DevExpress.Snap.v14.2.Core.resources.dll
+D:\MasterCafe\McMonitor\McMonitor\McMonitor\bin\Debug\ja\DevExpress.Snap.v14.2.Core.resources.dll
+D:\MasterCafe\McMonitor\McMonitor\McMonitor\bin\Debug\ru\DevExpress.Snap.v14.2.Core.resources.dll
+D:\MasterCafe\McMonitor\McMonitor\McMonitor\bin\Debug\de\DevExpress.Snap.v14.2.Extensions.resources.dll
+D:\MasterCafe\McMonitor\McMonitor\McMonitor\bin\Debug\es\DevExpress.Snap.v14.2.Extensions.resources.dll
+D:\MasterCafe\McMonitor\McMonitor\McMonitor\bin\Debug\ja\DevExpress.Snap.v14.2.Extensions.resources.dll
+D:\MasterCafe\McMonitor\McMonitor\McMonitor\bin\Debug\ru\DevExpress.Snap.v14.2.Extensions.resources.dll
+D:\MasterCafe\McMonitor\McMonitor\McMonitor\bin\Debug\de\DevExpress.Utils.v14.2.resources.dll
+D:\MasterCafe\McMonitor\McMonitor\McMonitor\bin\Debug\es\DevExpress.Utils.v14.2.resources.dll
+D:\MasterCafe\McMonitor\McMonitor\McMonitor\bin\Debug\ja\DevExpress.Utils.v14.2.resources.dll
+D:\MasterCafe\McMonitor\McMonitor\McMonitor\bin\Debug\ru\DevExpress.Utils.v14.2.resources.dll
+D:\MasterCafe\McMonitor\McMonitor\McMonitor\bin\Debug\de\DevExpress.Sparkline.v14.2.Core.resources.dll
+D:\MasterCafe\McMonitor\McMonitor\McMonitor\bin\Debug\es\DevExpress.Sparkline.v14.2.Core.resources.dll
+D:\MasterCafe\McMonitor\McMonitor\McMonitor\bin\Debug\ja\DevExpress.Sparkline.v14.2.Core.resources.dll
+D:\MasterCafe\McMonitor\McMonitor\McMonitor\bin\Debug\ru\DevExpress.Sparkline.v14.2.Core.resources.dll
+D:\MasterCafe\McMonitor\McMonitor\McMonitor\bin\Debug\de\DevExpress.Utils.v14.2.UI.resources.dll
+D:\MasterCafe\McMonitor\McMonitor\McMonitor\bin\Debug\es\DevExpress.Utils.v14.2.UI.resources.dll
+D:\MasterCafe\McMonitor\McMonitor\McMonitor\bin\Debug\ja\DevExpress.Utils.v14.2.UI.resources.dll
+D:\MasterCafe\McMonitor\McMonitor\McMonitor\bin\Debug\ru\DevExpress.Utils.v14.2.UI.resources.dll
+D:\MasterCafe\McMonitor\McMonitor\McMonitor\bin\Debug\de\DevExpress.Xpo.v14.2.resources.dll
+D:\MasterCafe\McMonitor\McMonitor\McMonitor\bin\Debug\es\DevExpress.Xpo.v14.2.resources.dll
+D:\MasterCafe\McMonitor\McMonitor\McMonitor\bin\Debug\ja\DevExpress.Xpo.v14.2.resources.dll
+D:\MasterCafe\McMonitor\McMonitor\McMonitor\bin\Debug\ru\DevExpress.Xpo.v14.2.resources.dll
+D:\MasterCafe\McMonitor\McMonitor\McMonitor\bin\Debug\de\DevExpress.XtraBars.v14.2.resources.dll
+D:\MasterCafe\McMonitor\McMonitor\McMonitor\bin\Debug\es\DevExpress.XtraBars.v14.2.resources.dll
+D:\MasterCafe\McMonitor\McMonitor\McMonitor\bin\Debug\ja\DevExpress.XtraBars.v14.2.resources.dll
+D:\MasterCafe\McMonitor\McMonitor\McMonitor\bin\Debug\ru\DevExpress.XtraBars.v14.2.resources.dll
+D:\MasterCafe\McMonitor\McMonitor\McMonitor\bin\Debug\de\DevExpress.XtraCharts.v14.2.resources.dll
+D:\MasterCafe\McMonitor\McMonitor\McMonitor\bin\Debug\es\DevExpress.XtraCharts.v14.2.resources.dll
+D:\MasterCafe\McMonitor\McMonitor\McMonitor\bin\Debug\ja\DevExpress.XtraCharts.v14.2.resources.dll
+D:\MasterCafe\McMonitor\McMonitor\McMonitor\bin\Debug\ru\DevExpress.XtraCharts.v14.2.resources.dll
+D:\MasterCafe\McMonitor\McMonitor\McMonitor\bin\Debug\de\DevExpress.XtraCharts.v14.2.Wizard.resources.dll
+D:\MasterCafe\McMonitor\McMonitor\McMonitor\bin\Debug\es\DevExpress.XtraCharts.v14.2.Wizard.resources.dll
+D:\MasterCafe\McMonitor\McMonitor\McMonitor\bin\Debug\ja\DevExpress.XtraCharts.v14.2.Wizard.resources.dll
+D:\MasterCafe\McMonitor\McMonitor\McMonitor\bin\Debug\ru\DevExpress.XtraCharts.v14.2.Wizard.resources.dll
+D:\MasterCafe\McMonitor\McMonitor\McMonitor\bin\Debug\de\DevExpress.XtraEditors.v14.2.resources.dll
+D:\MasterCafe\McMonitor\McMonitor\McMonitor\bin\Debug\es\DevExpress.XtraEditors.v14.2.resources.dll
+D:\MasterCafe\McMonitor\McMonitor\McMonitor\bin\Debug\ja\DevExpress.XtraEditors.v14.2.resources.dll
+D:\MasterCafe\McMonitor\McMonitor\McMonitor\bin\Debug\ru\DevExpress.XtraEditors.v14.2.resources.dll
+D:\MasterCafe\McMonitor\McMonitor\McMonitor\bin\Debug\de\DevExpress.XtraGauges.v14.2.Core.resources.dll
+D:\MasterCafe\McMonitor\McMonitor\McMonitor\bin\Debug\es\DevExpress.XtraGauges.v14.2.Core.resources.dll
+D:\MasterCafe\McMonitor\McMonitor\McMonitor\bin\Debug\ja\DevExpress.XtraGauges.v14.2.Core.resources.dll
+D:\MasterCafe\McMonitor\McMonitor\McMonitor\bin\Debug\ru\DevExpress.XtraGauges.v14.2.Core.resources.dll
+D:\MasterCafe\McMonitor\McMonitor\McMonitor\bin\Debug\de\DevExpress.XtraGrid.v14.2.resources.dll
+D:\MasterCafe\McMonitor\McMonitor\McMonitor\bin\Debug\es\DevExpress.XtraGrid.v14.2.resources.dll
+D:\MasterCafe\McMonitor\McMonitor\McMonitor\bin\Debug\ja\DevExpress.XtraGrid.v14.2.resources.dll
+D:\MasterCafe\McMonitor\McMonitor\McMonitor\bin\Debug\ru\DevExpress.XtraGrid.v14.2.resources.dll
+D:\MasterCafe\McMonitor\McMonitor\McMonitor\bin\Debug\de\DevExpress.XtraLayout.v14.2.resources.dll
+D:\MasterCafe\McMonitor\McMonitor\McMonitor\bin\Debug\es\DevExpress.XtraLayout.v14.2.resources.dll
+D:\MasterCafe\McMonitor\McMonitor\McMonitor\bin\Debug\ja\DevExpress.XtraLayout.v14.2.resources.dll
+D:\MasterCafe\McMonitor\McMonitor\McMonitor\bin\Debug\ru\DevExpress.XtraLayout.v14.2.resources.dll
+D:\MasterCafe\McMonitor\McMonitor\McMonitor\bin\Debug\de\DevExpress.XtraNavBar.v14.2.resources.dll
+D:\MasterCafe\McMonitor\McMonitor\McMonitor\bin\Debug\es\DevExpress.XtraNavBar.v14.2.resources.dll
+D:\MasterCafe\McMonitor\McMonitor\McMonitor\bin\Debug\ja\DevExpress.XtraNavBar.v14.2.resources.dll
+D:\MasterCafe\McMonitor\McMonitor\McMonitor\bin\Debug\ru\DevExpress.XtraNavBar.v14.2.resources.dll
+D:\MasterCafe\McMonitor\McMonitor\McMonitor\bin\Debug\de\DevExpress.XtraPivotGrid.v14.2.resources.dll
+D:\MasterCafe\McMonitor\McMonitor\McMonitor\bin\Debug\es\DevExpress.XtraPivotGrid.v14.2.resources.dll
+D:\MasterCafe\McMonitor\McMonitor\McMonitor\bin\Debug\ja\DevExpress.XtraPivotGrid.v14.2.resources.dll
+D:\MasterCafe\McMonitor\McMonitor\McMonitor\bin\Debug\ru\DevExpress.XtraPivotGrid.v14.2.resources.dll
+D:\MasterCafe\McMonitor\McMonitor\McMonitor\bin\Debug\de\DevExpress.XtraPrinting.v14.2.resources.dll
+D:\MasterCafe\McMonitor\McMonitor\McMonitor\bin\Debug\es\DevExpress.XtraPrinting.v14.2.resources.dll
+D:\MasterCafe\McMonitor\McMonitor\McMonitor\bin\Debug\ja\DevExpress.XtraPrinting.v14.2.resources.dll
+D:\MasterCafe\McMonitor\McMonitor\McMonitor\bin\Debug\ru\DevExpress.XtraPrinting.v14.2.resources.dll
+D:\MasterCafe\McMonitor\McMonitor\McMonitor\bin\Debug\de\DevExpress.XtraReports.v14.2.resources.dll
+D:\MasterCafe\McMonitor\McMonitor\McMonitor\bin\Debug\es\DevExpress.XtraReports.v14.2.resources.dll
+D:\MasterCafe\McMonitor\McMonitor\McMonitor\bin\Debug\ja\DevExpress.XtraReports.v14.2.resources.dll
+D:\MasterCafe\McMonitor\McMonitor\McMonitor\bin\Debug\ru\DevExpress.XtraReports.v14.2.resources.dll
+D:\MasterCafe\McMonitor\McMonitor\McMonitor\bin\Debug\de\DevExpress.XtraReports.v14.2.Extensions.resources.dll
+D:\MasterCafe\McMonitor\McMonitor\McMonitor\bin\Debug\es\DevExpress.XtraReports.v14.2.Extensions.resources.dll
+D:\MasterCafe\McMonitor\McMonitor\McMonitor\bin\Debug\ja\DevExpress.XtraReports.v14.2.Extensions.resources.dll
+D:\MasterCafe\McMonitor\McMonitor\McMonitor\bin\Debug\ru\DevExpress.XtraReports.v14.2.Extensions.resources.dll
+D:\MasterCafe\McMonitor\McMonitor\McMonitor\bin\Debug\de\DevExpress.XtraRichEdit.v14.2.resources.dll
+D:\MasterCafe\McMonitor\McMonitor\McMonitor\bin\Debug\es\DevExpress.XtraRichEdit.v14.2.resources.dll
+D:\MasterCafe\McMonitor\McMonitor\McMonitor\bin\Debug\ja\DevExpress.XtraRichEdit.v14.2.resources.dll
+D:\MasterCafe\McMonitor\McMonitor\McMonitor\bin\Debug\ru\DevExpress.XtraRichEdit.v14.2.resources.dll
+D:\MasterCafe\McMonitor\McMonitor\McMonitor\bin\Debug\de\DevExpress.XtraRichEdit.v14.2.Extensions.resources.dll
+D:\MasterCafe\McMonitor\McMonitor\McMonitor\bin\Debug\es\DevExpress.XtraRichEdit.v14.2.Extensions.resources.dll
+D:\MasterCafe\McMonitor\McMonitor\McMonitor\bin\Debug\ja\DevExpress.XtraRichEdit.v14.2.Extensions.resources.dll
+D:\MasterCafe\McMonitor\McMonitor\McMonitor\bin\Debug\ru\DevExpress.XtraRichEdit.v14.2.Extensions.resources.dll
+D:\MasterCafe\McMonitor\McMonitor\McMonitor\bin\Debug\de\DevExpress.XtraTreeList.v14.2.resources.dll
+D:\MasterCafe\McMonitor\McMonitor\McMonitor\bin\Debug\es\DevExpress.XtraTreeList.v14.2.resources.dll
+D:\MasterCafe\McMonitor\McMonitor\McMonitor\bin\Debug\ja\DevExpress.XtraTreeList.v14.2.resources.dll
+D:\MasterCafe\McMonitor\McMonitor\McMonitor\bin\Debug\ru\DevExpress.XtraTreeList.v14.2.resources.dll
+D:\MasterCafe\McMonitor\McMonitor\McMonitor\bin\Debug\de\DevExpress.XtraVerticalGrid.v14.2.resources.dll
+D:\MasterCafe\McMonitor\McMonitor\McMonitor\bin\Debug\es\DevExpress.XtraVerticalGrid.v14.2.resources.dll
+D:\MasterCafe\McMonitor\McMonitor\McMonitor\bin\Debug\ja\DevExpress.XtraVerticalGrid.v14.2.resources.dll
+D:\MasterCafe\McMonitor\McMonitor\McMonitor\bin\Debug\ru\DevExpress.XtraVerticalGrid.v14.2.resources.dll
+D:\MasterCafe\McMonitor\McMonitor\McMonitor\obj\Debug\McMonitor.csprojResolveAssemblyReference.cache
+D:\MasterCafe\McMonitor\McMonitor\McMonitor\obj\Debug\McMonitor.addmember.resources
+D:\MasterCafe\McMonitor\McMonitor\McMonitor\obj\Debug\McMonitor.addTimez.resources
+D:\MasterCafe\McMonitor\McMonitor\McMonitor\obj\Debug\McMonitor.cgroup.resources
+D:\MasterCafe\McMonitor\McMonitor\McMonitor\obj\Debug\McMonitor.changepc.resources
+D:\MasterCafe\McMonitor\McMonitor\McMonitor\obj\Debug\McMonitor.chargemember.resources
+D:\MasterCafe\McMonitor\McMonitor\McMonitor\obj\Debug\McMonitor.editmember.resources
+D:\MasterCafe\McMonitor\McMonitor\McMonitor\obj\Debug\McMonitor.Money.resources
+D:\MasterCafe\McMonitor\McMonitor\McMonitor\obj\Debug\McMonitor.timetemplate.resources
+D:\MasterCafe\McMonitor\McMonitor\McMonitor\obj\Debug\McMonitor.transfer.resources
+D:\MasterCafe\McMonitor\McMonitor\McMonitor\obj\Debug\McMonitor.XtraReport_clienthours.resources
+D:\MasterCafe\McMonitor\McMonitor\McMonitor\obj\Debug\McMonitor.XtraReport_client_member.resources
+D:\MasterCafe\McMonitor\McMonitor\McMonitor\obj\Debug\McMonitor.XtraReport_client_timecode.resources
+D:\MasterCafe\McMonitor\McMonitor\McMonitor\obj\Debug\McMonitor.XtraReport_employee_member.resources
+D:\MasterCafe\McMonitor\McMonitor\McMonitor\obj\Debug\McMonitor.XtraReport_emptimecode.resources
+D:\MasterCafe\McMonitor\McMonitor\McMonitor\obj\Debug\McMonitor.XtraReport_orlogo.resources
+D:\MasterCafe\McMonitor\McMonitor\McMonitor\obj\Debug\McMonitor.XtraReport_topmember.resources
+D:\MasterCafe\McMonitor\McMonitor\McMonitor\obj\Debug\McMonitor.addGroup.resources
+D:\MasterCafe\McMonitor\McMonitor\McMonitor\obj\Debug\McMonitor.Connecting.resources
+D:\MasterCafe\McMonitor\McMonitor\McMonitor\obj\Debug\McMonitor.FrmAddEmp.resources
+D:\MasterCafe\McMonitor\McMonitor\McMonitor\obj\Debug\McMonitor.FrmBan.resources
+D:\MasterCafe\McMonitor\McMonitor\McMonitor\obj\Debug\McMonitor.IP.resources
+D:\MasterCafe\McMonitor\McMonitor\McMonitor\obj\Debug\McMonitor.IPAddressTextBox.resources
+D:\MasterCafe\McMonitor\McMonitor\McMonitor\obj\Debug\McMonitor.Label_type.resources
+D:\MasterCafe\McMonitor\McMonitor\McMonitor\obj\Debug\McMonitor.Login.resources
+D:\MasterCafe\McMonitor\McMonitor\McMonitor\obj\Debug\McMonitor.Mainfrm.resources
+D:\MasterCafe\McMonitor\McMonitor\McMonitor\obj\Debug\McMonitor.msg.resources
+D:\MasterCafe\McMonitor\McMonitor\McMonitor\obj\Debug\McMonitor.Password.resources
+D:\MasterCafe\McMonitor\McMonitor\McMonitor\obj\Debug\McMonitor.Properties.Resources.resources
+D:\MasterCafe\McMonitor\McMonitor\McMonitor\obj\Debug\McMonitor.csproj.GenerateResource.Cache
+D:\MasterCafe\McMonitor\McMonitor\McMonitor\obj\Debug\McMonitor.exe.licenses
