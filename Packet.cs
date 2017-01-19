@@ -5,14 +5,6 @@ using System.Text;
 
 namespace Monitor
 {
-    public class gconfig
-    {
-        public bool load = false;
-        public int version;
-        public string speedtesturl;
-        public int speedtestsize;
-    }
-
     public class Packet
     {
         public string id;

@@ -36,7 +36,7 @@ namespace Monitor
         public static string serverip = "127.0.0.1";
         private System.Timers.Timer server_timer;
         private System.Timers.Timer client_timerstats;
-        private System.Timers.Timer speed_timer;
+        
         private int connecttimeout = 0;
         private bool connected = false;
         Connecting connecting;
@@ -294,20 +294,7 @@ namespace Monitor
                 {
                     cfg.idle_minute = 5;
                 }
-                //try
-                //{
-                    WebClient wc = new WebClient();
-                    gcfg = Newtonsoft.Json.JsonConvert.DeserializeObject<gconfig>(wc.DownloadString("http://" + host + "/api/version.php"));
 
-                //}
-                //catch (Exception ex)
-                //{
-                    //Program.log.Error(ex);
-                //}
-                speed_timer = new System.Timers.Timer(180000);
-                speed_timer.Elapsed += new ElapsedEventHandler(speed_timerelapsed);
-                speed_timer.Start();
-                Task.Factory.StartNew(() => speedtest());
                 InitializeComponent();
                 int count = (from row in dcm.hourtemplates
                              select row).Count();
