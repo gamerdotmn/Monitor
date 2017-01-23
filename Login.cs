@@ -59,7 +59,7 @@ namespace Monitor
                 if ((string)Mainfrm.broadcast_servers[servers[i]] == (string)comboBoxEdit_server.Text)
                 {
                     Mainfrm.serverip = servers[i];
-                    Program.constr = @"Data Source=" + Mainfrm.serverip + @"\MASTERCAFE;Initial Catalog=mastercafedb;Persist Security Info=True;User ID=sa;Password=pldifvzz7x;MultipleActiveResultSets=True";
+                    //Program.constr = @"Data Source=" + Mainfrm.serverip + @"\MASTERCAFE;Initial Catalog=mastercafedb;Persist Security Info=True;User ID=sa;Password=pldifvzz7x;MultipleActiveResultSets=True";
                 }
             }
         }

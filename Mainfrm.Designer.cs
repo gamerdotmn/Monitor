@@ -188,7 +188,6 @@
             this.panelControl_user = new DevExpress.XtraEditors.PanelControl();
             this.simpleButton_switch = new DevExpress.XtraEditors.SimpleButton();
             this.simpleButton_print = new DevExpress.XtraEditors.SimpleButton();
-            this.checkButton_reserve = new DevExpress.XtraEditors.CheckButton();
             this.pictureBox_logo = new System.Windows.Forms.PictureBox();
             this.panelControl_client_bottom = new DevExpress.XtraEditors.PanelControl();
             ((System.ComponentModel.ISupportInitialize)(this.MainTab)).BeginInit();
@@ -695,6 +694,8 @@
             this.imageList_client.Images.SetKeyName(6, "6.png");
             this.imageList_client.Images.SetKeyName(7, "7.png");
             this.imageList_client.Images.SetKeyName(8, "8.png");
+            this.imageList_client.Images.SetKeyName(9, "9.png");
+            this.imageList_client.Images.SetKeyName(10, "10.png");
             // 
             // user
             // 
@@ -1654,21 +1655,20 @@
             this.panelControl_client_top_right.Controls.Add(this.panelControl_user);
             this.panelControl_client_top_right.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.panelControl_client_top_right.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panelControl_client_top_right.Location = new System.Drawing.Point(676, 0);
+            this.panelControl_client_top_right.Location = new System.Drawing.Point(783, 0);
             this.panelControl_client_top_right.Name = "panelControl_client_top_right";
             this.panelControl_client_top_right.Padding = new System.Windows.Forms.Padding(5);
-            this.panelControl_client_top_right.Size = new System.Drawing.Size(332, 50);
+            this.panelControl_client_top_right.Size = new System.Drawing.Size(225, 50);
             this.panelControl_client_top_right.TabIndex = 1;
             // 
             // panelControl_user
             // 
             this.panelControl_user.Controls.Add(this.simpleButton_switch);
             this.panelControl_user.Controls.Add(this.simpleButton_print);
-            this.panelControl_user.Controls.Add(this.checkButton_reserve);
             this.panelControl_user.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelControl_user.Location = new System.Drawing.Point(5, 5);
             this.panelControl_user.Name = "panelControl_user";
-            this.panelControl_user.Size = new System.Drawing.Size(322, 40);
+            this.panelControl_user.Size = new System.Drawing.Size(215, 40);
             this.panelControl_user.TabIndex = 0;
             // 
             // simpleButton_switch
@@ -1676,7 +1676,7 @@
             this.simpleButton_switch.Cursor = System.Windows.Forms.Cursors.Hand;
             this.simpleButton_switch.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton_switch.Image")));
             this.simpleButton_switch.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
-            this.simpleButton_switch.Location = new System.Drawing.Point(217, 4);
+            this.simpleButton_switch.Location = new System.Drawing.Point(111, 3);
             this.simpleButton_switch.Name = "simpleButton_switch";
             this.simpleButton_switch.Size = new System.Drawing.Size(100, 32);
             this.simpleButton_switch.TabIndex = 0;
@@ -1689,24 +1689,13 @@
             this.simpleButton_print.Cursor = System.Windows.Forms.Cursors.Hand;
             this.simpleButton_print.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton_print.Image")));
             this.simpleButton_print.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
-            this.simpleButton_print.Location = new System.Drawing.Point(111, 4);
+            this.simpleButton_print.Location = new System.Drawing.Point(4, 3);
             this.simpleButton_print.Name = "simpleButton_print";
             this.simpleButton_print.Size = new System.Drawing.Size(100, 32);
             this.simpleButton_print.TabIndex = 0;
             this.simpleButton_print.TabStop = false;
             this.simpleButton_print.Text = "Тасалбар";
-            // 
-            // checkButton_reserve
-            // 
-            this.checkButton_reserve.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.checkButton_reserve.Image = ((System.Drawing.Image)(resources.GetObject("checkButton_reserve.Image")));
-            this.checkButton_reserve.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
-            this.checkButton_reserve.Location = new System.Drawing.Point(5, 4);
-            this.checkButton_reserve.Name = "checkButton_reserve";
-            this.checkButton_reserve.Size = new System.Drawing.Size(100, 32);
-            this.checkButton_reserve.TabIndex = 2;
-            this.checkButton_reserve.TabStop = false;
-            this.checkButton_reserve.Text = "Захиалга авна";
+            this.simpleButton_print.Click += new System.EventHandler(this.simpleButton_print_Click);
             // 
             // pictureBox_logo
             // 
@@ -1995,7 +1984,6 @@
         private DevExpress.XtraEditors.PanelControl panelControl_user;
         private DevExpress.XtraEditors.SimpleButton simpleButton_switch;
         private DevExpress.XtraEditors.SimpleButton simpleButton_print;
-        private DevExpress.XtraEditors.CheckButton checkButton_reserve;
         private System.Windows.Forms.SplitContainer splitContainer;
         private pos posc;
 

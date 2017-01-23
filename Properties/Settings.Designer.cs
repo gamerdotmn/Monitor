@@ -54,5 +54,16 @@ namespace Monitor.Properties {
                 return ((string)(this["mastercafedbConnectionString1"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=.\\MASTERCAFE;Initial Catalog=mastercafedb;User ID=sa;Password=pldifvz" +
+            "z7x")]
+        public string mastercafedbConnectionString2 {
+            get {
+                return ((string)(this["mastercafedbConnectionString2"]));
+            }
+        }
     }
 }

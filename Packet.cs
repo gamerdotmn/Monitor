@@ -13,22 +13,14 @@ namespace Monitor
         public string ip;
     }
 
-    public class PacketMonitorServerLogin
-    {
-        public string command = "login";
-        public string name;
-        public string password;
-    }
-
-    public class PacketServerMonitorLoginok
-    {
-        public string command = "loginok";
-        public string name;
-        public bool isadmin;
-    }
-
     public class PacketMonitorServerSyn
     {
         public string command = "syn";
+    }
+
+    public class PacketServerMonitorSyn
+    {
+        public string command = "syn";
+        public DateTime now;
     }
 }

@@ -530,6 +530,7 @@
     <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\delete.png" />
     <None Include="Resources\headerf.png" />
     <None Include="Resources\logof.png" />
     <Content Include="Monitor.ico" />

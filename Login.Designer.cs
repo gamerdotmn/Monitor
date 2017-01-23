@@ -127,7 +127,6 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "Login";
-            this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Нэвтрэх";
             ((System.ComponentModel.ISupportInitialize)(this.login_pwd.Properties)).EndInit();

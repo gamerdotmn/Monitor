@@ -33,6 +33,9 @@ namespace Monitor
     partial void Insertban(ban instance);
     partial void Updateban(ban instance);
     partial void Deleteban(ban instance);
+    partial void Inserttimecode(timecode instance);
+    partial void Updatetimecode(timecode instance);
+    partial void Deletetimecode(timecode instance);
     partial void Insertcategory(category instance);
     partial void Updatecategory(category instance);
     partial void Deletecategory(category instance);
@@ -72,13 +75,10 @@ namespace Monitor
     partial void Insertreserve(reserve instance);
     partial void Updatereserve(reserve instance);
     partial void Deletereserve(reserve instance);
-    partial void Inserttimecode(timecode instance);
-    partial void Updatetimecode(timecode instance);
-    partial void Deletetimecode(timecode instance);
     #endregion
 		
 		public DataContext_mastercafe() : 
-				base(global::Monitor.Properties.Settings.Default.mastercafedbConnectionString1, mappingSource)
+				base(global::Monitor.Properties.Settings.Default.mastercafedbConnectionString2, mappingSource)
 		{
 			OnCreated();
 		}
@@ -112,6 +112,14 @@ namespace Monitor
 			get
 			{
 				return this.GetTable<ban>();
+			}
+		}
+		
+		public System.Data.Linq.Table<timecode> timecodes
+		{
+			get
+			{
+				return this.GetTable<timecode>();
 			}
 		}
 		
@@ -218,14 +226,6 @@ namespace Monitor
 				return this.GetTable<reserve>();
 			}
 		}
-		
-		public System.Data.Linq.Table<timecode> timecodes
-		{
-			get
-			{
-				return this.GetTable<timecode>();
-			}
-		}
 	}
 	
 	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.ban")]
@@ -311,6 +311,172 @@ namespace Monitor
 			{
 				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
 			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.timecode")]
+	public partial class timecode : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private string _code;
+		
+		private int _money;
+		
+		private System.DateTime _ot;
+		
+		private EntitySet<client> _clients;
+		
+		private EntitySet<employee_timecode> _employee_timecodes;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OncodeChanging(string value);
+    partial void OncodeChanged();
+    partial void OnmoneyChanging(int value);
+    partial void OnmoneyChanged();
+    partial void OnotChanging(System.DateTime value);
+    partial void OnotChanged();
+    #endregion
+		
+		public timecode()
+		{
+			this._clients = new EntitySet<client>(new Action<client>(this.attach_clients), new Action<client>(this.detach_clients));
+			this._employee_timecodes = new EntitySet<employee_timecode>(new Action<employee_timecode>(this.attach_employee_timecodes), new Action<employee_timecode>(this.detach_employee_timecodes));
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_code", DbType="NChar(10) NOT NULL", CanBeNull=false, IsPrimaryKey=true)]
+		public string code
+		{
+			get
+			{
+				return this._code;
+			}
+			set
+			{
+				if ((this._code != value))
+				{
+					this.OncodeChanging(value);
+					this.SendPropertyChanging();
+					this._code = value;
+					this.SendPropertyChanged("code");
+					this.OncodeChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_money", DbType="Int NOT NULL")]
+		public int money
+		{
+			get
+			{
+				return this._money;
+			}
+			set
+			{
+				if ((this._money != value))
+				{
+					this.OnmoneyChanging(value);
+					this.SendPropertyChanging();
+					this._money = value;
+					this.SendPropertyChanged("money");
+					this.OnmoneyChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ot", DbType="SmallDateTime NOT NULL")]
+		public System.DateTime ot
+		{
+			get
+			{
+				return this._ot;
+			}
+			set
+			{
+				if ((this._ot != value))
+				{
+					this.OnotChanging(value);
+					this.SendPropertyChanging();
+					this._ot = value;
+					this.SendPropertyChanged("ot");
+					this.OnotChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="timecode_client", Storage="_clients", ThisKey="code", OtherKey="tc")]
+		public EntitySet<client> clients
+		{
+			get
+			{
+				return this._clients;
+			}
+			set
+			{
+				this._clients.Assign(value);
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="timecode_employee_timecode", Storage="_employee_timecodes", ThisKey="code", OtherKey="timecode_code")]
+		public EntitySet<employee_timecode> employee_timecodes
+		{
+			get
+			{
+				return this._employee_timecodes;
+			}
+			set
+			{
+				this._employee_timecodes.Assign(value);
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+		
+		private void attach_clients(client entity)
+		{
+			this.SendPropertyChanging();
+			entity.timecode = this;
+		}
+		
+		private void detach_clients(client entity)
+		{
+			this.SendPropertyChanging();
+			entity.timecode = null;
+		}
+		
+		private void attach_employee_timecodes(employee_timecode entity)
+		{
+			this.SendPropertyChanging();
+			entity.timecode = this;
+		}
+		
+		private void detach_employee_timecodes(employee_timecode entity)
+		{
+			this.SendPropertyChanging();
+			entity.timecode = null;
 		}
 	}
 	
@@ -460,17 +626,19 @@ namespace Monitor
 		
 		private System.Nullable<System.Guid> _ht;
 		
+		private System.Nullable<int> _wei;
+		
 		private EntitySet<employee_hour> _employee_hours;
 		
 		private EntitySet<reserve> _reserves;
+		
+		private EntityRef<timecode> _timecode;
 		
 		private EntityRef<group> _group;
 		
 		private EntityRef<hourtemplate> _hourtemplate;
 		
 		private EntityRef<member> _member;
-		
-		private EntityRef<timecode> _timecode;
 		
     #region Extensibility Method Definitions
     partial void OnLoaded();
@@ -502,16 +670,18 @@ namespace Monitor
     partial void OntcChanged();
     partial void OnhtChanging(System.Nullable<System.Guid> value);
     partial void OnhtChanged();
+    partial void OnweiChanging(System.Nullable<int> value);
+    partial void OnweiChanged();
     #endregion
 		
 		public client()
 		{
 			this._employee_hours = new EntitySet<employee_hour>(new Action<employee_hour>(this.attach_employee_hours), new Action<employee_hour>(this.detach_employee_hours));
 			this._reserves = new EntitySet<reserve>(new Action<reserve>(this.attach_reserves), new Action<reserve>(this.detach_reserves));
+			this._timecode = default(EntityRef<timecode>);
 			this._group = default(EntityRef<group>);
 			this._hourtemplate = default(EntityRef<hourtemplate>);
 			this._member = default(EntityRef<member>);
-			this._timecode = default(EntityRef<timecode>);
 			OnCreated();
 		}
 		
@@ -791,6 +961,26 @@ namespace Monitor
 			}
 		}
 		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_wei", DbType="Int")]
+		public System.Nullable<int> wei
+		{
+			get
+			{
+				return this._wei;
+			}
+			set
+			{
+				if ((this._wei != value))
+				{
+					this.OnweiChanging(value);
+					this.SendPropertyChanging();
+					this._wei = value;
+					this.SendPropertyChanged("wei");
+					this.OnweiChanged();
+				}
+			}
+		}
+		
 		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="client_employee_hour", Storage="_employee_hours", ThisKey="name", OtherKey="client_name")]
 		public EntitySet<employee_hour> employee_hours
 		{
@@ -814,6 +1004,40 @@ namespace Monitor
 			set
 			{
 				this._reserves.Assign(value);
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="timecode_client", Storage="_timecode", ThisKey="tc", OtherKey="code", IsForeignKey=true)]
+		public timecode timecode
+		{
+			get
+			{
+				return this._timecode.Entity;
+			}
+			set
+			{
+				timecode previousValue = this._timecode.Entity;
+				if (((previousValue != value) 
+							|| (this._timecode.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._timecode.Entity = null;
+						previousValue.clients.Remove(this);
+					}
+					this._timecode.Entity = value;
+					if ((value != null))
+					{
+						value.clients.Add(this);
+						this._tc = value.code;
+					}
+					else
+					{
+						this._tc = default(string);
+					}
+					this.SendPropertyChanged("timecode");
+				}
 			}
 		}
 		
@@ -919,40 +1143,6 @@ namespace Monitor
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="timecode_client", Storage="_timecode", ThisKey="tc", OtherKey="code", IsForeignKey=true)]
-		public timecode timecode
-		{
-			get
-			{
-				return this._timecode.Entity;
-			}
-			set
-			{
-				timecode previousValue = this._timecode.Entity;
-				if (((previousValue != value) 
-							|| (this._timecode.HasLoadedOrAssignedValue == false)))
-				{
-					this.SendPropertyChanging();
-					if ((previousValue != null))
-					{
-						this._timecode.Entity = null;
-						previousValue.clients.Remove(this);
-					}
-					this._timecode.Entity = value;
-					if ((value != null))
-					{
-						value.clients.Add(this);
-						this._tc = value.code;
-					}
-					else
-					{
-						this._tc = default(string);
-					}
-					this.SendPropertyChanged("timecode");
-				}
-			}
-		}
-		
 		public event PropertyChangingEventHandler PropertyChanging;
 		
 		public event PropertyChangedEventHandler PropertyChanged;
@@ -1012,10 +1202,6 @@ namespace Monitor
 		
 		private string _org_phone;
 		
-		private string _client_password;
-		
-		private string _client_user;
-		
 		private System.Nullable<int> _newmember_price;
 		
 		private System.Nullable<int> _newmember_stock;
@@ -1040,10 +1226,6 @@ namespace Monitor
     partial void Onorg_nameChanged();
     partial void Onorg_phoneChanging(string value);
     partial void Onorg_phoneChanged();
-    partial void Onclient_passwordChanging(string value);
-    partial void Onclient_passwordChanged();
-    partial void Onclient_userChanging(string value);
-    partial void Onclient_userChanged();
     partial void Onnewmember_priceChanging(System.Nullable<int> value);
     partial void Onnewmember_priceChanged();
     partial void Onnewmember_stockChanging(System.Nullable<int> value);
@@ -1139,46 +1321,6 @@ namespace Monitor
 					this._org_phone = value;
 					this.SendPropertyChanged("org_phone");
 					this.Onorg_phoneChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_client_password", DbType="NVarChar(MAX)")]
-		public string client_password
-		{
-			get
-			{
-				return this._client_password;
-			}
-			set
-			{
-				if ((this._client_password != value))
-				{
-					this.Onclient_passwordChanging(value);
-					this.SendPropertyChanging();
-					this._client_password = value;
-					this.SendPropertyChanged("client_password");
-					this.Onclient_passwordChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_client_user", DbType="NVarChar(MAX)")]
-		public string client_user
-		{
-			get
-			{
-				return this._client_user;
-			}
-			set
-			{
-				if ((this._client_user != value))
-				{
-					this.Onclient_userChanging(value);
-					this.SendPropertyChanging();
-					this._client_user = value;
-					this.SendPropertyChanged("client_user");
-					this.Onclient_userChanged();
 				}
 			}
 		}
@@ -2580,6 +2722,8 @@ namespace Monitor
 		
 		private int _minprice;
 		
+		private bool _vip;
+		
 		private EntitySet<client> _clients;
 		
     #region Extensibility Method Definitions
@@ -2606,6 +2750,8 @@ namespace Monitor
     partial void OnprepairhourChanged();
     partial void OnminpriceChanging(int value);
     partial void OnminpriceChanged();
+    partial void OnvipChanging(bool value);
+    partial void OnvipChanged();
     #endregion
 		
 		public group()
@@ -2810,6 +2956,26 @@ namespace Monitor
 					this._minprice = value;
 					this.SendPropertyChanged("minprice");
 					this.OnminpriceChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_vip", DbType="Bit NOT NULL")]
+		public bool vip
+		{
+			get
+			{
+				return this._vip;
+			}
+			set
+			{
+				if ((this._vip != value))
+				{
+					this.OnvipChanging(value);
+					this.SendPropertyChanging();
+					this._vip = value;
+					this.SendPropertyChanged("vip");
+					this.OnvipChanged();
 				}
 			}
 		}
@@ -3635,172 +3801,6 @@ namespace Monitor
 			{
 				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
 			}
-		}
-	}
-	
-	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.timecode")]
-	public partial class timecode : INotifyPropertyChanging, INotifyPropertyChanged
-	{
-		
-		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
-		
-		private string _code;
-		
-		private int _money;
-		
-		private System.DateTime _ot;
-		
-		private EntitySet<client> _clients;
-		
-		private EntitySet<employee_timecode> _employee_timecodes;
-		
-    #region Extensibility Method Definitions
-    partial void OnLoaded();
-    partial void OnValidate(System.Data.Linq.ChangeAction action);
-    partial void OnCreated();
-    partial void OncodeChanging(string value);
-    partial void OncodeChanged();
-    partial void OnmoneyChanging(int value);
-    partial void OnmoneyChanged();
-    partial void OnotChanging(System.DateTime value);
-    partial void OnotChanged();
-    #endregion
-		
-		public timecode()
-		{
-			this._clients = new EntitySet<client>(new Action<client>(this.attach_clients), new Action<client>(this.detach_clients));
-			this._employee_timecodes = new EntitySet<employee_timecode>(new Action<employee_timecode>(this.attach_employee_timecodes), new Action<employee_timecode>(this.detach_employee_timecodes));
-			OnCreated();
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_code", DbType="NChar(10) NOT NULL", CanBeNull=false, IsPrimaryKey=true)]
-		public string code
-		{
-			get
-			{
-				return this._code;
-			}
-			set
-			{
-				if ((this._code != value))
-				{
-					this.OncodeChanging(value);
-					this.SendPropertyChanging();
-					this._code = value;
-					this.SendPropertyChanged("code");
-					this.OncodeChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_money", DbType="Int NOT NULL")]
-		public int money
-		{
-			get
-			{
-				return this._money;
-			}
-			set
-			{
-				if ((this._money != value))
-				{
-					this.OnmoneyChanging(value);
-					this.SendPropertyChanging();
-					this._money = value;
-					this.SendPropertyChanged("money");
-					this.OnmoneyChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ot", DbType="SmallDateTime NOT NULL")]
-		public System.DateTime ot
-		{
-			get
-			{
-				return this._ot;
-			}
-			set
-			{
-				if ((this._ot != value))
-				{
-					this.OnotChanging(value);
-					this.SendPropertyChanging();
-					this._ot = value;
-					this.SendPropertyChanged("ot");
-					this.OnotChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="timecode_client", Storage="_clients", ThisKey="code", OtherKey="tc")]
-		public EntitySet<client> clients
-		{
-			get
-			{
-				return this._clients;
-			}
-			set
-			{
-				this._clients.Assign(value);
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="timecode_employee_timecode", Storage="_employee_timecodes", ThisKey="code", OtherKey="timecode_code")]
-		public EntitySet<employee_timecode> employee_timecodes
-		{
-			get
-			{
-				return this._employee_timecodes;
-			}
-			set
-			{
-				this._employee_timecodes.Assign(value);
-			}
-		}
-		
-		public event PropertyChangingEventHandler PropertyChanging;
-		
-		public event PropertyChangedEventHandler PropertyChanged;
-		
-		protected virtual void SendPropertyChanging()
-		{
-			if ((this.PropertyChanging != null))
-			{
-				this.PropertyChanging(this, emptyChangingEventArgs);
-			}
-		}
-		
-		protected virtual void SendPropertyChanged(String propertyName)
-		{
-			if ((this.PropertyChanged != null))
-			{
-				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
-			}
-		}
-		
-		private void attach_clients(client entity)
-		{
-			this.SendPropertyChanging();
-			entity.timecode = this;
-		}
-		
-		private void detach_clients(client entity)
-		{
-			this.SendPropertyChanging();
-			entity.timecode = null;
-		}
-		
-		private void attach_employee_timecodes(employee_timecode entity)
-		{
-			this.SendPropertyChanging();
-			entity.timecode = this;
-		}
-		
-		private void detach_employee_timecodes(employee_timecode entity)
-		{
-			this.SendPropertyChanging();
-			entity.timecode = null;
 		}
 	}
 }

@@ -1,9 +1,18 @@
 ﻿<?xml version="1.0" encoding="utf-8"?><Database Name="mastercafedb" Class="DataContext_mastercafe" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
-  <Connection Mode="AppSettings" ConnectionString="Data Source=MC-PC\MASTERCAFE;Initial Catalog=mastercafedb;User ID=sa" SettingsObjectName="Monitor.Properties.Settings" SettingsPropertyName="mastercafedbConnectionString1" Provider="System.Data.SqlClient" />
+  <Connection Mode="AppSettings" ConnectionString="Data Source=.\MASTERCAFE;Initial Catalog=mastercafedb;User ID=sa" SettingsObjectName="Monitor.Properties.Settings" SettingsPropertyName="mastercafedbConnectionString2" Provider="System.Data.SqlClient" />
   <Table Name="dbo.ban" Member="bans">
     <Type Name="ban">
       <Column Name="id" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
       <Column Name="word" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.timecode" Member="timecodes">
+    <Type Name="timecode">
+      <Column Name="code" Type="System.String" DbType="NChar(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="money" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ot" Type="System.DateTime" DbType="SmallDateTime NOT NULL" CanBeNull="false" />
+      <Association Name="timecode_client" Member="clients" ThisKey="code" OtherKey="tc" Type="client" />
+      <Association Name="timecode_employee_timecode" Member="employee_timecodes" ThisKey="code" OtherKey="timecode_code" Type="employee_timecode" />
     </Type>
   </Table>
   <Table Name="dbo.category" Member="categories">
@@ -28,12 +37,13 @@
       <Column Name="title" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
       <Column Name="tc" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
       <Column Name="ht" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="wei" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Association Name="client_employee_hour" Member="employee_hours" ThisKey="name" OtherKey="client_name" Type="employee_hour" />
       <Association Name="client_reserve" Member="reserves" ThisKey="name" OtherKey="client_name" Type="reserve" />
+      <Association Name="timecode_client" Member="timecode" ThisKey="tc" OtherKey="code" Type="timecode" IsForeignKey="true" />
       <Association Name="group_client" Member="group" ThisKey="group_id" OtherKey="id" Type="group" IsForeignKey="true" />
       <Association Name="hourtemplate_client" Member="hourtemplate" ThisKey="ht" OtherKey="id" Type="hourtemplate" IsForeignKey="true" />
       <Association Name="member_client" Member="member" ThisKey="member_name" OtherKey="name" Type="member" IsForeignKey="true" />
-      <Association Name="timecode_client" Member="timecode" ThisKey="tc" OtherKey="code" Type="timecode" IsForeignKey="true" />
     </Type>
   </Table>
   <Table Name="dbo.config" Member="configs">
@@ -42,8 +52,6 @@
       <Column Name="org_email" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
       <Column Name="org_name" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
       <Column Name="org_phone" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
-      <Column Name="client_password" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
-      <Column Name="client_user" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
       <Column Name="newmember_price" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="newmember_stock" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="close_hour" Type="System.Int32" DbType="Int" CanBeNull="true" />
@@ -121,6 +129,7 @@
       <Column Name="hour" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
       <Column Name="prepairhour" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
       <Column Name="minprice" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="vip" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
       <Association Name="group_client" Member="clients" ThisKey="id" OtherKey="group_id" Type="client" />
     </Type>
   </Table>
@@ -162,15 +171,6 @@
       <Column Name="ot" Type="System.DateTime" DbType="SmallDateTime NOT NULL" CanBeNull="false" />
       <Column Name="steamid" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
       <Association Name="client_reserve" Member="client" ThisKey="client_name" OtherKey="name" Type="client" IsForeignKey="true" />
-    </Type>
-  </Table>
-  <Table Name="dbo.timecode" Member="timecodes">
-    <Type Name="timecode">
-      <Column Name="code" Type="System.String" DbType="NChar(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
-      <Column Name="money" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Column Name="ot" Type="System.DateTime" DbType="SmallDateTime NOT NULL" CanBeNull="false" />
-      <Association Name="timecode_client" Member="clients" ThisKey="code" OtherKey="tc" Type="client" />
-      <Association Name="timecode_employee_timecode" Member="employee_timecodes" ThisKey="code" OtherKey="timecode_code" Type="employee_timecode" />
     </Type>
   </Table>
 </Database>

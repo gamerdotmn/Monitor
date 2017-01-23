@@ -33,22 +33,22 @@ namespace Monitor
     public partial class Mainfrm : DevExpress.XtraEditors.XtraForm
     {
         private Login lfrm = null;
-        public static string serverip = "127.0.0.1";
+        public static string serverip = "";
         private System.Timers.Timer server_timer;
         private System.Timers.Timer client_timerstats;
-        
         private int connecttimeout = 0;
         private bool connected = false;
         Connecting connecting;
         private Hashtable server_packets = new Hashtable();
         public static bool logged = false;
         public static bool isadmin = false;
+        public static DateTime now;
         public static string name = "";
         public static Hashtable broadcast_servers = new Hashtable();
+        public static bool printbill = false;
         private const int disconnecttime = 10;
         public const string host = "gamer.mn";
         public static config cfg = new config();
-        public static gconfig gcfg = new gconfig();
 
         private void broadcast_listen()
         {
@@ -83,7 +83,7 @@ namespace Monitor
                         if (serverip == "" && ip != "127.0.0.1")
                         {
                             serverip = ip;
-                            Program.constr = @"Data Source=" + serverip + @"\MASTERCAFE;Initial Catalog=mastercafedb;Persist Security Info=True;User ID=sa;Password=pldifvzz7x;MultipleActiveResultSets=True";
+                            //Program.constr = @"Data Source=" + serverip + @"\MASTERCAFE;Initial Catalog=mastercafedb;Persist Security Info=True;User ID=sa;Password=pldifvzz7x;MultipleActiveResultSets=True";
                         }
                     }
                 }
@@ -91,8 +91,9 @@ namespace Monitor
             sock.Close();
         }
 
-        private void server_syn()
+        private void server_syn(PacketServerMonitorSyn packet)
         {
+            now = packet.now;
             if (connected == false)
             {
                 connected = true;
@@ -123,12 +124,32 @@ namespace Monitor
 
         private void lfrm_login()
         {
-            PacketMonitorServerLogin packetlogin = new PacketMonitorServerLogin();
-            packetlogin.name = lfrm.login_username.Text;
-            packetlogin.password = lfrm.login_pwd.Text;
-            lfrm.login_pwd.Text = String.Empty;
-            lfrm.login_pwd.Focus();
-            Send(serverip, Program.port_monitortoserver, Newtonsoft.Json.JsonConvert.SerializeObject(packetlogin));
+            using (DataContext_mastercafe dcm = new DataContext_mastercafe(Program.constr))
+            {
+                var emps = (from e in dcm.employees where e.name.ToLower() == lfrm.login_username.Text.ToLower() && e.password.ToLower() == lfrm.login_pwd.Text.ToLower() select new { e.name, e.isadmin });
+                int cnt = emps.Count();
+                if (cnt == 1)
+                {
+                    if (lfrm.InvokeRequired)
+                    {
+                        lfrm.Invoke(new MethodInvoker(delegate
+                        {
+                            lfrm.Close();
+                        }));
+                    }
+                    else
+                    {
+                        lfrm.Close();
+                    }
+                    name = emps.FirstOrDefault().name;
+                    logged = true;
+                    isadmin = emps.FirstOrDefault().isadmin;
+                }
+                else
+                {
+                    lfrm.labelerr.Settext("Та хандах эрхгүй байна.");
+                }
+            }
         }
 
         private void lfrm_login_pwd_KeyDown(object sender, KeyEventArgs e)
@@ -220,7 +241,7 @@ namespace Monitor
             }
             try
             {
-                serverip = Program.Decompress(regserver.GetValue("serverip").ToString());
+                printbill =bool.Parse(Program.Decompress(regserver.GetValue("printbill").ToString()));
             }
             catch
             {
@@ -253,47 +274,12 @@ namespace Monitor
                 cfg.org_email = dcm.configs.FirstOrDefault().org_email;
                 cfg.org_name = dcm.configs.FirstOrDefault().org_name;
                 cfg.org_phone = dcm.configs.FirstOrDefault().org_phone;
-                cfg.client_password = dcm.configs.FirstOrDefault().client_password;
-                cfg.client_user = dcm.configs.FirstOrDefault().client_user;
                 cfg.newmember_price = dcm.configs.FirstOrDefault().newmember_price;
                 cfg.newmember_stock = dcm.configs.FirstOrDefault().newmember_stock;
                 cfg.close_hour = dcm.configs.FirstOrDefault().close_hour;
                 cfg.alert_minute = dcm.configs.FirstOrDefault().alert_minute;
                 cfg.alert_message = dcm.configs.FirstOrDefault().alert_message;
                 cfg.idle_minute = dcm.configs.FirstOrDefault().idle_minute;
-
-                if (cfg.client_password == null)
-                {
-                    cfg.client_password = "mastercafe";
-                }
-                if (cfg.client_user == null)
-                {
-                    cfg.client_user = "admin";
-                }
-                if (cfg.newmember_price == null)
-                {
-                    cfg.newmember_price = 5000;
-                }
-                if (cfg.newmember_stock == null)
-                {
-                    cfg.newmember_stock = 600;
-                }
-                if (cfg.close_hour == null)
-                {
-                    cfg.close_hour = 4;
-                }
-                if (cfg.alert_minute == null)
-                {
-                    cfg.alert_minute = 5;
-                }
-                if (cfg.alert_message == null)
-                {
-                    cfg.alert_message = "Таны цаг дуусах гэж байна.";
-                }
-                if (cfg.idle_minute == null)
-                {
-                    cfg.idle_minute = 5;
-                }
 
                 InitializeComponent();
                 int count = (from row in dcm.hourtemplates
@@ -335,41 +321,6 @@ namespace Monitor
             }
         }
 
-        private void speedtest()
-        {
-            try
-            {
-                if (gcfg.load)
-                {
-                    double[] speeds = new double[3];
-                    for (int i = 0; i < speeds.Length; i++)
-                    {
-                        if (File.Exists(i.ToString()))
-                        {
-                            File.Delete(i.ToString());
-                        }
-                        WebClient client = new WebClient();
-                        DateTime startTime = DateTime.Now;
-                        client.DownloadFile(gcfg.speedtesturl, i.ToString());
-                        DateTime endTime = DateTime.Now;
-                        speeds[i] = Math.Round((gcfg.speedtestsize / (endTime - startTime).TotalSeconds));
-                        File.Delete(i.ToString());
-                    }
-                    int speed = (int)speeds.Average();
-                    WebClient wclient = new WebClient();
-                    wclient.DownloadString("http://" + host + "/api/speed.php?license=" + cfg.org_id + "&speed=" + speed);
-                }
-            }
-            catch (Exception ex)
-            {
-                Program.log.Error(ex);
-            }
-        }
-
-        private void speed_timerelapsed(object sender, ElapsedEventArgs e)
-        {
-            Task.Factory.StartNew(() => speedtest());
-        }
 
         private void client_timerstatselapsed(object sender, ElapsedEventArgs e)
         {
@@ -587,8 +538,6 @@ namespace Monitor
                     textEdit_pcname.Enabled = false;
                     textEdit_newmemberstock.Text = _c.Single().newmember_stock.ToString();
                     textEdit_newmemberprice.Text = _c.Single().newmember_price.ToString();
-                    textEdit_client_user.Text = _c.Single().client_user;
-                    textEdit_client_pwd.Text = _c.Single().client_password;
                 }
             }
             catch { MessageBox.Show("config error!!!"); }
@@ -775,29 +724,6 @@ namespace Monitor
             }
         }
 
-        private void server_loginfailed()
-        {
-            lfrm.labelerr.Settext("Та хандах эрхгүй байна.");
-        }
-
-        private void server_loginok(PacketServerMonitorLoginok packet)
-        {
-            if (lfrm.InvokeRequired)
-            {
-                lfrm.Invoke(new MethodInvoker(delegate
-                {
-                    lfrm.Close();
-                }));
-            }
-            else
-            {
-                lfrm.Close();
-            }
-            name = packet.name;
-            logged = true;
-            isadmin = packet.isadmin;
-        }
-
         private void server_management(string ip, string data)
         {
             if (data.Length == 0)
@@ -808,9 +734,7 @@ namespace Monitor
             string cmd = (string)Newtonsoft.Json.Linq.JObject.Parse(data)["command"];
             switch (cmd)
             {
-                case "loginok": server_loginok(Newtonsoft.Json.JsonConvert.DeserializeObject<PacketServerMonitorLoginok>(data)); break;
-                case "loginfailed": server_loginfailed(); break;
-                case "syn": server_syn(); break;
+                case "syn": server_syn(Newtonsoft.Json.JsonConvert.DeserializeObject<PacketServerMonitorSyn>(data)); break;
                 default: break;
             }
         }
@@ -1859,6 +1783,12 @@ namespace Monitor
         {
             e.Cancel = true;
         }
+
+        private void simpleButton_print_Click(object sender, EventArgs e)
+        {
+
+        }
+
 
     }
 }

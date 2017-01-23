@@ -33,8 +33,8 @@ namespace Monitor
 
         public void fill()
         {
-            try
-            {
+            //try
+            //{
                 int w = xtraTabControl_cats.Width;
                 int h = xtraTabControl_cats.Height;
                 int cw = w / 90;
@@ -47,7 +47,7 @@ namespace Monitor
                     DevExpress.XtraEditors.VScrollBar _vs = new DevExpress.XtraEditors.VScrollBar();
                     _vs.Dock = DockStyle.Right;
                     _vs.Width = 25;
-                    _vs.LargeChange = 80;
+                    _vs.LargeChange = 40;
                     _vs.SmallChange = 10;
                     _vs.Scroll += new ScrollEventHandler(_vs_Scroll);
                     _vs.Maximum = 40 * ht[i].Keys.Count;
@@ -57,7 +57,7 @@ namespace Monitor
 
                     int x = 0;
                     int y = 0;
-                    int[] keys = new int[ht[i].Keys.Count];
+                    Guid[] keys = new Guid[ht[i].Keys.Count];
                     ht[i].Keys.CopyTo(keys, 0);
                     for (int j = 0; j < ht[i].Keys.Count; j++)
                     {
@@ -80,8 +80,11 @@ namespace Monitor
                     }
                     _panel_control.Refresh();
                 }
-            }
-            catch { ;}
+            //}
+            //catch(Exception ex)
+            //{
+                //Program.log.Error(ex);
+            //}
         }
         private void recalc()
         {
@@ -100,6 +103,7 @@ namespace Monitor
                 simpleButton_save.Enabled = false;
             }
         }
+
         void _vs_Scroll(object sender, ScrollEventArgs e)
         {
             if (e.OldValue != e.NewValue)
@@ -116,7 +120,7 @@ namespace Monitor
         void _sb_Click(object sender, EventArgs e)
         {
             DevExpress.XtraEditors.SimpleButton _sb = (DevExpress.XtraEditors.SimpleButton)sender;
-            int id = int.Parse(_sb.Name);
+            Guid id = Guid.Parse(_sb.Name);
             int j=0;
             if (ti.ContainsKey(id))
             {
@@ -184,32 +188,30 @@ namespace Monitor
         private void simpleButton_save_Click(object sender, EventArgs e)
         {
             DataContext_mastercafe ms = new DataContext_mastercafe(Program.constr);
-            string employee_name = "admin";
             for (int i = 0; i < listView_order.Items.Count; i++)
             {
                 employee_sale sale = new employee_sale();
+                sale.id = Guid.NewGuid();
                 sale.item_id = Guid.Parse(listView_order.Items[i].Name);
                 sale.qnt = int.Parse(listView_order.Items[i].SubItems[2].Text);
                 sale.total = int.Parse(listView_order.Items[i].SubItems[3].Text);
                 sale.price = int.Parse(listView_order.Items[i].SubItems[3].Text) / int.Parse(listView_order.Items[i].SubItems[2].Text);
-                sale.ot = DateTime.Now;
-                sale.empoyee_name = employee_name;
+                sale.ot = Mainfrm.now;
+                sale.empoyee_name = Mainfrm.name;
                 ms.employee_sales.InsertOnSubmit(sale);
-                ms.SubmitChanges();
-
             }
-            try
+            ms.SubmitChanges();
+            if (Mainfrm.printbill)
             {
                 var _cfg = (from c in ms.configs select c).SingleOrDefault();
-                //print
-                print(_cfg.org_name,"Нийт:"+textEdit_sum.Text);
-            }catch{;}
-            
+                print(_cfg.org_name, "Нийт:" + textEdit_sum.Text);
+            }
             ti.Clear();
             listView_order.Items.Clear();
             textEdit_sum.Text = "0";
             simpleButton_save.Enabled = false;
         }
+
         private void print(string _p_header,string _p_footer)
         {
             p_text = string.Empty;
@@ -264,7 +266,7 @@ namespace Monitor
             }
             else
             {
-                MessageBox.Show(printername + " асуудалтай байна.");
+                MessageBox.Show(printername + " хэвлэх боломжгүй байна.");
             }
         }
         private string space(int max, string text, bool left)
@@ -304,7 +306,7 @@ namespace Monitor
         {
             if (listView_order.SelectedItems.Count > 0)
             {
-                ti.Remove(int.Parse(listView_order.SelectedItems[0].Name));
+                ti.Remove(Guid.Parse(listView_order.SelectedItems[0].Name));
                 listView_order.SelectedItems[0].Remove();
                 recalc();
 
