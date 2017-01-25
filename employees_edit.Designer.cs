@@ -78,7 +78,7 @@
             this.simpleButton_edit.Name = "simpleButton_edit";
             this.simpleButton_edit.Size = new System.Drawing.Size(100, 25);
             this.simpleButton_edit.TabIndex = 3;
-            this.simpleButton_edit.Text = "Засах";
+            this.simpleButton_edit.Text = "Хадгалах";
             this.simpleButton_edit.Click += new System.EventHandler(this.simpleButton_edit_Click);
             // 
             // labelerr

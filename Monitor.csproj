@@ -223,11 +223,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="addGroup.cs">
+    <Compile Include="groups_add.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="addGroup.Designer.cs">
-      <DependentUpon>addGroup.cs</DependentUpon>
+    <Compile Include="groups_add.Designer.cs">
+      <DependentUpon>groups_add.cs</DependentUpon>
     </Compile>
     <Compile Include="addmember.cs">
       <SubType>Form</SubType>
@@ -403,8 +403,8 @@
     <None Include="DataClasses_mastercafe.dbml.layout">
       <DependentUpon>DataClasses_mastercafe.dbml</DependentUpon>
     </None>
-    <EmbeddedResource Include="addGroup.resx">
-      <DependentUpon>addGroup.cs</DependentUpon>
+    <EmbeddedResource Include="groups_add.resx">
+      <DependentUpon>groups_add.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="connecting.resx">
       <DependentUpon>connecting.cs</DependentUpon>

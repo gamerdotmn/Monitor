@@ -749,7 +749,7 @@
             this.group.Image = ((System.Drawing.Image)(resources.GetObject("group.Image")));
             this.group.Name = "group";
             this.group.Size = new System.Drawing.Size(1002, 633);
-            this.group.Text = "Групп";
+            this.group.Text = "Тасалгаа";
             // 
             // gridControl_groups
             // 

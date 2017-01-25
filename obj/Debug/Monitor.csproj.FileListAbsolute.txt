@@ -309,7 +309,6 @@ D:\MC\Monitor\obj\Debug\Monitor.Screen.resources
 D:\MC\Monitor\obj\Debug\Monitor.timetemplate.resources
 D:\MC\Monitor\obj\Debug\Monitor.total.resources
 D:\MC\Monitor\obj\Debug\Monitor.transfer.resources
-D:\MC\Monitor\obj\Debug\Monitor.addGroup.resources
 D:\MC\Monitor\obj\Debug\Monitor.Connecting.resources
 D:\MC\Monitor\obj\Debug\Monitor.Screenshot.resources
 D:\MC\Monitor\obj\Debug\Monitor.Login.resources
@@ -328,3 +327,4 @@ D:\MC\Monitor\bin\Debug\log4net.xml
 D:\MC\Monitor\bin\Debug\Newtonsoft.Json.xml
 D:\MC\Monitor\obj\Debug\Monitor.employees_add.resources
 D:\MC\Monitor\obj\Debug\Monitor.employees_edit.resources
+D:\MC\Monitor\obj\Debug\Monitor.groups_add.resources

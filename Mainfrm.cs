@@ -49,6 +49,7 @@ namespace Monitor
         private const int disconnecttime = 10;
         public const string host = "gamer.mn";
         public static config cfg = new config();
+        public List<string> groups_key = new List<string>();
 
         private void broadcast_listen()
         {
@@ -391,32 +392,28 @@ namespace Monitor
             }
         }
 
-        public void groups_ButtonClick(object sender, ButtonPressedEventArgs e)
+        public void groups_edit(object sender, ButtonPressedEventArgs e)
         {
-            try
-            {
+
+        }
+
+        public void groups_delete(object sender, ButtonPressedEventArgs e)
+        {
                 DataContext_mastercafe ms = new DataContext_mastercafe(Program.constr);
-                if (e.Button.Tag.ToString() == "delete")
+                if (MessageBox.Show("Та '" + gridView_groups.GetFocusedRowCellValue("Нэр").ToString() + "' нэртэй тасалгаа устгахдаа итгэлтэй байна уу?", "Баталгаажуулалт", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
-                    if (MessageBox.Show("Та " + gridView_groups.GetFocusedRowCellValue("Нэр").ToString() + " нэртэй группийг устгахдаа итгэлтэй байна уу?", "Баталгаажуулалт", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question) == DialogResult.Yes)
+                    group _g = ms.groups.Where(g => g.id == Guid.Parse(gridView_groups.GetFocusedRowCellValue("Дугаар").ToString())).FirstOrDefault();
+                    if (_g.clients.Count == 0)
                     {
-                        group _g = ms.groups.Single(g => g.id == Guid.Parse(gridView_groups.GetFocusedRowCellValue("Дугаар").ToString()));
                         ms.groups.DeleteOnSubmit(_g);
                         ms.SubmitChanges();
                         gridView_groups.DeleteRow(gridView_groups.FocusedRowHandle);
                     }
-                }
-                if (e.Button.Tag.ToString() == "edit")
-                {
-                    addGroup add = new addGroup(gridView_groups.GetFocusedRowCellValue("Дугаар").ToString());
-                    add.ShowDialog(this);
-                    if (add.ok)
+                    else
                     {
-                        groups();
+                        MessageBox.Show("Тус тасалгаанд бүртгэлтэй компьютерууд байгаа тул устгах боломжгүй.","Анхаар", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
-            }
-            catch { MessageBox.Show("group button click error"); }
         }
 
         private void MainTab_Selected(object sender, DevExpress.XtraTab.TabPageEventArgs e)
@@ -554,18 +551,18 @@ namespace Monitor
                 RepositoryItemButtonEdit ritem_edit = new RepositoryItemButtonEdit();
                 ritem_edit.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
                 ritem_edit.Buttons[0].Kind = DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph;
+                ritem_edit.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(groups_edit);
                 ritem_edit.Buttons[0].Image = new System.Drawing.Bitmap(((System.Drawing.Image)(resources.GetObject("simpleButton_edit_member.Image"))), new Size(20, 20));
-                ritem_edit.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(groups_ButtonClick);
                 gridControl_groups.RepositoryItems.Add(ritem_edit);
                 gridView_groups.Columns["Засах"].ColumnEdit = ritem_edit;
-                
-                RepositoryItemButtonEdit ritem1 = new RepositoryItemButtonEdit();
-                ritem1.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
-                ritem1.Buttons[0].Kind = DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph;
-                ritem1.Buttons[0].Tag = "delete";
-                ritem1.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(groups_ButtonClick);
-                gridControl_groups.RepositoryItems.Add(ritem1);
-                gridView_groups.Columns["Устгах"].ColumnEdit = ritem1;
+
+                RepositoryItemButtonEdit ritem_delete = new RepositoryItemButtonEdit();
+                ritem_delete.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
+                ritem_delete.Buttons[0].Kind = DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph;
+                ritem_delete.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(groups_delete);
+                ritem_delete.Buttons[0].Image = new System.Drawing.Bitmap(((System.Drawing.Image)(resources.GetObject("simpleButton_delete_member.Image"))), new Size(20,20)); ;
+                gridControl_groups.RepositoryItems.Add(ritem_delete);
+                gridView_groups.Columns["Устгах"].ColumnEdit = ritem_delete;
         }
 
         private void ban()
@@ -589,6 +586,7 @@ namespace Monitor
             }
             catch { MessageBox.Show("ban error!!!"); }
         }
+
         public void ban_delete_ButtonClick(object sender, ButtonPressedEventArgs e)
         {
             try
@@ -624,7 +622,7 @@ namespace Monitor
 
         private void simpleButton_add_group_Click(object sender, EventArgs e)
         {
-            addGroup group = new addGroup(null);
+            groups_add group = new groups_add(null);
             group.ShowDialog(this);
             if (group.ok)
             {
