@@ -6,7 +6,6 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
-using System.Linq;
 using DevExpress.XtraTreeList;
 using DevExpress.XtraTreeList.Nodes;
 using System.Collections;

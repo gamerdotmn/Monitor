@@ -54,7 +54,7 @@ namespace Monitor
                 ms.SubmitChanges();
                 employee_member _em = new employee_member();
                 _em.member_name = textEdit_name.Text;
-                _em.member_name = Mainfrm.name;
+                _em.member_name = mainfrm.name;
                 _em.price = newmemberprice;
                 _em.ot = DateTime.Now;
                 ms.employee_members.InsertOnSubmit(_em);

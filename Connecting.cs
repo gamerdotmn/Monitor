@@ -9,9 +9,9 @@ using DevExpress.XtraSplashScreen;
 
 namespace Monitor
 {
-    public partial class Connecting : SplashScreen
+    public partial class connecting : SplashScreen
     {
-        public Connecting()
+        public connecting()
         {
             InitializeComponent();
             labelControl_copyright.Text = labelControl_copyright.Text + DateTime.Now.Year;

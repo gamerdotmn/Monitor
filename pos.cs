@@ -27,7 +27,6 @@ namespace Monitor
         public float h_size = 9.25f;
         public FontStyle f_fontstyle = FontStyle.Bold;
         public float f_size = 9.25f;
-        public string printername = "";
         Hashtable[] ht;
         Hashtable ti = new Hashtable();
 
@@ -196,12 +195,12 @@ namespace Monitor
                 sale.qnt = int.Parse(listView_order.Items[i].SubItems[2].Text);
                 sale.total = int.Parse(listView_order.Items[i].SubItems[3].Text);
                 sale.price = int.Parse(listView_order.Items[i].SubItems[3].Text) / int.Parse(listView_order.Items[i].SubItems[2].Text);
-                sale.ot = Mainfrm.now;
-                sale.empoyee_name = Mainfrm.name;
+                sale.ot = mainfrm.now;
+                sale.empoyee_name = mainfrm.name;
                 ms.employee_sales.InsertOnSubmit(sale);
             }
             ms.SubmitChanges();
-            if (Mainfrm.printbill)
+            if (mainfrm.printbill)
             {
                 var _cfg = (from c in ms.configs select c).SingleOrDefault();
                 print(_cfg.org_name, "Нийт:" + textEdit_sum.Text);
@@ -250,24 +249,9 @@ namespace Monitor
                 p_text += "\n";
             }
             p_text += seperator + "\n";
-            
             PrintDocument pd = new PrintDocument();
-            if (printername != null)
-            {
-                if (printername.Length > 0)
-                {
-                    pd.PrinterSettings.PrinterName = printername;
-                }
-            }
-            if (pd.PrinterSettings.IsValid)
-            {
-                pd.PrintPage += new PrintPageEventHandler(this.PrintPageEvent);
-                pd.Print();
-            }
-            else
-            {
-                MessageBox.Show(printername + " хэвлэх боломжгүй байна.");
-            }
+            pd.PrintPage += new PrintPageEventHandler(this.PrintPageEvent);
+            pd.Print();
         }
         private string space(int max, string text, bool left)
         {

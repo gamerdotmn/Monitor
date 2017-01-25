@@ -1,6 +1,6 @@
 ﻿namespace Monitor
 {
-    partial class Login
+    partial class login
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(login));
             this.simpleButton_ok = new DevExpress.XtraEditors.SimpleButton();
             this.labelControl_name = new DevExpress.XtraEditors.LabelControl();
             this.labelControl_pwd = new DevExpress.XtraEditors.LabelControl();
@@ -44,15 +44,15 @@
             // 
             // simpleButton_ok
             // 
-            this.simpleButton_ok.Location = new System.Drawing.Point(210, 115);
+            this.simpleButton_ok.Location = new System.Drawing.Point(190, 113);
             this.simpleButton_ok.Name = "simpleButton_ok";
-            this.simpleButton_ok.Size = new System.Drawing.Size(75, 23);
+            this.simpleButton_ok.Size = new System.Drawing.Size(100, 25);
             this.simpleButton_ok.TabIndex = 3;
             this.simpleButton_ok.Text = "Нэвтрэх";
             // 
             // labelControl_name
             // 
-            this.labelControl_name.Location = new System.Drawing.Point(25, 27);
+            this.labelControl_name.Location = new System.Drawing.Point(30, 30);
             this.labelControl_name.Name = "labelControl_name";
             this.labelControl_name.Size = new System.Drawing.Size(94, 13);
             this.labelControl_name.TabIndex = 1;
@@ -60,7 +60,7 @@
             // 
             // labelControl_pwd
             // 
-            this.labelControl_pwd.Location = new System.Drawing.Point(74, 53);
+            this.labelControl_pwd.Location = new System.Drawing.Point(79, 60);
             this.labelControl_pwd.Name = "labelControl_pwd";
             this.labelControl_pwd.Size = new System.Drawing.Size(45, 13);
             this.labelControl_pwd.TabIndex = 3;
@@ -68,7 +68,7 @@
             // 
             // login_pwd
             // 
-            this.login_pwd.Location = new System.Drawing.Point(125, 50);
+            this.login_pwd.Location = new System.Drawing.Point(130, 57);
             this.login_pwd.Name = "login_pwd";
             this.login_pwd.Properties.PasswordChar = '*';
             this.login_pwd.Size = new System.Drawing.Size(160, 20);
@@ -76,7 +76,7 @@
             // 
             // comboBoxEdit_server
             // 
-            this.comboBoxEdit_server.Location = new System.Drawing.Point(125, 76);
+            this.comboBoxEdit_server.Location = new System.Drawing.Point(130, 87);
             this.comboBoxEdit_server.Name = "comboBoxEdit_server";
             this.comboBoxEdit_server.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -88,7 +88,7 @@
             // 
             // labelControl_server
             // 
-            this.labelControl_server.Location = new System.Drawing.Point(75, 79);
+            this.labelControl_server.Location = new System.Drawing.Point(80, 90);
             this.labelControl_server.Name = "labelControl_server";
             this.labelControl_server.Size = new System.Drawing.Size(44, 13);
             this.labelControl_server.TabIndex = 6;
@@ -96,7 +96,7 @@
             // 
             // login_username
             // 
-            this.login_username.Location = new System.Drawing.Point(125, 24);
+            this.login_username.Location = new System.Drawing.Point(130, 27);
             this.login_username.Name = "login_username";
             this.login_username.Size = new System.Drawing.Size(160, 20);
             this.login_username.TabIndex = 1;
@@ -104,16 +104,16 @@
             // labelerr
             // 
             this.labelerr.AutoSize = true;
-            this.labelerr.Location = new System.Drawing.Point(122, 99);
+            this.labelerr.Location = new System.Drawing.Point(127, 141);
             this.labelerr.Name = "labelerr";
             this.labelerr.Size = new System.Drawing.Size(0, 13);
             this.labelerr.TabIndex = 4;
             // 
-            // Login
+            // login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(310, 160);
+            this.ClientSize = new System.Drawing.Size(324, 162);
             this.Controls.Add(this.login_username);
             this.Controls.Add(this.labelControl_server);
             this.Controls.Add(this.comboBoxEdit_server);
@@ -126,7 +126,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "Login";
+            this.Name = "login";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Нэвтрэх";
             ((System.ComponentModel.ISupportInitialize)(this.login_pwd.Properties)).EndInit();

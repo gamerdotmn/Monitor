@@ -1,6 +1,6 @@
 ﻿namespace Monitor
 {
-    partial class Connecting
+    partial class connecting
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Connecting));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(connecting));
             this.marqueeProgressBarControl = new DevExpress.XtraEditors.MarqueeProgressBarControl();
             this.labelControl_connecting = new DevExpress.XtraEditors.LabelControl();
             this.labelControl_link = new DevExpress.XtraEditors.LabelControl();
@@ -99,7 +99,7 @@
             this.simpleButton_exit.Text = "x";
             this.simpleButton_exit.Click += new System.EventHandler(this.simpleButton_exit_Click);
             // 
-            // Connecting
+            // connecting
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -110,9 +110,10 @@
             this.Controls.Add(this.labelControl_link);
             this.Controls.Add(this.labelControl_connecting);
             this.Controls.Add(this.marqueeProgressBarControl);
+            this.DoubleBuffered = true;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "Connecting";
-            this.Text = "Form1";
+            this.Name = "connecting";
+            this.Text = "MasterCafe";
             this.TopMost = true;
             ((System.ComponentModel.ISupportInitialize)(this.marqueeProgressBarControl.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit_logo.Properties)).EndInit();

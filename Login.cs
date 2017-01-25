@@ -11,10 +11,10 @@ using System.Net;
 
 namespace Monitor
 {
-    public partial class Login : DevExpress.XtraEditors.XtraForm
+    public partial class login : DevExpress.XtraEditors.XtraForm
     {
         public bool ok_login = false;
-        public Login()
+        public login()
         {
             InitializeComponent();
             Refresh();
@@ -22,8 +22,8 @@ namespace Monitor
 
         public void Refresh()
         {
-            string[] servers = new string[Mainfrm.broadcast_servers.Count];
-            Mainfrm.broadcast_servers.Keys.CopyTo(servers, 0);
+            string[] servers = new string[mainfrm.broadcast_servers.Count];
+            mainfrm.broadcast_servers.Keys.CopyTo(servers, 0);
             if (comboBoxEdit_server.InvokeRequired)
             {
                 comboBoxEdit_server.Invoke(new MethodInvoker(delegate
@@ -31,7 +31,7 @@ namespace Monitor
                     comboBoxEdit_server.Properties.Items.Clear();
                     for (int i = 0; i < servers.Length; i++)
                     {
-                        comboBoxEdit_server.Properties.Items.Add(Mainfrm.broadcast_servers[servers[i]]);
+                        comboBoxEdit_server.Properties.Items.Add(mainfrm.broadcast_servers[servers[i]]);
                     }
                     comboBoxEdit_server.SelectedIndex = 0;
                 }));
@@ -41,7 +41,7 @@ namespace Monitor
                 comboBoxEdit_server.Properties.Items.Clear();
                 for (int i = 0; i < servers.Length; i++)
                 {
-                    comboBoxEdit_server.Properties.Items.Add(Mainfrm.broadcast_servers[servers[i]]);
+                    comboBoxEdit_server.Properties.Items.Add(mainfrm.broadcast_servers[servers[i]]);
                 }
                 comboBoxEdit_server.SelectedIndex = 0;
             }
@@ -52,13 +52,13 @@ namespace Monitor
 
         private void comboBoxEdit_server_SelectedIndexChanged(object sender, EventArgs e)
         {
-            string[] servers = new string[Mainfrm.broadcast_servers.Count];
-            Mainfrm.broadcast_servers.Keys.CopyTo(servers, 0);
+            string[] servers = new string[mainfrm.broadcast_servers.Count];
+            mainfrm.broadcast_servers.Keys.CopyTo(servers, 0);
             for (int i = 0; i < servers.Length; i++)
             {
-                if ((string)Mainfrm.broadcast_servers[servers[i]] == (string)comboBoxEdit_server.Text)
+                if ((string)mainfrm.broadcast_servers[servers[i]] == (string)comboBoxEdit_server.Text)
                 {
-                    Mainfrm.serverip = servers[i];
+                    mainfrm.serverip = servers[i];
                     //Program.constr = @"Data Source=" + Mainfrm.serverip + @"\MASTERCAFE;Initial Catalog=mastercafedb;Persist Security Info=True;User ID=sa;Password=pldifvzz7x;MultipleActiveResultSets=True";
                 }
             }

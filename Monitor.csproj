@@ -253,11 +253,11 @@
     <Compile Include="chargemember.Designer.cs">
       <DependentUpon>chargemember.cs</DependentUpon>
     </Compile>
-    <Compile Include="Connecting.cs">
+    <Compile Include="connecting.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Connecting.Designer.cs">
-      <DependentUpon>Connecting.cs</DependentUpon>
+    <Compile Include="connecting.Designer.cs">
+      <DependentUpon>connecting.cs</DependentUpon>
     </Compile>
     <Compile Include="DataClasses_mastercafe.cs">
       <DependentUpon>DataClasses_mastercafe.dbml</DependentUpon>
@@ -267,22 +267,23 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
     </Compile>
-    <Compile Include="DataSet1_rp1.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>DataSet1_rp.xsd</DependentUpon>
-    </Compile>
     <Compile Include="editmember.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="editmember.Designer.cs">
       <DependentUpon>editmember.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmAddEmp.cs">
+    <Compile Include="employees_add.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmAddEmp.designer.cs">
-      <DependentUpon>FrmAddEmp.cs</DependentUpon>
+    <Compile Include="employees_add.designer.cs">
+      <DependentUpon>employees_add.cs</DependentUpon>
+    </Compile>
+    <Compile Include="employees_edit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="employees_edit.Designer.cs">
+      <DependentUpon>employees_edit.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmBan.cs">
       <SubType>Form</SubType>
@@ -293,17 +294,17 @@
     <Compile Include="Labelerr.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Login.cs">
+    <Compile Include="login.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Login.Designer.cs">
-      <DependentUpon>Login.cs</DependentUpon>
+    <Compile Include="login.Designer.cs">
+      <DependentUpon>login.cs</DependentUpon>
     </Compile>
-    <Compile Include="Mainfrm.cs">
+    <Compile Include="mainfrm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Mainfrm.Designer.cs">
-      <DependentUpon>Mainfrm.cs</DependentUpon>
+    <Compile Include="mainfrm.Designer.cs">
+      <DependentUpon>mainfrm.cs</DependentUpon>
     </Compile>
     <Compile Include="Money.cs">
       <SubType>Form</SubType>
@@ -363,48 +364,6 @@
       <DependentUpon>transfer.cs</DependentUpon>
     </Compile>
     <Compile Include="WOL.cs" />
-    <Compile Include="XtraReport_clienthours.cs">
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="XtraReport_clienthours.Designer.cs">
-      <DependentUpon>XtraReport_clienthours.cs</DependentUpon>
-    </Compile>
-    <Compile Include="XtraReport_client_member.cs">
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="XtraReport_client_member.Designer.cs">
-      <DependentUpon>XtraReport_client_member.cs</DependentUpon>
-    </Compile>
-    <Compile Include="XtraReport_client_timecode.cs">
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="XtraReport_client_timecode.Designer.cs">
-      <DependentUpon>XtraReport_client_timecode.cs</DependentUpon>
-    </Compile>
-    <Compile Include="XtraReport_employee_member.cs">
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="XtraReport_employee_member.Designer.cs">
-      <DependentUpon>XtraReport_employee_member.cs</DependentUpon>
-    </Compile>
-    <Compile Include="XtraReport_emptimecode.cs">
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="XtraReport_emptimecode.Designer.cs">
-      <DependentUpon>XtraReport_emptimecode.cs</DependentUpon>
-    </Compile>
-    <Compile Include="XtraReport_orlogo.cs">
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="XtraReport_orlogo.Designer.cs">
-      <DependentUpon>XtraReport_orlogo.cs</DependentUpon>
-    </Compile>
-    <Compile Include="XtraReport_topmember.cs">
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="XtraReport_topmember.Designer.cs">
-      <DependentUpon>XtraReport_topmember.cs</DependentUpon>
-    </Compile>
     <EmbeddedResource Include="addmember.resx">
       <DependentUpon>addmember.cs</DependentUpon>
     </EmbeddedResource>
@@ -419,6 +378,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="editmember.resx">
       <DependentUpon>editmember.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="employees_edit.resx">
+      <DependentUpon>employees_edit.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Money.resx">
       <DependentUpon>Money.cs</DependentUpon>
@@ -438,48 +400,26 @@
     <EmbeddedResource Include="transfer.resx">
       <DependentUpon>transfer.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="XtraReport_clienthours.resx">
-      <DependentUpon>XtraReport_clienthours.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="XtraReport_client_member.resx">
-      <DependentUpon>XtraReport_client_member.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="XtraReport_client_timecode.resx">
-      <DependentUpon>XtraReport_client_timecode.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="XtraReport_employee_member.resx">
-      <DependentUpon>XtraReport_employee_member.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="XtraReport_emptimecode.resx">
-      <DependentUpon>XtraReport_emptimecode.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="XtraReport_orlogo.resx">
-      <DependentUpon>XtraReport_orlogo.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="XtraReport_topmember.resx">
-      <DependentUpon>XtraReport_topmember.cs</DependentUpon>
-    </EmbeddedResource>
-    <None Include="app.config" />
     <None Include="DataClasses_mastercafe.dbml.layout">
       <DependentUpon>DataClasses_mastercafe.dbml</DependentUpon>
     </None>
     <EmbeddedResource Include="addGroup.resx">
       <DependentUpon>addGroup.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Connecting.resx">
-      <DependentUpon>Connecting.cs</DependentUpon>
+    <EmbeddedResource Include="connecting.resx">
+      <DependentUpon>connecting.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmAddEmp.resx">
-      <DependentUpon>FrmAddEmp.cs</DependentUpon>
+    <EmbeddedResource Include="employees_add.resx">
+      <DependentUpon>employees_add.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmBan.resx">
       <DependentUpon>FrmBan.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Login.resx">
-      <DependentUpon>Login.cs</DependentUpon>
+    <EmbeddedResource Include="login.resx">
+      <DependentUpon>login.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Mainfrm.resx">
-      <DependentUpon>Mainfrm.cs</DependentUpon>
+    <EmbeddedResource Include="mainfrm.resx">
+      <DependentUpon>mainfrm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="msg.resx">
       <DependentUpon>msg.cs</DependentUpon>
@@ -502,17 +442,6 @@
       <Generator>MSLinqToSQLGenerator</Generator>
       <LastGenOutput>DataClasses_mastercafe.designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
-    </None>
-    <None Include="DataSet1_rp.xsc">
-      <DependentUpon>DataSet1_rp.xsd</DependentUpon>
-    </None>
-    <None Include="DataSet1_rp.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>DataSet1_rp1.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="DataSet1_rp.xss">
-      <DependentUpon>DataSet1_rp.xsd</DependentUpon>
     </None>
     <None Include="log4net.config" />
     <None Include="packages.config" />

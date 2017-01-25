@@ -30,15 +30,15 @@ using System.Threading;
 
 namespace Monitor
 {
-    public partial class Mainfrm : DevExpress.XtraEditors.XtraForm
+    public partial class mainfrm : DevExpress.XtraEditors.XtraForm
     {
-        private Login lfrm = null;
+        private login lfrm = null;
         public static string serverip = "";
         private System.Timers.Timer server_timer;
         private System.Timers.Timer client_timerstats;
         private int connecttimeout = 0;
         private bool connected = false;
-        Connecting connecting;
+        connecting connecting;
         private Hashtable server_packets = new Hashtable();
         public static bool logged = false;
         public static bool isadmin = false;
@@ -88,7 +88,7 @@ namespace Monitor
                     }
                 }
             }
-            sock.Close();
+            //sock.Close();
         }
 
         private void server_syn(PacketServerMonitorSyn packet)
@@ -126,7 +126,7 @@ namespace Monitor
         {
             using (DataContext_mastercafe dcm = new DataContext_mastercafe(Program.constr))
             {
-                var emps = (from e in dcm.employees where e.name.ToLower() == lfrm.login_username.Text.ToLower() && e.password.ToLower() == lfrm.login_pwd.Text.ToLower() select new { e.name, e.isadmin });
+                var emps = (from e in dcm.employees where e.name.ToLower() == lfrm.login_username.Text.ToLower() && e.password == Program.Compress(lfrm.login_pwd.Text.ToLower()) select new { e.name, e.isadmin });
                 int cnt = emps.Count();
                 if (cnt == 1)
                 {
@@ -170,7 +170,7 @@ namespace Monitor
 
         private void server_disconnect()
         {
-            if (MessageBox.Show("Сервер унтарсан байна. Программыг гаргах уу?", "Анхаар", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            if (MessageBox.Show("Сервер унтарсан байна. Программыг гаргах уу?", "Анхаар", MessageBoxButtons.YesNo,MessageBoxIcon.Warning) == DialogResult.Yes)
             {
                 System.Environment.Exit(0);
             }
@@ -221,7 +221,7 @@ namespace Monitor
             }
         }
 
-        public Mainfrm()
+        public mainfrm()
         {
             try
             {
@@ -253,7 +253,7 @@ namespace Monitor
             server_timer = new System.Timers.Timer(2000);
             server_timer.Elapsed += new ElapsedEventHandler(server_timerelapsed);
             server_timer.Start();
-            connecting = new Connecting();
+            connecting = new connecting();
             connecting.ShowDialog(this);
             client_timerstats = new System.Timers.Timer(500);
             client_timerstats.Elapsed += new ElapsedEventHandler(client_timerstatselapsed);
@@ -263,13 +263,12 @@ namespace Monitor
             }
             
             DataContext_mastercafe dcm = new DataContext_mastercafe(Program.constr);
-            lfrm = new Login();
+            lfrm = new login();
             lfrm.login_pwd.KeyDown += new KeyEventHandler(lfrm_login_pwd_KeyDown);
             lfrm.simpleButton_ok.Click += new EventHandler(lfrm_simpleButton_ok_Click);
             lfrm.ShowDialog(this);
             if (logged)
             {
-                
                 cfg.org_id = dcm.configs.FirstOrDefault().org_id;
                 cfg.org_email = dcm.configs.FirstOrDefault().org_email;
                 cfg.org_name = dcm.configs.FirstOrDefault().org_name;
@@ -280,10 +279,8 @@ namespace Monitor
                 cfg.alert_minute = dcm.configs.FirstOrDefault().alert_minute;
                 cfg.alert_message = dcm.configs.FirstOrDefault().alert_message;
                 cfg.idle_minute = dcm.configs.FirstOrDefault().idle_minute;
-
                 InitializeComponent();
-                int count = (from row in dcm.hourtemplates
-                             select row).Count();
+                int count = (from row in dcm.hourtemplates select row).Count();
                 if (count > 0)
                 {
                     var htemp = from g in dcm.hourtemplates select g;
@@ -341,66 +338,59 @@ namespace Monitor
                 connecting.Close();
             }
         }
-        private void users()
+
+        private void employees()
         {
-            try
-            {
                 DataContext_mastercafe ms = new DataContext_mastercafe(Program.constr);
-                gridControl1.DataSource = (from t in ms.employees
+                gridControl_employees.DataSource = (from t in ms.employees where t.isadmin==false
                                            select new
                                            {
                                                Нэр = t.name,
-                                               ХэрэглэгчийнЭрх = t.isadmin == true ? "Админ" : "Кашир",
                                                Засах = "",
                                                Устгах = ""
                                            }).ToList();
+                
+                System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(mainfrm));
+                RepositoryItemButtonEdit ritem_edit = new RepositoryItemButtonEdit();
+                ritem_edit.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
+                ritem_edit.Buttons[0].Kind = DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph;
+                ritem_edit.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(employees_edit);
+                ritem_edit.Buttons[0].Image = new System.Drawing.Bitmap(((System.Drawing.Image)(resources.GetObject("simpleButton_edit_member.Image"))), new Size(20, 20));
+                gridControl_employees.RepositoryItems.Add(ritem_edit);
+                gridView_employees.Columns["Засах"].ColumnEdit = ritem_edit;
 
-                RepositoryItemButtonEdit ritem = new RepositoryItemButtonEdit();
-                ritem.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
-                ritem.Buttons[0].Kind = DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph;
-                ritem.Buttons[0].Tag = "edit";
-                //ritem.Buttons[0].Image = Monitor.Properties.Resources.delete;
-                ritem.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(ritem_ButtonClick);
-                gridControl1.RepositoryItems.Add(ritem);
-                gridView1.Columns["Засах"].ColumnEdit = ritem;
-                RepositoryItemButtonEdit ritem1 = new RepositoryItemButtonEdit();
-                ritem1.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
-                ritem1.Buttons[0].Kind = DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph;
-                ritem1.Buttons[0].Tag = "delete";
-                ritem1.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(ritem_ButtonClick);
-                gridControl1.RepositoryItems.Add(ritem1);
-                gridView1.Columns["Устгах"].ColumnEdit = ritem1;
-            }
-            catch { MessageBox.Show("users() алдаа гарлаа!!!"); }
+                RepositoryItemButtonEdit ritem_delete = new RepositoryItemButtonEdit();
+                ritem_delete.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
+                ritem_delete.Buttons[0].Kind = DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph;
+                ritem_delete.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(employees_delete);
+                ritem_delete.Buttons[0].Image = new System.Drawing.Bitmap(((System.Drawing.Image)(resources.GetObject("simpleButton_delete_member.Image"))), new Size(20,20)); ;
+                gridControl_employees.RepositoryItems.Add(ritem_delete);
+                gridView_employees.Columns["Устгах"].ColumnEdit = ritem_delete;
         }
-        public void ritem_ButtonClick(object sender, ButtonPressedEventArgs e)
+
+        public void employees_edit(object sender, ButtonPressedEventArgs e)
         {
-            try
+            DataContext_mastercafe ms = new DataContext_mastercafe(Program.constr);
+            Monitor.employees_edit edit = new employees_edit(gridView_employees.GetFocusedRowCellValue("Нэр").ToString());
+            edit.ShowDialog(this);
+            if (edit.ok)
             {
-                DataContext_mastercafe ms = new DataContext_mastercafe(Program.constr);
-                if (e.Button.Tag.ToString() == "delete")
-                {
-                    if (MessageBox.Show("Та " + gridView1.GetFocusedRowCellValue("Нэр").ToString() + " нэртэй хэрэглэгчийг устгахдаа итгэлтэй байна уу?", "Баталгаажуулалт", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question) == DialogResult.Yes)
-                    {
-                        employee _emp = ms.employees.Single(p => p.name == gridView1.GetFocusedRowCellValue("Нэр").ToString());
-                        ms.employees.DeleteOnSubmit(_emp);
-                        ms.SubmitChanges();
-                        gridView1.DeleteRow(gridView1.FocusedRowHandle);
-                    }
-                }
-                if (e.Button.Tag.ToString() == "edit")
-                {
-                    FrmAddEmp add = new FrmAddEmp(gridView1.GetFocusedRowCellValue("Нэр").ToString());
-                    add.ShowDialog(this);
-                    if (add.ok)
-                    {
-                        users();
-                    }
-                }
+                employees();
             }
-            catch (Exception ex) { MessageBox.Show(ex.Message); }
-            
         }
+
+        public void employees_delete(object sender, ButtonPressedEventArgs e)
+        {
+            DataContext_mastercafe ms = new DataContext_mastercafe(Program.constr);
+            if (MessageBox.Show("Та '" + gridView_employees.GetFocusedRowCellValue("Нэр").ToString() + "' нэртэй хэрэглэгчийг устгахдаа итгэлтэй байна уу?", "Баталгаажуулалт", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                employee _emp = ms.employees.Single(p => p.name.ToLower() == gridView_employees.GetFocusedRowCellValue("Нэр").ToString().ToLower());
+                ms.employees.DeleteOnSubmit(_emp);
+                ms.SubmitChanges();
+                gridView_employees.DeleteRow(gridView_employees.FocusedRowHandle);
+            }
+        }
+
         public void groups_ButtonClick(object sender, ButtonPressedEventArgs e)
         {
             try
@@ -422,39 +412,39 @@ namespace Monitor
                     add.ShowDialog(this);
                     if (add.ok)
                     {
-                        ngroups();
+                        groups();
                     }
                 }
             }
             catch { MessageBox.Show("group button click error"); }
         }
-        private void MainTab_SelectedPageChanged(object sender, DevExpress.XtraTab.TabPageChangedEventArgs e)
+
+        private void MainTab_Selected(object sender, DevExpress.XtraTab.TabPageEventArgs e)
         {
-            switch (MainTab.SelectedTabPageIndex)
+            switch (e.PageIndex)
             {
-                case 0:
-                    users();
-                    break;
                 case 1:
-                    ngroups();
+                    employees();
                     break;
-                case 4:
-                     ban(); break;
                 case 2:
+                    groups();
                     break;
                 case 3:
-                    nmember();
+                    ban(); break;
+                case 4:
                     break;
                 case 5:
-                    timez();
+                    nmember();
                     break;
                 case 6:
+                    timez();
+                    break;
+                case 7:
                     nconfig();
                     break;
             }
         }
 
-        
         public void timez_ButtonClick(object sender, ButtonPressedEventArgs e)
         {
             try
@@ -542,10 +532,9 @@ namespace Monitor
             }
             catch { MessageBox.Show("config error!!!"); }
         }
-        private void ngroups()
+
+        private void groups()
         {
-            try
-            {
                 DataContext_mastercafe ms = new DataContext_mastercafe(Program.constr);
                 gridControl_groups.DataSource = (from t in ms.groups
                                                  select new
@@ -559,13 +548,17 @@ namespace Monitor
                                                      Засах = "",
                                                      Устгах = ""
                                                  }).ToList();
-                RepositoryItemButtonEdit ritem = new RepositoryItemButtonEdit();
-                ritem.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
-                ritem.Buttons[0].Kind = DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph;
-                ritem.Buttons[0].Tag = "edit";
-                ritem.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(groups_ButtonClick);
-                gridControl_groups.RepositoryItems.Add(ritem);
-                gridView_groups.Columns["Засах"].ColumnEdit = ritem;
+
+                System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(mainfrm));
+                
+                RepositoryItemButtonEdit ritem_edit = new RepositoryItemButtonEdit();
+                ritem_edit.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
+                ritem_edit.Buttons[0].Kind = DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph;
+                ritem_edit.Buttons[0].Image = new System.Drawing.Bitmap(((System.Drawing.Image)(resources.GetObject("simpleButton_edit_member.Image"))), new Size(20, 20));
+                ritem_edit.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(groups_ButtonClick);
+                gridControl_groups.RepositoryItems.Add(ritem_edit);
+                gridView_groups.Columns["Засах"].ColumnEdit = ritem_edit;
+                
                 RepositoryItemButtonEdit ritem1 = new RepositoryItemButtonEdit();
                 ritem1.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
                 ritem1.Buttons[0].Kind = DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph;
@@ -573,9 +566,8 @@ namespace Monitor
                 ritem1.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(groups_ButtonClick);
                 gridControl_groups.RepositoryItems.Add(ritem1);
                 gridView_groups.Columns["Устгах"].ColumnEdit = ritem1;
-            }
-            catch { MessageBox.Show("groups error!!!"); }
         }
+
         private void ban()
         {
             try
@@ -610,13 +602,13 @@ namespace Monitor
             catch { MessageBox.Show("ban delete error"); }
         }
 
-        private void button_add_Click(object sender, EventArgs e)
+        private void simpleButton_employees_add_Click(object sender, EventArgs e)
         {
-            FrmAddEmp add = new FrmAddEmp("");
+            employees_add add = new employees_add();
             add.ShowDialog(this);
             if (add.ok)
             {
-                users();
+                employees();
             }
         }
 
@@ -636,7 +628,7 @@ namespace Monitor
             group.ShowDialog(this);
             if (group.ok)
             {
-                ngroups();
+                groups();
             }
         }
         private void server_listen()
@@ -1579,157 +1571,6 @@ namespace Monitor
             }
         }
 
-        private void simpleButton_report_ok_Click(object sender, EventArgs e)
-        {
-            DataSet1_rp.emphourDataTable dta = new DataSet1_rp.emphourDataTable();
-            string emp_id = "";
-            
-            DateTime begd = DateTime.Parse(start_date1.DateTime.Year.ToString() + "-" + start_date1.DateTime.Month.ToString() + "-" + start_date1.DateTime.Day.ToString() + " " + start_hour1.Text.ToString() + ":00:00");
-            DateTime endd = DateTime.Parse(end_date.DateTime.Year.ToString() + "-" + end_date.DateTime.Month.ToString() + "-" + end_date.DateTime.Day.ToString() + " " + end_hour.Text.ToString() + ":00:00");
-            DataContext_mastercafe ms = new DataContext_mastercafe(Program.constr);
-            var _data = from g in ms.employee_hours where g.ot >= begd && g.ot <= endd select g;
-            if (emp_id != "")
-            {
-                _data = from g in ms.employee_hours where g.employee_name == emp_id && g.ot >= begd && g.ot <= endd select g;
-            }
-            int sum = 0;
-            foreach(var _d in _data)
-            {
-                if (_d.price != 0)
-                {
-                    string type = "Цаг тависан";
-                    if (_d.price < 0) type = "Буцаалт";
-                    dta.Rows.Add(_d.employee.name, _d.client_name, _d.price, type, _d.ot.ToString("yyyy-MM-dd H:mm:ss"));
-                    sum += _d.price;
-                }
-            }
-            dta.Rows.Add(null,"Нийт",sum.ToString(),null,null);
-            DataSet ds = new DataSet();
-            ds.Tables.Add(dta);
-            XtraReport_orlogo t = new XtraReport_orlogo(start_date1.DateTime.ToShortDateString()+" "+start_hour1.Text.ToString()+" цагаас "+ end_date.DateTime.ToShortDateString()+" "+end_hour.Text.ToString()+" цаг хүртэл");
-            t.DataSource = ds;
-            t.DataMember = "dta";
-            documentViewer1.PrintingSystem = t.PrintingSystem;
-            try
-            {
-                t.CreateDocument();
-            }
-            catch { MessageBox.Show("Шүүлтэд тохирох үр дүн олдсонгүй"); }
-            //member
-            DataSet1_rp.empmemberDataTable emember = new DataSet1_rp.empmemberDataTable();
-            var _employee_member = from emp_member in ms.employee_members where  emp_member.ot >= begd && emp_member.ot <= endd select emp_member;
-            if (emp_id != "")
-            {
-                _employee_member = from emp_member in ms.employee_members where emp_member.employee_name == emp_id && emp_member.ot >= begd && emp_member.ot <= endd select emp_member;
-            }
-            int sum_employee_member = 0;
-            foreach (var _e in _employee_member)
-            {
-                sum_employee_member += _e.price; 
-               emember.Rows.Add(_e.employee.name, _e.member.name, _e.price.ToString(), _e.ot.ToString("yyyy-MM-dd H:mm:ss"));
-                
-            }
-            emember.Rows.Add(null,"Нийт",sum_employee_member.ToString(),null);
-            DataSet md = new DataSet();
-            md.Tables.Add(emember);
-            XtraReport_employee_member xr = new XtraReport_employee_member(start_date1.DateTime.ToShortDateString() + " " + start_hour1.Text.ToString() + " цагаас " + end_date.DateTime.ToShortDateString() + " " + end_hour.Text.ToString() + " цаг хүртэл");
-            xr.DataSource = md;
-            xr.DataMember = "emember";
-            documentViewer2.PrintingSystem = xr.PrintingSystem;
-           
-            try
-            {
-                xr.CreateDocument();
-            }
-            catch { ;}
-            //timecode
-            DataSet1_rp.emptimecodeDataTable emptimecode = new DataSet1_rp.emptimecodeDataTable();
-            var _employee_timecode = from timecode in ms.employee_timecodes where timecode.ot >= begd && timecode.ot <= endd select timecode;
-            if (emp_id != "")
-            {
-                _employee_timecode = from timecode in ms.employee_timecodes where timecode.employee_name==emp_id && timecode.ot >= begd && timecode.ot <= endd select timecode;
-            }
-            int sum_employee_timecode = 0;
-            foreach (var _t in _employee_timecode)
-            {
-                sum_employee_timecode += _t.price;
-                emptimecode.Rows.Add(_t.employee.name, _t.price.ToString(), _t.ot.ToString("yyyy-MM-dd H:mm:ss"),_t.timecode_code);
-            }
-            emptimecode.Rows.Add(null,sum_employee_timecode.ToString(),null,"Нийт");
-            DataSet tc = new DataSet();
-            tc.Tables.Add(emptimecode);
-            XtraReport_emptimecode tcode = new XtraReport_emptimecode(start_date1.DateTime.ToShortDateString() + " " + start_hour1.Text.ToString() + " цагаас " + end_date.DateTime.ToShortDateString() + " " + end_hour.Text.ToString() + " цаг хүртэл");
-            tcode.DataSource = tc;
-            tcode.DataMember = "emptimecode";
-            //documentViewer.PrintingSystem = tcode.PrintingSystem;
-            try
-            {
-                tcode.CreateDocument();
-            }
-            catch { ; }
-
-            int total = 0;
-            XtraReport_topmember top = new XtraReport_topmember(start_date1.DateTime.ToShortDateString() + " " + start_hour1.Text.ToString() + " цагаас " + end_date.DateTime.ToShortDateString() + " " + end_hour.Text.ToString() + " цаг хүртэл");
-            top.DataSource = total;
-            top.DataMember = "tpmember";
-            documentViewer7.PrintingSystem = top.PrintingSystem;
-            try
-            {
-                top.CreateDocument();
-            }
-            catch { ;}
-            labelControl_time.Text = sum.ToString();
-            labelControl_ognoo.Text = start_date1.DateTime.ToShortDateString() + " " + start_hour1.Text.ToString() + " цагаас " + end_date.DateTime.ToShortDateString() + " " + end_hour.Text.ToString() + " цаг хүртэл";
-            labelControl1_member.Text = sum_employee_member.ToString();
-            labelControl1_timecode.Text = sum_employee_timecode.ToString();
-            labelControl2_total.Text = (sum + sum_employee_member + sum_employee_timecode).ToString();
-            
-        }
-
-        private void xtraTabControl1_SelectedPageChanged(object sender, DevExpress.XtraTab.TabPageChangedEventArgs e)
-        {
-            /*
-            if (xtraTabControl1.SelectedTabPageIndex == 0)
-            {
-                documentViewerBarManager1.DocumentViewer = documentViewer1;
-            }
-            else if (xtraTabControl1.SelectedTabPageIndex == 1)
-            {
-                documentViewerBarManager1.DocumentViewer = documentViewer2;
-            }
-            else if (xtraTabControl1.SelectedTabPageIndex == 2)
-            {
-                documentViewerBarManager1.DocumentViewer = documentViewer3;
-            }
-            else if (xtraTabControl1.SelectedTabPageIndex == 3)
-            {
-                documentViewerBarManager1.DocumentViewer = documentViewer4;
-            }
-            else if (xtraTabControl1.SelectedTabPageIndex == 4)
-            {
-                documentViewerBarManager1.DocumentViewer = documentViewer5;
-            }
-            else if (xtraTabControl1.SelectedTabPageIndex == 5)
-            {
-                documentViewerBarManager1.DocumentViewer = documentViewer6;
-            }
-            else if (xtraTabControl1.SelectedTabPageIndex == 6)
-            {
-                documentViewerBarManager1.DocumentViewer = documentViewer7;
-            }
-            */
-        }
-
-        private void mtime_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void checkBox1_CheckedChanged(object sender, EventArgs e)
-        {
-            
-        }
-
         private void listView_clients_SizeChanged(object sender, EventArgs e)
         {
             int cw = listView_clients.Width / listView_clients.Columns.Count;
@@ -1738,11 +1579,6 @@ namespace Monitor
                 listView_clients.Columns[i].Width = cw;
                 listView_clients.Columns[i].TextAlign = HorizontalAlignment.Center;
             }
-        }
-
-        private void listView_clients_ItemSelectionChanged(object sender, ListViewItemSelectionChangedEventArgs e)
-        {
-
         }
 
         private void listView_clients_SelectedIndexChanged(object sender, EventArgs e)
@@ -1764,6 +1600,11 @@ namespace Monitor
             System.Environment.Exit(0);
         }
 
+        private void simpleButton_print_Click(object sender, EventArgs e)
+        {
+
+        }
+
         private void mremote_screenshot_Click(object sender, EventArgs e)
         {
             for(int i=0;i<listView_clients.SelectedItems.Count;i++)
@@ -1783,12 +1624,6 @@ namespace Monitor
         {
             e.Cancel = true;
         }
-
-        private void simpleButton_print_Click(object sender, EventArgs e)
-        {
-
-        }
-
 
     }
 }

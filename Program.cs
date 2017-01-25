@@ -31,7 +31,7 @@ namespace Monitor
             BonusSkins.Register();
             SkinManager.EnableFormSkins();
             UserLookAndFeel.Default.SetSkinStyle("DevExpress Style");
-            Application.Run(new Mainfrm());
+            Application.Run(new mainfrm());
         }
 
         public static string Compress(string text)

@@ -1,6 +1,6 @@
 ﻿namespace Monitor
 {
-    partial class Mainfrm
+    partial class mainfrm
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Mainfrm));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(mainfrm));
             this.MainTab = new DevExpress.XtraTab.XtraTabControl();
             this.pc = new DevExpress.XtraTab.XtraTabPage();
             this.panelControl_pc = new DevExpress.XtraEditors.PanelControl();
@@ -82,10 +82,10 @@
             this.mremote_finish = new System.Windows.Forms.ToolStripMenuItem();
             this.imageList_client = new System.Windows.Forms.ImageList(this.components);
             this.user = new DevExpress.XtraTab.XtraTabPage();
-            this.gridControl1 = new DevExpress.XtraGrid.GridControl();
-            this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
-            this.button_add = new DevExpress.XtraEditors.SimpleButton();
+            this.gridControl_employees = new DevExpress.XtraGrid.GridControl();
+            this.gridView_employees = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.panelControl_employees = new DevExpress.XtraEditors.PanelControl();
+            this.simpleButton_employees_add = new DevExpress.XtraEditors.SimpleButton();
             this.group = new DevExpress.XtraTab.XtraTabPage();
             this.gridControl_groups = new DevExpress.XtraGrid.GridControl();
             this.gridView_groups = new DevExpress.XtraGrid.Views.Grid.GridView();
@@ -201,10 +201,10 @@
             this.splitContainer.SuspendLayout();
             this.contextMenuStrip_client.SuspendLayout();
             this.user.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
-            this.panelControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.gridControl_employees)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView_employees)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.panelControl_employees)).BeginInit();
+            this.panelControl_employees.SuspendLayout();
             this.group.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl_groups)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView_groups)).BeginInit();
@@ -293,7 +293,7 @@
             this.time,
             this.config,
             this.report});
-            this.MainTab.SelectedPageChanged += new DevExpress.XtraTab.TabPageChangedEventHandler(this.MainTab_SelectedPageChanged);
+            this.MainTab.Selected += new DevExpress.XtraTab.TabPageEventHandler(this.MainTab_Selected);
             // 
             // pc
             // 
@@ -366,7 +366,6 @@
             this.listView_clients.TabIndex = 1;
             this.listView_clients.UseCompatibleStateImageBehavior = false;
             this.listView_clients.View = System.Windows.Forms.View.Details;
-            this.listView_clients.ItemSelectionChanged += new System.Windows.Forms.ListViewItemSelectionChangedEventHandler(this.listView_clients_ItemSelectionChanged);
             this.listView_clients.SelectedIndexChanged += new System.EventHandler(this.listView_clients_SelectedIndexChanged);
             this.listView_clients.SizeChanged += new System.EventHandler(this.listView_clients_SizeChanged);
             // 
@@ -453,7 +452,6 @@
             this.mtime.Size = new System.Drawing.Size(202, 22);
             this.mtime.Text = "Цаг";
             this.mtime.DropDownItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.mtime_DropDownItemClicked);
-            this.mtime.Click += new System.EventHandler(this.mtime_Click);
             // 
             // mtime_open
             // 
@@ -699,50 +697,50 @@
             // 
             // user
             // 
-            this.user.Controls.Add(this.gridControl1);
-            this.user.Controls.Add(this.panelControl1);
+            this.user.Controls.Add(this.gridControl_employees);
+            this.user.Controls.Add(this.panelControl_employees);
             this.user.Image = ((System.Drawing.Image)(resources.GetObject("user.Image")));
             this.user.Name = "user";
             this.user.Size = new System.Drawing.Size(1002, 633);
             this.user.Text = "Хэрэглэгч";
             // 
-            // gridControl1
+            // gridControl_employees
             // 
-            this.gridControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gridControl1.Location = new System.Drawing.Point(0, 53);
-            this.gridControl1.MainView = this.gridView1;
-            this.gridControl1.Name = "gridControl1";
-            this.gridControl1.Size = new System.Drawing.Size(1002, 580);
-            this.gridControl1.TabIndex = 2;
-            this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-            this.gridView1});
+            this.gridControl_employees.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.gridControl_employees.Location = new System.Drawing.Point(0, 60);
+            this.gridControl_employees.MainView = this.gridView_employees;
+            this.gridControl_employees.Name = "gridControl_employees";
+            this.gridControl_employees.Size = new System.Drawing.Size(1002, 573);
+            this.gridControl_employees.TabIndex = 2;
+            this.gridControl_employees.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.gridView_employees});
             // 
-            // gridView1
+            // gridView_employees
             // 
-            this.gridView1.GridControl = this.gridControl1;
-            this.gridView1.Name = "gridView1";
-            this.gridView1.OptionsView.ShowFilterPanelMode = DevExpress.XtraGrid.Views.Base.ShowFilterPanelMode.Never;
-            this.gridView1.OptionsView.ShowGroupPanel = false;
+            this.gridView_employees.GridControl = this.gridControl_employees;
+            this.gridView_employees.Name = "gridView_employees";
+            this.gridView_employees.OptionsView.ShowFilterPanelMode = DevExpress.XtraGrid.Views.Base.ShowFilterPanelMode.Never;
+            this.gridView_employees.OptionsView.ShowGroupPanel = false;
             // 
-            // panelControl1
+            // panelControl_employees
             // 
-            this.panelControl1.Controls.Add(this.button_add);
-            this.panelControl1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelControl1.Location = new System.Drawing.Point(0, 0);
-            this.panelControl1.Name = "panelControl1";
-            this.panelControl1.Size = new System.Drawing.Size(1002, 53);
-            this.panelControl1.TabIndex = 1;
+            this.panelControl_employees.Controls.Add(this.simpleButton_employees_add);
+            this.panelControl_employees.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelControl_employees.Location = new System.Drawing.Point(0, 0);
+            this.panelControl_employees.Name = "panelControl_employees";
+            this.panelControl_employees.Size = new System.Drawing.Size(1002, 60);
+            this.panelControl_employees.TabIndex = 1;
             // 
-            // button_add
+            // simpleButton_employees_add
             // 
-            this.button_add.Image = ((System.Drawing.Image)(resources.GetObject("button_add.Image")));
-            this.button_add.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleLeft;
-            this.button_add.Location = new System.Drawing.Point(11, 5);
-            this.button_add.Name = "button_add";
-            this.button_add.Size = new System.Drawing.Size(92, 38);
-            this.button_add.TabIndex = 0;
-            this.button_add.Text = "Нэмэх";
-            this.button_add.Click += new System.EventHandler(this.button_add_Click);
+            this.simpleButton_employees_add.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton_employees_add.Image")));
+            this.simpleButton_employees_add.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleLeft;
+            this.simpleButton_employees_add.Location = new System.Drawing.Point(10, 10);
+            this.simpleButton_employees_add.Name = "simpleButton_employees_add";
+            this.simpleButton_employees_add.Size = new System.Drawing.Size(100, 40);
+            this.simpleButton_employees_add.TabIndex = 0;
+            this.simpleButton_employees_add.TabStop = false;
+            this.simpleButton_employees_add.Text = "Нэмэх";
             // 
             // group
             // 
@@ -756,10 +754,10 @@
             // gridControl_groups
             // 
             this.gridControl_groups.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gridControl_groups.Location = new System.Drawing.Point(0, 53);
+            this.gridControl_groups.Location = new System.Drawing.Point(0, 60);
             this.gridControl_groups.MainView = this.gridView_groups;
             this.gridControl_groups.Name = "gridControl_groups";
-            this.gridControl_groups.Size = new System.Drawing.Size(1002, 580);
+            this.gridControl_groups.Size = new System.Drawing.Size(1002, 573);
             this.gridControl_groups.TabIndex = 3;
             this.gridControl_groups.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView_groups});
@@ -776,17 +774,18 @@
             this.panelControl_groups.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelControl_groups.Location = new System.Drawing.Point(0, 0);
             this.panelControl_groups.Name = "panelControl_groups";
-            this.panelControl_groups.Size = new System.Drawing.Size(1002, 53);
+            this.panelControl_groups.Size = new System.Drawing.Size(1002, 60);
             this.panelControl_groups.TabIndex = 2;
             // 
             // simpleButton_add_group
             // 
             this.simpleButton_add_group.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton_add_group.Image")));
             this.simpleButton_add_group.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleLeft;
-            this.simpleButton_add_group.Location = new System.Drawing.Point(11, 5);
+            this.simpleButton_add_group.Location = new System.Drawing.Point(10, 10);
             this.simpleButton_add_group.Name = "simpleButton_add_group";
-            this.simpleButton_add_group.Size = new System.Drawing.Size(92, 38);
+            this.simpleButton_add_group.Size = new System.Drawing.Size(100, 40);
             this.simpleButton_add_group.TabIndex = 0;
+            this.simpleButton_add_group.TabStop = false;
             this.simpleButton_add_group.Text = "Нэмэх";
             this.simpleButton_add_group.Click += new System.EventHandler(this.simpleButton_add_group_Click);
             // 
@@ -1131,7 +1130,6 @@
             this.checkBox1.TabIndex = 24;
             this.checkBox1.Text = "НӨАТ төлөгч";
             this.checkBox1.UseVisualStyleBackColor = true;
-            this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
             // 
             // labelControl13
             // 
@@ -1267,7 +1265,6 @@
             this.xtraTabPage9,
             this.xtraTabPage1,
             this.xtraTabPage2});
-            this.xtraTabControl.SelectedPageChanged += new DevExpress.XtraTab.TabPageChangedEventHandler(this.xtraTabControl1_SelectedPageChanged);
             // 
             // xtraTabPage4
             // 
@@ -1510,7 +1507,6 @@
             this.simpleButton_report_ok.Size = new System.Drawing.Size(82, 23);
             this.simpleButton_report_ok.TabIndex = 11;
             this.simpleButton_report_ok.Text = "Шүүх";
-            this.simpleButton_report_ok.Click += new System.EventHandler(this.simpleButton_report_ok_Click);
             // 
             // comboBoxEdit_cashier
             // 
@@ -1717,7 +1713,7 @@
             this.panelControl_client_bottom.Size = new System.Drawing.Size(1008, 680);
             this.panelControl_client_bottom.TabIndex = 3;
             // 
-            // Mainfrm
+            // mainfrm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -1725,7 +1721,7 @@
             this.Controls.Add(this.panelControl_client_bottom);
             this.Controls.Add(this.panelControl_client_top);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "Mainfrm";
+            this.Name = "mainfrm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MasterCafe Monitor";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Mainfrm_FormClosing);
@@ -1742,10 +1738,10 @@
             this.splitContainer.ResumeLayout(false);
             this.contextMenuStrip_client.ResumeLayout(false);
             this.user.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
-            this.panelControl1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.gridControl_employees)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView_employees)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.panelControl_employees)).EndInit();
+            this.panelControl_employees.ResumeLayout(false);
             this.group.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gridControl_groups)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView_groups)).EndInit();
@@ -1833,10 +1829,10 @@
         private DevExpress.XtraTab.XtraTabPage badwords;
         private DevExpress.XtraTab.XtraTabPage config;
         private DevExpress.XtraTab.XtraTabPage report;
-        private DevExpress.XtraEditors.PanelControl panelControl1;
-        private DevExpress.XtraGrid.GridControl gridControl1;
-        private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
-        private DevExpress.XtraEditors.SimpleButton button_add;
+        private DevExpress.XtraEditors.PanelControl panelControl_employees;
+        private DevExpress.XtraGrid.GridControl gridControl_employees;
+        private DevExpress.XtraGrid.Views.Grid.GridView gridView_employees;
+        private DevExpress.XtraEditors.SimpleButton simpleButton_employees_add;
         private DevExpress.XtraGrid.GridControl gridControl_ban;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView_ban;
         private DevExpress.XtraEditors.PanelControl panelControl2;

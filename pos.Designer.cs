@@ -101,15 +101,14 @@
             this.contextMenuStrip_del.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.delToolStripMenuItem});
             this.contextMenuStrip_del.Name = "contextMenuStrip1";
-            this.contextMenuStrip_del.Size = new System.Drawing.Size(109, 26);
+            this.contextMenuStrip_del.Size = new System.Drawing.Size(205, 48);
             this.contextMenuStrip_del.Opening += new System.ComponentModel.CancelEventHandler(this.contextMenuStrip_Opening);
             // 
             // delToolStripMenuItem
             // 
-            this.delToolStripMenuItem.Image = global::Monitor.Properties.Resources.delete;
             this.delToolStripMenuItem.Name = "delToolStripMenuItem";
-            this.delToolStripMenuItem.Size = new System.Drawing.Size(108, 22);
-            this.delToolStripMenuItem.Text = "Устгах";
+            this.delToolStripMenuItem.Size = new System.Drawing.Size(204, 22);
+            this.delToolStripMenuItem.Text = "Сонгосон барааг устгах";
             this.delToolStripMenuItem.Click += new System.EventHandler(this.delToolStripMenuItem_Click);
             // 
             // panelControl_bottom

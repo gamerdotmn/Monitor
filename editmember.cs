@@ -37,7 +37,7 @@ namespace Monitor
                 _g.money = int.Parse(textEdit_stock.Text);
                 ms.SubmitChanges();
                 employee_member em = new employee_member();
-                em.employee_name= Mainfrm.name;
+                em.employee_name= mainfrm.name;
                 em.member_name = member_name;
                 em.price = int.Parse(textEdit_stock.Text) - old;
                 em.ot = DateTime.Now;
