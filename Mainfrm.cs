@@ -49,7 +49,6 @@ namespace Monitor
         private const int disconnecttime = 10;
         public const string host = "gamer.mn";
         public static config cfg = new config();
-        public List<string> groups_key = new List<string>();
 
         private void broadcast_listen()
         {
@@ -293,6 +292,9 @@ namespace Monitor
                 client_timerstats.Start();
                 foreach (var g in dcm.groups)
                 {
+                    ListViewGroup lg = new ListViewGroup(g.id.ToString(), g.name);
+                    listView_clients.Groups.Add(lg);
+
                     ToolStripMenuItem tsmi = new ToolStripMenuItem(g.name);
                     tsmi.Name = g.id.ToString();
                     tsmi.Click += new EventHandler(group_click);
@@ -392,29 +394,7 @@ namespace Monitor
             }
         }
 
-        public void groups_edit(object sender, ButtonPressedEventArgs e)
-        {
-
-        }
-
-        public void groups_delete(object sender, ButtonPressedEventArgs e)
-        {
-                DataContext_mastercafe ms = new DataContext_mastercafe(Program.constr);
-                if (MessageBox.Show("Та '" + gridView_groups.GetFocusedRowCellValue("Нэр").ToString() + "' нэртэй тасалгаа устгахдаа итгэлтэй байна уу?", "Баталгаажуулалт", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
-                {
-                    group _g = ms.groups.Where(g => g.id == Guid.Parse(gridView_groups.GetFocusedRowCellValue("Дугаар").ToString())).FirstOrDefault();
-                    if (_g.clients.Count == 0)
-                    {
-                        ms.groups.DeleteOnSubmit(_g);
-                        ms.SubmitChanges();
-                        gridView_groups.DeleteRow(gridView_groups.FocusedRowHandle);
-                    }
-                    else
-                    {
-                        MessageBox.Show("Тус тасалгаанд бүртгэлтэй компьютерууд байгаа тул устгах боломжгүй.","Анхаар", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    }
-                }
-        }
+       
 
         private void MainTab_Selected(object sender, DevExpress.XtraTab.TabPageEventArgs e)
         {
@@ -530,22 +510,20 @@ namespace Monitor
             catch { MessageBox.Show("config error!!!"); }
         }
 
+        public Hashtable groupshash = new Hashtable();
         private void groups()
         {
+              
                 DataContext_mastercafe ms = new DataContext_mastercafe(Program.constr);
-                gridControl_groups.DataSource = (from t in ms.groups
-                                                 select new
-                                                 {
-                                                     Дугаар = t.id,
-                                                     Нэр = t.name,
-                                                     ЦагынКод = t.timecodeprice,
-                                                     Гишүүн = t.memberprice,
-                                                     ЦагНээх = t.hourprice,
-                                                     ДоодҮнэлгээ = t.minprice,
-                                                     Засах = "",
-                                                     Устгах = ""
-                                                 }).ToList();
-
+                List<object> dgroups = new List<object>();
+                groupshash.Clear();
+                for (int i = 0; i < ms.groups.Count(); i++)
+                {
+                    groupshash.Add((i + 1).ToString(), ms.groups.ToArray()[i].id.ToString());
+                    dgroups.Add(new { Дугаар = (i + 1).ToString(), Нэр = ms.groups.ToArray()[i].name.ToString(), VIP = ms.groups.ToArray()[i].vip == true ? "Тийм" : "Үгүй", Гишүүн = ms.groups.ToArray()[i].member == true ? "Тийм" : "Үгүй", ЦагНээх = ms.groups.ToArray()[i].hour == true ? "Тийм" : "Үгүй", ЦагТавих = ms.groups.ToArray()[i].prepairhour == true ? "Тийм" : "Үгүй", Тасалбар = ms.groups.ToArray()[i].timecode == true ? "Тийм" : "Үгүй", ДоодҮнэ = ms.groups.ToArray()[i].minprice, ГишүүнҮнэ = ms.groups.ToArray()[i].memberprice, ЦагҮнэ = ms.groups.ToArray()[i].hourprice,ТасалбарҮнэ = ms.groups.ToArray()[i].timecodeprice, Засах = "", Устгах = "" });
+                }
+                gridControl_groups.DataSource = dgroups;
+                
                 System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(mainfrm));
                 
                 RepositoryItemButtonEdit ritem_edit = new RepositoryItemButtonEdit();
@@ -563,6 +541,36 @@ namespace Monitor
                 ritem_delete.Buttons[0].Image = new System.Drawing.Bitmap(((System.Drawing.Image)(resources.GetObject("simpleButton_delete_member.Image"))), new Size(20,20)); ;
                 gridControl_groups.RepositoryItems.Add(ritem_delete);
                 gridView_groups.Columns["Устгах"].ColumnEdit = ritem_delete;
+                
+        }
+
+        public void groups_edit(object sender, ButtonPressedEventArgs e)
+        {
+            groups_add group = new groups_add(groupshash[gridView_groups.GetFocusedRowCellValue("Дугаар").ToString()].ToString());
+            group.ShowDialog(this);
+            if (group.ok)
+            {
+                groups();
+            }
+        }
+
+        public void groups_delete(object sender, ButtonPressedEventArgs e)
+        {
+            DataContext_mastercafe ms = new DataContext_mastercafe(Program.constr);
+            if (MessageBox.Show("Та '" + gridView_groups.GetFocusedRowCellValue("Нэр").ToString() + "' нэртэй тасалгаа устгахдаа итгэлтэй байна уу?", "Баталгаажуулалт", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                group _g = ms.groups.Where(g => g.id == Guid.Parse(groupshash[gridView_groups.GetFocusedRowCellValue("Дугаар").ToString()].ToString())).FirstOrDefault();
+                if (_g.clients.Count == 0)
+                {
+                    ms.groups.DeleteOnSubmit(_g);
+                    ms.SubmitChanges();
+                    gridView_groups.DeleteRow(gridView_groups.FocusedRowHandle);
+                }
+                else
+                {
+                    MessageBox.Show("Тус тасалгаанд бүртгэлтэй компьютерууд байгаа тул устгах боломжгүй.", "Анхаар", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
         }
 
         private void ban()
@@ -773,6 +781,7 @@ namespace Monitor
                     {
                         listView_clients.Invoke(new MethodInvoker(delegate
                         {
+                            listView_clients.BeginUpdate();
                              if (listView_clients.Items.ContainsKey(c.name))
                             {
                                 listView_clients.Items[c.name].ImageIndex = c.status;
@@ -813,6 +822,7 @@ namespace Monitor
                             {
                                 ListViewItem lvi = new ListViewItem(new string[] { c.name, c.group.name,c.member_name,c.usedminute.ToString(),c.remainminute.ToString(),"",c.start.ToString(),c.app.ToString(),c.title.ToString(),c.ip,c.mac}, c.status);
                                 lvi.Name = c.name;
+                                lvi.Group = listView_clients.Groups[c.group_id.ToString()];
                                 listView_clients.Items.Add(lvi);
                                 int cw=listView_clients.Width/listView_clients.Columns.Count;
                                 for (int i = 0; i < listView_clients.Columns.Count; i++)
@@ -820,10 +830,12 @@ namespace Monitor
                                     listView_clients.Columns[i].Width = cw;
                                 }
                             }
+                             listView_clients.EndUpdate();
                         }));
                     }
                     else
                     {
+                        listView_clients.BeginUpdate();
                         if (listView_clients.Items.ContainsKey(c.name))
                         {
                             listView_clients.Items[name].ImageIndex = c.status;
@@ -865,12 +877,14 @@ namespace Monitor
                             ListViewItem lvi = new ListViewItem(new string[] { c.name, c.group.name, c.member_name, c.usedminute.ToString(), c.remainminute.ToString(), "", c.start.ToString(), c.app.ToString(), c.title.ToString(), c.ip, c.mac }, c.status);
                             lvi.Name = c.name;
                             listView_clients.Items.Add(lvi);
+                            lvi.Group = listView_clients.Groups[c.group_id.ToString()];
                             int cw = listView_clients.Width / listView_clients.Columns.Count;
                             for (int i = 0; i < listView_clients.Columns.Count; i++)
                             {
                                 listView_clients.Columns[i].Width = cw;
                             }
                         }
+                        listView_clients.EndUpdate();
                     }
                 }
             }

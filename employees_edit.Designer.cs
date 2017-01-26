@@ -107,7 +107,7 @@
             this.Name = "employees_edit";
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "Хэрэглэгч засах";
+            this.Text = "Хэрэглэгч";
             ((System.ComponentModel.ISupportInitialize)(this.textEdit_username.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit_password.Properties)).EndInit();
             this.ResumeLayout(false);

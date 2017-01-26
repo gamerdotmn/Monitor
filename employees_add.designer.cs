@@ -61,7 +61,7 @@
             this.simpleButton_add.Name = "simpleButton_add";
             this.simpleButton_add.Size = new System.Drawing.Size(100, 25);
             this.simpleButton_add.TabIndex = 3;
-            this.simpleButton_add.Text = "Нэмэх";
+            this.simpleButton_add.Text = "Хадгалах";
             this.simpleButton_add.Click += new System.EventHandler(this.simpleButton_add_Click);
             // 
             // textEdit_username
@@ -105,7 +105,7 @@
             this.Name = "employees_add";
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "Хэрэглэгч нэмэх";
+            this.Text = "Хэрэглэгч";
             ((System.ComponentModel.ISupportInitialize)(this.textEdit_username.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit_password.Properties)).EndInit();
             this.ResumeLayout(false);

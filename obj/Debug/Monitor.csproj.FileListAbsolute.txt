@@ -328,3 +328,4 @@ D:\MC\Monitor\bin\Debug\Newtonsoft.Json.xml
 D:\MC\Monitor\obj\Debug\Monitor.employees_add.resources
 D:\MC\Monitor\obj\Debug\Monitor.employees_edit.resources
 D:\MC\Monitor\obj\Debug\Monitor.groups_add.resources
+D:\MC\Monitor\bin\Debug\Monitor.exe.config

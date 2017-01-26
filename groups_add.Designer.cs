@@ -188,6 +188,7 @@
             // 
             // checkEdit_vip_ok
             // 
+            this.checkEdit_vip_ok.EditValue = true;
             this.checkEdit_vip_ok.Location = new System.Drawing.Point(301, 27);
             this.checkEdit_vip_ok.Name = "checkEdit_vip_ok";
             this.checkEdit_vip_ok.Properties.Caption = "V.I.P";

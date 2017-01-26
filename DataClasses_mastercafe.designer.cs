@@ -78,7 +78,7 @@ namespace Monitor
     #endregion
 		
 		public DataContext_mastercafe() : 
-				base(Program.constr, mappingSource)
+				base(global::Monitor.Properties.Settings.Default.mastercafedbConnectionString2, mappingSource)
 		{
 			OnCreated();
 		}

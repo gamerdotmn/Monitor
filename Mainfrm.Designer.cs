@@ -35,7 +35,7 @@
             this.panelControl_pc = new DevExpress.XtraEditors.PanelControl();
             this.splitContainer = new System.Windows.Forms.SplitContainer();
             this.posc = new Monitor.pos();
-            this.listView_clients = new System.Windows.Forms.ListView();
+            this.listView_clients = new ListViewNew();
             this.columnHeader_name = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader_tariff = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader_member = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -741,6 +741,7 @@
             this.simpleButton_employees_add.TabIndex = 0;
             this.simpleButton_employees_add.TabStop = false;
             this.simpleButton_employees_add.Text = "Нэмэх";
+            this.simpleButton_employees_add.Click += new System.EventHandler(this.simpleButton_employees_add_Click);
             // 
             // group
             // 
@@ -1720,6 +1721,7 @@
             this.ClientSize = new System.Drawing.Size(1008, 730);
             this.Controls.Add(this.panelControl_client_bottom);
             this.Controls.Add(this.panelControl_client_top);
+            this.DoubleBuffered = true;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "mainfrm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -1841,7 +1843,7 @@
         private DevExpress.XtraGrid.Views.Grid.GridView gridView_groups;
         private DevExpress.XtraEditors.PanelControl panelControl_groups;
         private DevExpress.XtraEditors.SimpleButton simpleButton_add_group;
-        private System.Windows.Forms.ListView listView_clients;
+        private ListViewNew listView_clients;
         private System.Windows.Forms.ColumnHeader columnHeader_name;
         private System.Windows.Forms.ColumnHeader columnHeader_tariff;
         private System.Windows.Forms.ColumnHeader columnHeader_member;

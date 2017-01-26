@@ -294,6 +294,9 @@
     <Compile Include="Labelerr.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="ListViewNew.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -400,6 +403,7 @@
     <EmbeddedResource Include="transfer.resx">
       <DependentUpon>transfer.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="app.config" />
     <None Include="DataClasses_mastercafe.dbml.layout">
       <DependentUpon>DataClasses_mastercafe.dbml</DependentUpon>
     </None>
