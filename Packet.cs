@@ -5,6 +5,11 @@ using System.Text;
 
 namespace Monitor
 {
+    public class server
+    {
+        public string name;
+        public string org;
+    }
 
     public class clientstat
     {

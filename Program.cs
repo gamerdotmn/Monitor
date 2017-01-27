@@ -32,6 +32,7 @@ namespace Monitor
         public static int port_clienttoserver10 = 40014;
 
         public static readonly log4net.ILog log = log4net.LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
+
         public static string constr = @"Data Source=.\MASTERCAFE;Initial Catalog=mastercafedb;Persist Security Info=True;User ID=sa;Password=pldifvzz7x;MultipleActiveResultSets=True";
         
         [STAThread]

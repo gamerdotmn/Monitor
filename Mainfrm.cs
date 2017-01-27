@@ -47,7 +47,6 @@ namespace Monitor
         public static Hashtable broadcast_servers = new Hashtable();
         public static bool printbill = false;
         private const int disconnecttime = 10;
-        public const string host = "gamer.mn";
         public static config cfg = new config();
 
         private void broadcast_listen()
@@ -64,18 +63,15 @@ namespace Monitor
                 data = new byte[1024];
                 recv = sock.ReceiveFrom(data, ref ep);
                 stringData = Encoding.UTF8.GetString(data, 0, recv);
-                XmlDocument xd = new XmlDocument();
-                xd.LoadXml(stringData);
+                server s=Newtonsoft.Json.JsonConvert.DeserializeObject<server>(stringData);
 
-                if (xd.ChildNodes.Count > 0 && xd.ChildNodes[0].Name == "mastercafe" && xd.ChildNodes[0].ChildNodes.Count > 0 && xd.ChildNodes[0].ChildNodes[0].Name == "cmd")
-                {
-                    string name = xd.ChildNodes[0].ChildNodes[1].InnerText;
-                    string ip = ep.ToString();
-                    ip = ip.Substring(0, ip.IndexOf(":"));
-                    name = name + "(" + ip + ")";
+                string ip = ep.ToString();
+                ip = ip.Substring(0, ip.IndexOf(":"));
+                s.name=s.name+"/"+s.org + " (" + ip + ")";
+
                     if (broadcast_servers.ContainsKey(ip) == false)
                     {
-                        broadcast_servers.Add(ip, name);
+                        broadcast_servers.Add(ip, s.name);
                         if (lfrm != null)
                         {
                             lfrm.Refresh();
@@ -86,7 +82,6 @@ namespace Monitor
                             //Program.constr = @"Data Source=" + serverip + @"\MASTERCAFE;Initial Catalog=mastercafedb;Persist Security Info=True;User ID=sa;Password=pldifvzz7x;MultipleActiveResultSets=True";
                         }
                     }
-                }
             }
             //sock.Close();
         }
