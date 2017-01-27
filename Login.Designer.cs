@@ -104,7 +104,7 @@
             // labelerr
             // 
             this.labelerr.AutoSize = true;
-            this.labelerr.Location = new System.Drawing.Point(127, 141);
+            this.labelerr.Location = new System.Drawing.Point(30, 141);
             this.labelerr.Name = "labelerr";
             this.labelerr.Size = new System.Drawing.Size(0, 13);
             this.labelerr.TabIndex = 4;

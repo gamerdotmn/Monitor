@@ -342,11 +342,17 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Screen.cs">
+    <Compile Include="screen.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Screen.Designer.cs">
-      <DependentUpon>Screen.cs</DependentUpon>
+    <Compile Include="screen.Designer.cs">
+      <DependentUpon>screen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="stats.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="stats.Designer.cs">
+      <DependentUpon>stats.cs</DependentUpon>
     </Compile>
     <Compile Include="timetemplate.cs">
       <SubType>Form</SubType>
@@ -391,8 +397,11 @@
     <EmbeddedResource Include="pos.resx">
       <DependentUpon>pos.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Screen.resx">
-      <DependentUpon>Screen.cs</DependentUpon>
+    <EmbeddedResource Include="screen.resx">
+      <DependentUpon>screen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="stats.resx">
+      <DependentUpon>stats.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="timetemplate.resx">
       <DependentUpon>timetemplate.cs</DependentUpon>

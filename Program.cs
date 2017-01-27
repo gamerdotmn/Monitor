@@ -14,24 +14,45 @@ namespace Monitor
 {
     static class Program
     {
-
+        public static string host = "gamer.mn";
         public static int port_servertoclient = 40001;
-        public static int port_clienttoserver = 40002;
-        public static int port_servertomonitor = 40003;
-        public static int port_monitortoserver = 40004;
-        public static int port_broadcast = 40006;
+        public static int port_servertomonitor = 40002;
+        public static int port_monitortoserver = 40003;
+        public static int port_broadcast = 40004;
+        public static int port_clienttoserver = 40005;
+        public static int port_clienttoserver1 = 40005;
+        public static int port_clienttoserver2 = 40006;
+        public static int port_clienttoserver3 = 40007;
+        public static int port_clienttoserver4 = 40008;
+        public static int port_clienttoserver5 = 4009;
+        public static int port_clienttoserver6 = 40010;
+        public static int port_clienttoserver7 = 40011;
+        public static int port_clienttoserver8 = 40012;
+        public static int port_clienttoserver9 = 40013;
+        public static int port_clienttoserver10 = 40014;
+
         public static readonly log4net.ILog log = log4net.LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
         public static string constr = @"Data Source=.\MASTERCAFE;Initial Catalog=mastercafedb;Persist Security Info=True;User ID=sa;Password=pldifvzz7x;MultipleActiveResultSets=True";
         
         [STAThread]
-        static void Main()
+        static void Main(string[] args)
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             BonusSkins.Register();
             SkinManager.EnableFormSkins();
             UserLookAndFeel.Default.SetSkinStyle("DevExpress Style");
-            Application.Run(new mainfrm());
+            if (args.Length > 0)
+            {
+                if (args[0].IndexOf("-stats") > -1)
+                {
+                    Application.Run(new stats());
+                }
+            }
+            else
+            {
+                Application.Run(new mainfrm());
+            }
         }
 
         public static string Compress(string text)

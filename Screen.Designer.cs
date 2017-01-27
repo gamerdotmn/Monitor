@@ -1,6 +1,6 @@
 ﻿namespace Monitor
 {
-    partial class Screen
+    partial class screen
     {
         /// <summary>
         /// Required designer variable.

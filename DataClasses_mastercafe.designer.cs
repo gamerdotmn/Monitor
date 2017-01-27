@@ -78,7 +78,7 @@ namespace Monitor
     #endregion
 		
 		public DataContext_mastercafe() : 
-				base(global::Monitor.Properties.Settings.Default.mastercafedbConnectionString2, mappingSource)
+				base(global::Monitor.Properties.Settings.Default.mastercafedbConnectionString, mappingSource)
 		{
 			OnCreated();
 		}
@@ -1007,7 +1007,7 @@ namespace Monitor
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="timecode_client", Storage="_timecode", ThisKey="tc", OtherKey="code", IsForeignKey=true)]
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="timecode_client", Storage="_timecode", ThisKey="tc", OtherKey="code", IsForeignKey=true, DeleteRule="CASCADE")]
 		public timecode timecode
 		{
 			get
@@ -1041,7 +1041,7 @@ namespace Monitor
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="group_client", Storage="_group", ThisKey="group_id", OtherKey="id", IsForeignKey=true)]
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="group_client", Storage="_group", ThisKey="group_id", OtherKey="id", IsForeignKey=true, DeleteOnNull=true, DeleteRule="CASCADE")]
 		public group group
 		{
 			get
@@ -1075,7 +1075,7 @@ namespace Monitor
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="hourtemplate_client", Storage="_hourtemplate", ThisKey="ht", OtherKey="id", IsForeignKey=true)]
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="hourtemplate_client", Storage="_hourtemplate", ThisKey="ht", OtherKey="id", IsForeignKey=true, DeleteRule="CASCADE")]
 		public hourtemplate hourtemplate
 		{
 			get
@@ -1109,7 +1109,7 @@ namespace Monitor
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="member_client", Storage="_member", ThisKey="member_name", OtherKey="name", IsForeignKey=true)]
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="member_client", Storage="_member", ThisKey="member_name", OtherKey="name", IsForeignKey=true, DeleteRule="CASCADE")]
 		public member member
 		{
 			get
@@ -1478,6 +1478,8 @@ namespace Monitor
 		
 		private bool _isadmin;
 		
+		private System.Nullable<bool> _connected;
+		
 		private EntitySet<employee_hour> _employee_hours;
 		
 		private EntitySet<employee_member> _employee_members;
@@ -1496,6 +1498,8 @@ namespace Monitor
     partial void OnpasswordChanged();
     partial void OnisadminChanging(bool value);
     partial void OnisadminChanged();
+    partial void OnconnectedChanging(System.Nullable<bool> value);
+    partial void OnconnectedChanged();
     #endregion
 		
 		public employee()
@@ -1563,6 +1567,26 @@ namespace Monitor
 					this._isadmin = value;
 					this.SendPropertyChanged("isadmin");
 					this.OnisadminChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_connected", DbType="Bit")]
+		public System.Nullable<bool> connected
+		{
+			get
+			{
+				return this._connected;
+			}
+			set
+			{
+				if ((this._connected != value))
+				{
+					this.OnconnectedChanging(value);
+					this.SendPropertyChanging();
+					this._connected = value;
+					this.SendPropertyChanged("connected");
+					this.OnconnectedChanged();
 				}
 			}
 		}
@@ -1839,7 +1863,7 @@ namespace Monitor
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="client_employee_hour", Storage="_client", ThisKey="client_name", OtherKey="name", IsForeignKey=true)]
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="client_employee_hour", Storage="_client", ThisKey="client_name", OtherKey="name", IsForeignKey=true, DeleteOnNull=true, DeleteRule="CASCADE")]
 		public client client
 		{
 			get
@@ -1873,7 +1897,7 @@ namespace Monitor
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="employee_employee_hour", Storage="_employee", ThisKey="employee_name", OtherKey="name", IsForeignKey=true)]
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="employee_employee_hour", Storage="_employee", ThisKey="employee_name", OtherKey="name", IsForeignKey=true, DeleteOnNull=true, DeleteRule="CASCADE")]
 		public employee employee
 		{
 			get
@@ -2079,7 +2103,7 @@ namespace Monitor
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="employee_employee_member", Storage="_employee", ThisKey="employee_name", OtherKey="name", IsForeignKey=true)]
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="employee_employee_member", Storage="_employee", ThisKey="employee_name", OtherKey="name", IsForeignKey=true, DeleteOnNull=true, DeleteRule="CASCADE")]
 		public employee employee
 		{
 			get
@@ -2113,7 +2137,7 @@ namespace Monitor
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="member_employee_member", Storage="_member", ThisKey="member_name", OtherKey="name", IsForeignKey=true)]
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="member_employee_member", Storage="_member", ThisKey="member_name", OtherKey="name", IsForeignKey=true, DeleteOnNull=true, DeleteRule="CASCADE")]
 		public member member
 		{
 			get
@@ -2367,7 +2391,7 @@ namespace Monitor
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="employee_employee_sale", Storage="_employee", ThisKey="empoyee_name", OtherKey="name", IsForeignKey=true)]
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="employee_employee_sale", Storage="_employee", ThisKey="empoyee_name", OtherKey="name", IsForeignKey=true, DeleteOnNull=true, DeleteRule="CASCADE")]
 		public employee employee
 		{
 			get
@@ -2401,7 +2425,7 @@ namespace Monitor
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="item_employee_sale", Storage="_item", ThisKey="item_id", OtherKey="id", IsForeignKey=true)]
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="item_employee_sale", Storage="_item", ThisKey="item_id", OtherKey="id", IsForeignKey=true, DeleteOnNull=true, DeleteRule="CASCADE")]
 		public item item
 		{
 			get
@@ -2607,7 +2631,7 @@ namespace Monitor
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="employee_employee_timecode", Storage="_employee", ThisKey="employee_name", OtherKey="name", IsForeignKey=true)]
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="employee_employee_timecode", Storage="_employee", ThisKey="employee_name", OtherKey="name", IsForeignKey=true, DeleteOnNull=true, DeleteRule="CASCADE")]
 		public employee employee
 		{
 			get
@@ -3372,7 +3396,7 @@ namespace Monitor
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="category_item", Storage="_category", ThisKey="category_id", OtherKey="id", IsForeignKey=true)]
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="category_item", Storage="_category", ThisKey="category_id", OtherKey="id", IsForeignKey=true, DeleteOnNull=true, DeleteRule="CASCADE")]
 		public category category
 		{
 			get
@@ -3749,7 +3773,7 @@ namespace Monitor
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="client_reserve", Storage="_client", ThisKey="client_name", OtherKey="name", IsForeignKey=true)]
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="client_reserve", Storage="_client", ThisKey="client_name", OtherKey="name", IsForeignKey=true, DeleteOnNull=true, DeleteRule="CASCADE")]
 		public client client
 		{
 			get

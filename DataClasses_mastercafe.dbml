@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?><Database Name="mastercafedb" Class="DataContext_mastercafe" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
-  <Connection Mode="AppSettings" ConnectionString="Data Source=.\MASTERCAFE;Initial Catalog=mastercafedb;User ID=sa" SettingsObjectName="Monitor.Properties.Settings" SettingsPropertyName="mastercafedbConnectionString2" Provider="System.Data.SqlClient" />
+  <Connection Mode="AppSettings" ConnectionString="Data Source=.\MASTERCAFE;Initial Catalog=mastercafedb;User ID=sa" SettingsObjectName="Monitor.Properties.Settings" SettingsPropertyName="mastercafedbConnectionString" Provider="System.Data.SqlClient" />
   <Table Name="dbo.ban" Member="bans">
     <Type Name="ban">
       <Column Name="id" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
@@ -40,10 +40,10 @@
       <Column Name="wei" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Association Name="client_employee_hour" Member="employee_hours" ThisKey="name" OtherKey="client_name" Type="employee_hour" />
       <Association Name="client_reserve" Member="reserves" ThisKey="name" OtherKey="client_name" Type="reserve" />
-      <Association Name="timecode_client" Member="timecode" ThisKey="tc" OtherKey="code" Type="timecode" IsForeignKey="true" />
-      <Association Name="group_client" Member="group" ThisKey="group_id" OtherKey="id" Type="group" IsForeignKey="true" />
-      <Association Name="hourtemplate_client" Member="hourtemplate" ThisKey="ht" OtherKey="id" Type="hourtemplate" IsForeignKey="true" />
-      <Association Name="member_client" Member="member" ThisKey="member_name" OtherKey="name" Type="member" IsForeignKey="true" />
+      <Association Name="timecode_client" Member="timecode" ThisKey="tc" OtherKey="code" Type="timecode" IsForeignKey="true" DeleteRule="CASCADE" />
+      <Association Name="group_client" Member="group" ThisKey="group_id" OtherKey="id" Type="group" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+      <Association Name="hourtemplate_client" Member="hourtemplate" ThisKey="ht" OtherKey="id" Type="hourtemplate" IsForeignKey="true" DeleteRule="CASCADE" />
+      <Association Name="member_client" Member="member" ThisKey="member_name" OtherKey="name" Type="member" IsForeignKey="true" DeleteRule="CASCADE" />
     </Type>
   </Table>
   <Table Name="dbo.config" Member="configs">
@@ -65,6 +65,7 @@
       <Column Name="name" Type="System.String" DbType="NVarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
       <Column Name="password" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
       <Column Name="isadmin" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="connected" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
       <Association Name="employee_employee_hour" Member="employee_hours" ThisKey="name" OtherKey="employee_name" Type="employee_hour" />
       <Association Name="employee_employee_member" Member="employee_members" ThisKey="name" OtherKey="employee_name" Type="employee_member" />
       <Association Name="employee_employee_sale" Member="employee_sales" ThisKey="name" OtherKey="empoyee_name" Type="employee_sale" />
@@ -78,8 +79,8 @@
       <Column Name="client_name" Type="System.String" DbType="VarChar(256) NOT NULL" CanBeNull="false" />
       <Column Name="price" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
       <Column Name="ot" Type="System.DateTime" DbType="SmallDateTime NOT NULL" CanBeNull="false" />
-      <Association Name="client_employee_hour" Member="client" ThisKey="client_name" OtherKey="name" Type="client" IsForeignKey="true" />
-      <Association Name="employee_employee_hour" Member="employee" ThisKey="employee_name" OtherKey="name" Type="employee" IsForeignKey="true" />
+      <Association Name="client_employee_hour" Member="client" ThisKey="client_name" OtherKey="name" Type="client" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+      <Association Name="employee_employee_hour" Member="employee" ThisKey="employee_name" OtherKey="name" Type="employee" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
     </Type>
   </Table>
   <Table Name="dbo.employee_member" Member="employee_members">
@@ -89,8 +90,8 @@
       <Column Name="member_name" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
       <Column Name="price" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
       <Column Name="ot" Type="System.DateTime" DbType="SmallDateTime NOT NULL" CanBeNull="false" />
-      <Association Name="employee_employee_member" Member="employee" ThisKey="employee_name" OtherKey="name" Type="employee" IsForeignKey="true" />
-      <Association Name="member_employee_member" Member="member" ThisKey="member_name" OtherKey="name" Type="member" IsForeignKey="true" />
+      <Association Name="employee_employee_member" Member="employee" ThisKey="employee_name" OtherKey="name" Type="employee" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+      <Association Name="member_employee_member" Member="member" ThisKey="member_name" OtherKey="name" Type="member" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
     </Type>
   </Table>
   <Table Name="dbo.employee_sale" Member="employee_sales">
@@ -102,8 +103,8 @@
       <Column Name="total" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
       <Column Name="empoyee_name" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
       <Column Name="ot" Type="System.DateTime" DbType="SmallDateTime NOT NULL" CanBeNull="false" />
-      <Association Name="employee_employee_sale" Member="employee" ThisKey="empoyee_name" OtherKey="name" Type="employee" IsForeignKey="true" />
-      <Association Name="item_employee_sale" Member="item" ThisKey="item_id" OtherKey="id" Type="item" IsForeignKey="true" />
+      <Association Name="employee_employee_sale" Member="employee" ThisKey="empoyee_name" OtherKey="name" Type="employee" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+      <Association Name="item_employee_sale" Member="item" ThisKey="item_id" OtherKey="id" Type="item" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
     </Type>
   </Table>
   <Table Name="dbo.employee_timecode" Member="employee_timecodes">
@@ -113,7 +114,7 @@
       <Column Name="price" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
       <Column Name="timecode_code" Type="System.String" DbType="NChar(10) NOT NULL" CanBeNull="false" />
       <Column Name="ot" Type="System.DateTime" DbType="SmallDateTime NOT NULL" CanBeNull="false" />
-      <Association Name="employee_employee_timecode" Member="employee" ThisKey="employee_name" OtherKey="name" Type="employee" IsForeignKey="true" />
+      <Association Name="employee_employee_timecode" Member="employee" ThisKey="employee_name" OtherKey="name" Type="employee" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
       <Association Name="timecode_employee_timecode" Member="timecode" ThisKey="timecode_code" OtherKey="code" Type="timecode" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
     </Type>
   </Table>
@@ -151,7 +152,7 @@
       <Column Name="category_id" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
       <Column Name="price" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
       <Association Name="item_employee_sale" Member="employee_sales" ThisKey="id" OtherKey="item_id" Type="employee_sale" />
-      <Association Name="category_item" Member="category" ThisKey="category_id" OtherKey="id" Type="category" IsForeignKey="true" />
+      <Association Name="category_item" Member="category" ThisKey="category_id" OtherKey="id" Type="category" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
     </Type>
   </Table>
   <Table Name="dbo.member" Member="members">
@@ -170,7 +171,7 @@
       <Column Name="client_name" Type="System.String" DbType="VarChar(256) NOT NULL" CanBeNull="false" />
       <Column Name="ot" Type="System.DateTime" DbType="SmallDateTime NOT NULL" CanBeNull="false" />
       <Column Name="steamid" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
-      <Association Name="client_reserve" Member="client" ThisKey="client_name" OtherKey="name" Type="client" IsForeignKey="true" />
+      <Association Name="client_reserve" Member="client" ThisKey="client_name" OtherKey="name" Type="client" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
     </Type>
   </Table>
 </Database>

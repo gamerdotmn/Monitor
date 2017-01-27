@@ -10,9 +10,9 @@ using DevExpress.XtraEditors;
 
 namespace Monitor
 {
-    public partial class Screen : DevExpress.XtraEditors.XtraForm
+    public partial class screen : DevExpress.XtraEditors.XtraForm
     {
-        public Screen()
+        public screen()
         {
             InitializeComponent();
         }

@@ -122,6 +122,34 @@ namespace Monitor
             server_sendsyn();
         }
 
+        private void server_loginfailed()
+        {
+            lfrm.labelerr.Settext("Хяналтын эрхээр давхар нэвтрэх боломжгүй.");
+        }
+
+        private void server_loginok(PacketServerMonitorLoginok packet)
+        {
+            if (lfrm.InvokeRequired)
+            {
+                lfrm.Invoke(new MethodInvoker(delegate
+                {
+                    lfrm.Close();
+                }));
+            }
+            else
+            {
+                lfrm.Close();
+            }
+            name = packet.name;
+            logged = true;
+            isadmin = packet.isadmin;
+        }
+
+        private void server_logoutok()
+        {
+            System.Environment.Exit(0);
+        }
+
         private void lfrm_login()
         {
             using (DataContext_mastercafe dcm = new DataContext_mastercafe(Program.constr))
@@ -130,20 +158,9 @@ namespace Monitor
                 int cnt = emps.Count();
                 if (cnt == 1)
                 {
-                    if (lfrm.InvokeRequired)
-                    {
-                        lfrm.Invoke(new MethodInvoker(delegate
-                        {
-                            lfrm.Close();
-                        }));
-                    }
-                    else
-                    {
-                        lfrm.Close();
-                    }
-                    name = emps.FirstOrDefault().name;
-                    logged = true;
-                    isadmin = emps.FirstOrDefault().isadmin;
+                    PacketMonitorServerLogin packetlogin = new PacketMonitorServerLogin();
+                    packetlogin.name = emps.FirstOrDefault().name;
+                    Send(serverip, Program.port_monitortoserver, Newtonsoft.Json.JsonConvert.SerializeObject(packetlogin));
                 }
                 else
                 {
@@ -167,11 +184,63 @@ namespace Monitor
             lfrm_login();
         }
 
+        
 
         private void server_disconnect()
         {
-            if (MessageBox.Show("Сервер унтарсан байна. Программыг гаргах уу?", "Анхаар", MessageBoxButtons.YesNo,MessageBoxIcon.Warning) == DialogResult.Yes)
+            if (logged)
             {
+
+                clientstats cs = new clientstats();
+                if (listView_clients.InvokeRequired)
+                {
+                    listView_clients.Invoke(new MethodInvoker(delegate
+                    {
+                        foreach (ListViewItem l in listView_clients.Items)
+                        {
+                            clientstat c = new clientstat();
+                            c.status = l.ImageIndex;
+                            c.name = l.SubItems[0].Text;
+                            c.group = l.SubItems[1].Text;
+                            c.member = l.SubItems[2].Text;
+                            c.used = l.SubItems[3].Text;
+                            c.remain = l.SubItems[4].Text;
+                            c.money = l.SubItems[5].Text;
+                            c.start = l.SubItems[6].Text;
+                            c.app = l.SubItems[7].Text;
+                            c.title = l.SubItems[8].Text;
+                            c.ip = l.SubItems[9].Text;
+                            c.mac = l.SubItems[10].Text;
+                            cs.clients_list.Add(c);
+                        }
+                    }));
+                }
+                else
+                {
+                    foreach (ListViewItem l in listView_clients.Items)
+                    {
+                        clientstat c = new clientstat();
+                        c.status = l.ImageIndex;
+                        c.name = l.SubItems[0].Text;
+                        c.group = l.SubItems[1].Text;
+                        c.member = l.SubItems[2].Text;
+                        c.used = l.SubItems[3].Text;
+                        c.remain = l.SubItems[4].Text;
+                        c.money = l.SubItems[5].Text;
+                        c.start = l.SubItems[6].Text;
+                        c.app = l.SubItems[7].Text;
+                        c.title = l.SubItems[8].Text;
+                        c.ip = l.SubItems[9].Text;
+                        c.mac = l.SubItems[10].Text;
+                        cs.clients_list.Add(c);
+                    }
+                }
+                if (File.Exists("clients.json"))
+                {
+                    File.Delete("clients.json");
+                }
+                File.WriteAllText("clients.json", Newtonsoft.Json.JsonConvert.SerializeObject(cs));
+                System.Diagnostics.Process.Start(Application.ExecutablePath, "-stats");
                 System.Environment.Exit(0);
             }
         }
@@ -712,7 +781,7 @@ namespace Monitor
         {
             using (DataContext_mastercafe dcm = new DataContext_mastercafe(Program.constr))
             {
-                Screen screen = new Screen();
+                screen screen = new screen();
                 screen.Text=dcm.clients.Where(_ip => _ip.ip == ip).FirstOrDefault().name;
                 screen.Size = new System.Drawing.Size(bmp.Width, bmp.Height);
                 screen.BackgroundImage = bmp;
@@ -733,6 +802,9 @@ namespace Monitor
             switch (cmd)
             {
                 case "syn": server_syn(Newtonsoft.Json.JsonConvert.DeserializeObject<PacketServerMonitorSyn>(data)); break;
+                case "loginok": server_loginok(Newtonsoft.Json.JsonConvert.DeserializeObject<PacketServerMonitorLoginok>(data)); break;
+                case "loginfailed": server_loginfailed(); break;
+                case "logoutok": server_logoutok(); break;
                 default: break;
             }
         }
@@ -896,7 +968,9 @@ namespace Monitor
             e.Cancel = true;
             if (MessageBox.Show("Программыг хаах?", "Анхаар", MessageBoxButtons.OKCancel) == DialogResult.OK)
             {
-                System.Environment.Exit(0);
+                PacketMonitorServerLogout packetlogout = new PacketMonitorServerLogout();
+                packetlogout.name = name;
+                Send(serverip, Program.port_monitortoserver, Newtonsoft.Json.JsonConvert.SerializeObject(packetlogout));
             }
         }
 
@@ -1609,7 +1683,12 @@ namespace Monitor
 
         private void simpleButton_switch_Click(object sender, EventArgs e)
         {
-            System.Environment.Exit(0);
+            if (MessageBox.Show("Программыг хаах?", "Анхаар", MessageBoxButtons.OKCancel) == DialogResult.OK)
+            {
+                PacketMonitorServerLogout packetlogout = new PacketMonitorServerLogout();
+                packetlogout.name = name;
+                Send(serverip, Program.port_monitortoserver, Newtonsoft.Json.JsonConvert.SerializeObject(packetlogout));
+            }
         }
 
         private void simpleButton_print_Click(object sender, EventArgs e)
