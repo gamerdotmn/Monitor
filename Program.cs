@@ -24,7 +24,7 @@ namespace Monitor
         public static int port_clienttoserver2 = 40006;
         public static int port_clienttoserver3 = 40007;
         public static int port_clienttoserver4 = 40008;
-        public static int port_clienttoserver5 = 4009;
+        public static int port_clienttoserver5 = 40009;
         public static int port_clienttoserver6 = 40010;
         public static int port_clienttoserver7 = 40011;
         public static int port_clienttoserver8 = 40012;
